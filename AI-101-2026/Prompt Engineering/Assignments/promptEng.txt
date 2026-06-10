@@ -1,0 +1,248 @@
+Ex1: Briefing = Providing the right fields and Context
+
+Daily)
+Difference In Response: The first answer was a general answer the second answer addresses all my needs. Furthermore, I noticed that at the end of the first answer it was asking me for suggestions meaninf that the response itself was saying that it needed filters for more suitable answer.
+On the other hand we already provided the filters in the prompt for the specific query which helped us reach the best suitable pick.
+In the second answer we were able to reach the best pick , in the first answer we were not able to reach the best pick.
+
+Insights Gained:
+
+1.The Second prompt provides Context. 
+2.The Second prompt starts with a Verb directly.
+3.The Second prompt provides filters that a user may have set if he were on a user interface.
+4.The Second Prompt provides information about the usage of the phone.
+5.The Second Prompt provides information on the problems the user faced with the earlier phone.
+6.The user explicity provides instruction for 3 options , he sets a threshold.
+7.Furthermore he demands one-line reason for each option and asks for the reasoning and choice reason.
+8.Finally a decision is made at the end. This is the end goal.
+
+Conclusion: The Second Prompt includes all the context required for a phone buying decision. If its a buying decision then a prompt should include all the buying filters and preferences. Provide Proper Context with all the required fields.
+
+Work)
+
+Difference In Response:The first response tell me how to format the email.It just provides generic guidelines. The second response provides the email directly instead of generic guidelines or rules.
+
+Insights Gained:
+ 
+
+1.The Second Prompt directly provides for what purpose he has written the email.
+2.Further more the second prompt provides the audience of the email, the goal to be achieved with eamil, the relationship with the person we are writign for.
+3.The second response further sets the tone.
+4.The second prompt explicitly demands ar ready to send email
+
+Conclusion: If we want a text articraft in output (like emai) we should explicitly mention the tone, the audience, the goal to be achieved, the writer's position , the reader's position.Provide Proper Context with all the required fields.
+----------------------------
+
+Ex2:Goal: A confident tone is not the same as a correct answer. (detect broken reasoning, frequncy creates confidence and confidence is not reliable. A confident tone is not the same as a correct answer)
+Daily)
+The AI admitted that it want sure in the The information was not available to it. It did not sound confident.
+Work)
+It confidently gave the response 30 days.
+Conclusion: For recent, local or private facts, make it search or admit uncertainty.
+
+Nuances: For recent, local or private facts, make it search or admit uncertainty. 
+
+Use this: 
+-"Be specific."
+-" Keep it short."
+-"If you cannot be sure, say so clearly instead of guessing."
+-"If you are not sure this is current, say so instead of guessing."
+----------------------------
+
+Ex3:(Goal: See how your wording makes the AI answer from memory, search the
+web, or run deep research.)
+
+Daily)
+Which prompts made the AI actually search? How could you tell? :
+The Weather Forcast prompt made the AI actually search due to "This Weekend" keyword
+
+Work)
+latest Developments prompt made the AI actually search due to "This month" keyword
+Research Thoroughly keyword made the AI do Deep Research.
+
+Nuances:
+
+1)Use Fresh Info not Stale Info: Web Search can use outdated results as well The model talking to you frequently does not read the original page directly (The sub model does it,That is why it sometimes misrepresents what a page actually said: the information went through a translation layer before it reached the model, and translation layers lose nuance.)
+2)Prompt decided pretrained, web search or deep research response: You usually do not pick a mode by clicking a button; the AI picks based on your prompt. But you can steer.
+Fix:
+
+1)Explicitly Mention Quality Sources ,Sourcing Quality by mentioning sources explicitly instead of relying on llm ,Practical fix: tell the AI which kinds of sources to use. Instead of "are vaccines safe," try "use the World Health Organization, the FDA, the European Medicines Agency, and peer-reviewed studies. Do not use forums or personal blogs." Source quality is a knob you can turn. Default settings cite popular sources first (Reddit, Wikipedia, YouTube, Google itself, Yelp), which are often reliable but not always trustworthy for high-stakes questions.
+2)ask the AI to quote the source,  "For each claim, quote the exact sentence from the source page that supports it."
+
+Pro Tips to add in prompt:
+When you do want web search, three small habits raise the quality:
+
+Always use this in web Search Results for tackling 3 problems: Quality Sources, Citations, Unverified Claims:
+1)Name the sources you trust. "Use the WHO, the FDA, and peer-reviewed studies, not forums."
+2)Ask for citations inline. "Cite the source after each claim."
+3)Ask the AI to flag what it could not verify. "If a claim cannot be supported by the cited sources, mark it 'unverified'."
+
+These three lines, pasted into any web-search prompt, cut down on the most common failure mode: the AI quietly synthesizing across sources and producing a confident sentence that no single source supports.
+
+For latest information or web searches, Use:
+"Today / this week / latest / my city" 
+1)What's the weather forecast for my city this weekend?
+2)What are the latest developments this month in [your field]? Cite each claim, and mark anything you can't support as 'unverified'
+
+
+Deep Research:
+
+Words like "research thoroughly," "report," "cite sources," "use these source types" steer toward the
+deepest mode.
+
+Prompt: 
+Research [a topic you care about] thoroughly. Use reputable
+sources only (government sites, peer-reviewed studies, official
+reports — not forums). Produce a structured report with:
+(1) the 3 most important points, (2) a comparison table,
+(3) 3 open questions. Cite sources
+
+Takeaway: You don't click a mode — your wording picks it. Name your sources and
+ask for citations to keep web answers honest
+
+Summarize something which is old enough with trigger Pretrained.
+
+Words:
+1)Summarize,
+2) this weekend? 
+3)Research [a topic you care about] thoroughly.
+4) Produce a structured report with:
+(1) the 3 most important points, (2) a comparison table,
+(3) 3 open questions. Cite sources.
+
+----------------------------
+
+Ex4:Load context up front instead of making the AI guess.
+
+I need help with [your task].
+Here is what you need to know:
+- [fact 1 — a constraint, like time or budget]
+- [fact 2 — who it's for]
+- [fact 3 — anything the AI couldn't guess]
+What I want back: [a list / an email / 3 options / a plan]
+
+I need help planning dinner for tonight.
+Here is what you need to know:
+- I have chicken, rice, onions, and yogurt in the kitchen
+- I have only 30 minutes
+- One person at the table doesn't eat spicy food
+
+What I want back: 3 simple meal options, no commentary.
+
+I need help writing a short update for my team.
+Here is what you need to know:
+- We finished the customer survey this week
+- 2 tasks are still pending (the report and the slides)
+- The reader is my team, who like quick bullet points
+What I want back: a 4-line status update, friendly tone
+
+
+Daily)
+Which single piece of context changed the answer the most? 
+the ingredients changed the answers the most, then the spices.
+Work)
+Which single piece of context changed the answer the most?
+Friendly tone, bullet points made it different
+
+
+
+5 lines of context, properly chosen, beats five paragraphs of cleverness [Checklist]:
+a) Is there a document the answer should be consistent with? [Attach Document]
+b)Is there a constraint the AI cannot infer (budget, time, who's on the team)? [Add Constraints: Budget, Time, Who's on the team]
+c)Is there prior context (a previous decision, an existing process)? [Yes: summarize in one paragraph. Summarize the previous context in one paragraph]
+d)Is there an output format you want (table, email, bullet list)? [State the Output Format: Table, Email, Bullet List]
+e)Is there an audience (a boss, a child, a stranger)? [State the audience: Audience Key]
+
+Context Rot
+Rule of Thumb:  When the topic changes, start a new chat.
+-------------------------------
+
+Ex5:
+Daily)
+Difference In Response:
+Insights Gained:
+Conclusion:
+Work)
+Difference In Response:
+Insights Gained:
+Conclusion:
+
+Ex6:
+Daily)
+Difference In Response:
+Insights Gained:
+Conclusion:
+Work)
+Difference In Response:
+Insights Gained:
+Conclusion:
+
+Ex7:
+Daily)
+Difference In Response:
+Insights Gained:
+Conclusion:
+Work)
+Difference In Response:
+Insights Gained:
+Conclusion:
+
+Ex8:
+Daily)
+Difference In Response:
+Insights Gained:
+Conclusion:
+Work)
+Difference In Response:
+Insights Gained:
+Conclusion:
+
+Ex9:
+Daily)
+Difference In Response:
+Insights Gained:
+Conclusion:
+Work)
+Difference In Response:
+Insights Gained:
+Conclusion:
+
+Ex10:
+Daily)
+Difference In Response:
+Insights Gained:
+Conclusion:
+Work)
+Difference In Response:
+Insights Gained:
+Conclusion:
+
+Ex11:
+Daily)
+Difference In Response:
+Insights Gained:
+Conclusion:
+Work)
+Difference In Response:
+Insights Gained:
+Conclusion:
+
+Ex12:
+Daily)
+Difference In Response:
+Insights Gained:
+Conclusion:
+Work)
+Difference In Response:
+Insights Gained:
+Conclusion:
+
+Ex13:
+Daily)
+Difference In Response:
+Insights Gained:
+Conclusion:
+Work)
+Difference In Response:
+Insights Gained:
+Conclusion:
