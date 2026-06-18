@@ -1,0 +1,133 @@
+Ex1: Briefing = Providing the right fields and Context
+
+Daily)
+Difference In Response: The first answer was a general answer the second answer addresses all my needs. Furthermore, I noticed that at the end of the first answer it was asking me for suggestions meaninf that the response itself was saying that it needed filters for more suitable answer.
+On the other hand we already provided the filters in the prompt for the specific query which helped us reach the best suitable pick.
+In the second answer we were able to reach the best pick , in the first answer we were not able to reach the best pick.
+
+Work)
+Difference In Response:The first response tell me how to format the email.It just provides generic guidelines. The second response provides the email directly instead of generic guidelines or rules.
+
+
+----------------------------
+
+Ex2:Goal: A confident tone is not the same as a correct answer. (detect broken reasoning, frequncy creates confidence and confidence is not reliable. A confident tone is not the same as a correct answer)
+Daily)
+The AI admitted that it want sure in the The information was not available to it. It did not sound confident.
+Work)
+It confidently gave the response 30 days.
+Conclusion: For recent, local or private facts, make it search or admit uncertainty.
+
+----------------------------
+
+Ex3:(Goal: See how your wording makes the AI answer from memory, search the
+web, or run deep research.)
+
+Daily)
+Which prompts made the AI actually search? How could you tell? :
+The Weather Forcast prompt made the AI actually search due to "This Weekend" keyword
+
+Work)
+latest Developments prompt made the AI actually search due to "This month" keyword
+Research Thoroughly keyword made the AI do Deep Research.
+
+----------------------------
+
+Ex4:Load context up front instead of making the AI guess.
+
+Daily)
+Which single piece of context changed the answer the most? 
+the ingredients changed the answers the most, then the spices.
+Work)
+Which single piece of context changed the answer the most?
+Friendly tone, bullet points made it different
+
+-------------------------------
+
+Ex5:
+Daily)
+ Did "think hard" produce a deeper answer? What changed?
+ Yes, think hard produced a more detailed and deeper answer with better reasoning. There were more details on reasponing and options. The output was more structured.
+Work)
+ Did "think hard" produce a deeper answer? What changed?
+ Yes, "think hard" produced deeper output and mentioned all the caveates as well.
+ 
+----------------------------------------------------------------------------
+Ex6: (Human Bias: The prompt contains an inclination toward a conclusion, choice, explanation, or solution before the investigation has happened. )See how the way you ask pushes AI to just agree with you.
+
+Daily)
+Did Step B give you a reason you hadn't thought of? Write one.
+The model did hedging and didnt agree with me blindly and gave me instead a balanced answer.
+
+---------------------------------------------------------------------------
+
+Ex7:Goal: Never accept the first answer. The value is in the back-and-forth
+Daily)
+Was the idea you ended with better than anything in Round 1? Why?
+
+Yes it was better since it was based on my feedback and all my preferences were integrated in it.
+
+---------------------------------------------------------------------------
+
+Ex8:
+Daily)
+ What did the AI read correctly? What did it get wrong or flag?
+ 
+ AI read most of the handwritten items correctly , even it performed well on some images with blurry repeated phrases.
+Work)
+ What did the AI read correctly? What did it get wrong or flag?
+ AI flagged a few words as [unclear], the words were not even readable with the human sight as well.
+
+----------------------------------
+Ex9:
+Daily)
+Did it work first try? What did you change in the iterate step?
+It worked in the first try and I changed the theme and button in the second one.
+
+-----------------------------------
+Ex10:
+
+Did Round 1 run code or guess? How could you tell the difference?
+
+No code was shown in round 1 meaning that AI was guessing instead of running code. It must show code if it ran it otherwise we will assert that it made guesses which is unreliable approach.
+When I run the second round, it showed the code meaning that it did not make guesses this time. 
+In round 1  Calculation Q1 nad Q3 were 44 and 88, whereas in the round 2 they were 40.5 and 85.0. 
+Furthermore, IQR in round 1 was 42 and in round 2 , it became 44.5, which resulted in altogether different lower and upper fences.
+Both ways we reached the same result however the first result was guessing based.
+
+Moreover, Chatgpt gave me the right answers during round 2, in the first approach , I tried google ai studio then ChatGPT
+
+(This is the silent Faliure Mode)
+
+
+Conclusion from Exercise: If it is not showing code then we assert that it did not run the code and only showed guesses and we wont allow guessing in any case.
+
+------------------------------------
+Ex11:
+
+What's one thing you'd NEVER grant an AI app on day one?
+Ans: Write Permissions and Rename Permissions.
+
+------------------------------------
+Ex12:
+Which tool did better on THIS task — and what was different?
+
+Daily)
+I used Chatgpt and Claude. Claude's plan was more realistic and the plan was 
+
+Work)
+ChatGPT worked better for the Linkedin Post and it also created hashtags without asking. Claude's response was shallow in this context
+
+
+-------------------------------------
+
+Ex13:
+
+ What did Tool B catch that Tool A missed (or vice versa)?
+ 
+ The Tool A captured that Evidience was missing from claims, while Tool B Captured that there was lack in the structural cohesion and a gist was missing at the end.
+ Both suggested different ways to raise the score.
+ 
+ 
+--------------------------------------
+
