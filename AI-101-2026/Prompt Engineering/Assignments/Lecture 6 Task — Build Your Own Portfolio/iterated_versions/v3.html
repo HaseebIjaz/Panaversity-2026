@@ -1,0 +1,3044 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haseeb Ijaz | Senior Frontend Engineer & UI Architect</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                900: "#090d16",
+                950: "#05070c",
+              },
+              brand: {
+                400: "#34d399",
+                500: "#10b981", // Emerald Accents
+                600: "#059669",
+                950: "#012015",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+              mono: ["JetBrains Mono", "Fira Code", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #05070c;
+        color: #f1f5f9;
+      }
+      /* Engineering Dotted Matrix Mesh */
+      .mesh-bg {
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.05) 1px,
+          transparent 0
+        );
+        background-size: 24px 24px;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #05070c;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #10b981;
+      }
+      /* Premium Syntax Highlighting */
+      .syntax-keyword {
+        color: #f472b6;
+        font-weight: 600;
+      }
+      .syntax-string {
+        color: #34d399;
+      }
+      .syntax-type {
+        color: #60a5fa;
+      }
+      .syntax-comment {
+        color: #64748b;
+        font-style: italic;
+      }
+      .syntax-const {
+        color: #fbbf24;
+      }
+      .syntax-function {
+        color: #818cf8;
+      }
+    </style>
+  </head>
+  <body
+    class="selection:bg-brand-500/30 selection:text-brand-100 overflow-x-hidden relative mesh-bg"
+  >
+    <!-- Gradient Ambient light sources -->
+    <div
+      class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px] -z-10 pointer-events-none"
+    ></div>
+    <div
+      class="absolute top-[1200px] right-1/4 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[140px] -z-10 pointer-events-none"
+    ></div>
+    <div
+      class="absolute bottom-[800px] left-10 w-[450px] h-[450px] bg-emerald-500/5 rounded-full blur-[100px] -z-10 pointer-events-none"
+    ></div>
+
+    <!-- Sticky Navigation Header -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-white/5 bg-slate-950/75 backdrop-blur-lg"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      >
+        <a
+          href="#"
+          class="group flex items-center space-x-2 text-lg font-bold tracking-tight text-white"
+        >
+          <span class="text-brand-500 font-mono">&lt;</span>
+          <span class="tracking-tight hover:text-brand-400 transition-colors"
+            >Haseeb Ijaz</span
+          >
+          <span class="text-brand-500 font-mono">/&gt;</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav
+          class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-wider uppercase text-slate-300"
+        >
+          <a href="#about" class="hover:text-brand-500 transition-colors"
+            >About</a
+          >
+          <a href="#skills" class="hover:text-brand-500 transition-colors"
+            >Skills</a
+          >
+          <a href="#experience" class="hover:text-brand-500 transition-colors"
+            >Experience</a
+          >
+          <a href="#projects" class="hover:text-brand-500 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#performance-lab"
+            class="text-brand-400 hover:text-brand-500 font-semibold transition-colors flex items-center gap-1.5 normal-case font-sans"
+          >
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"
+              ></span>
+            </span>
+            Performance Lab
+          </a>
+          <a href="#contact" class="hover:text-brand-500 transition-colors"
+            >Contact</a
+          >
+        </nav>
+
+        <div class="hidden md:flex items-center space-x-4">
+          <a
+            href="#contact"
+            class="rounded-lg bg-brand-500 px-4 py-2 text-xs font-bold tracking-wider uppercase text-slate-950 transition-all hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-slate-950"
+          >
+            Contact Me
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button
+          id="mobile-menu-btn"
+          class="rounded-lg p-2 text-slate-400 hover:bg-slate-900 hover:text-white md:hidden"
+          aria-label="Toggle Menu"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              id="menu-icon"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Nav Menu Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden border-b border-white/5 bg-slate-950 px-4 py-4 md:hidden"
+      >
+        <nav
+          class="flex flex-col space-y-4 text-base font-medium text-slate-300"
+        >
+          <a href="#about" class="hover:text-brand-500 transition-colors"
+            >About</a
+          >
+          <a href="#skills" class="hover:text-brand-500 transition-colors"
+            >Skills</a
+          >
+          <a href="#experience" class="hover:text-brand-500 transition-colors"
+            >Experience</a
+          >
+          <a href="#projects" class="hover:text-brand-500 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#performance-lab"
+            class="text-brand-400 hover:text-brand-500 transition-colors flex items-center gap-2"
+          >
+            <span
+              class="h-2 w-2 rounded-full bg-brand-500 animate-pulse"
+            ></span>
+            Performance Lab
+          </a>
+          <a href="#contact" class="hover:text-brand-500 transition-colors"
+            >Contact</a
+          >
+          <a
+            href="#contact"
+            class="inline-block rounded-lg bg-brand-500 px-4 py-2.5 text-center text-sm font-semibold text-slate-950 transition hover:bg-brand-600"
+          >
+            Contact Me
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+          <!-- Hero Left Content -->
+          <div class="lg:col-span-7 space-y-6">
+            <div
+              class="inline-flex items-center gap-x-2 rounded-full border border-brand-500/20 bg-brand-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-brand-400 font-mono"
+            >
+              <span
+                class="flex h-2 w-2 rounded-full bg-brand-500 animate-pulse"
+              ></span>
+              Available for Senior Technical Roles
+            </div>
+
+            <h1
+              class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white"
+            >
+              Haseeb Ijaz
+            </h1>
+            <p
+              class="text-xl sm:text-3xl font-medium bg-gradient-to-r from-slate-100 via-slate-300 to-slate-400 bg-clip-text text-transparent leading-tight"
+            >
+              Senior Software Engineer & UI Architect
+            </p>
+            <p
+              class="max-w-xl text-base sm:text-lg text-slate-400 leading-relaxed"
+            >
+              I build performant, highly scalable, and user-focused web
+              applications. Specializing in functional React systems, custom
+              TypeScript architectures, and runtime performance tuning.
+            </p>
+
+            <!-- CTAs -->
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a
+                href="#projects"
+                class="rounded-lg bg-brand-500 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-950 transition-all hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500 shadow-lg shadow-brand-500/10"
+              >
+                View Project Work
+              </a>
+              <a
+                href="#contact"
+                class="rounded-lg border border-white/10 bg-slate-900/50 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-200 transition-all hover:bg-slate-900 hover:text-white"
+              >
+                Contact Me
+              </a>
+              <a
+                href="https://linkedin.com/in/haseebijaz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-slate-900/50 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-300 transition-all hover:bg-slate-900 hover:text-white"
+              >
+                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+                LinkedIn Profile
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right: Dynamic Interactive Terminal -->
+          <div class="lg:col-span-5">
+            <div
+              class="relative overflow-hidden rounded-xl border border-white/5 bg-slate-950/80 shadow-2xl backdrop-blur-md"
+            >
+              <!-- Terminal Title Bar -->
+              <div
+                class="flex items-center justify-between border-b border-white/5 bg-slate-900/40 px-4 py-3"
+              >
+                <div class="flex space-x-2">
+                  <span class="h-3 w-3 rounded-full bg-red-500/80"></span>
+                  <span class="h-3 w-3 rounded-full bg-yellow-500/80"></span>
+                  <span class="h-3 w-3 rounded-full bg-green-500/80"></span>
+                </div>
+                <span class="text-xs font-mono text-slate-500"
+                  >profile_spec.ts</span
+                >
+              </div>
+              <!-- Terminal Code Area -->
+              <div
+                class="p-6 font-mono text-xs sm:text-sm leading-relaxed text-slate-300"
+              >
+                <p class="text-slate-500 mb-2">
+                  // Structural Specification Schema
+                </p>
+                <p>
+                  <span class="syntax-keyword">const</span>
+                  <span class="syntax-const">engineer</span> = {
+                </p>
+                <p class="pl-4">
+                  name: <span class="syntax-string">'Haseeb Ijaz'</span>,
+                </p>
+                <p class="pl-4">
+                  role:
+                  <span class="syntax-string"
+                    >'Senior Software Engineer (Frontend)'</span
+                  >,
+                </p>
+                <p class="pl-4">
+                  experienceYears: <span class="syntax-const">7</span>,
+                </p>
+                <p class="pl-4">
+                  location:
+                  <span class="syntax-string">'Lahore, Pakistan'</span>,
+                </p>
+                <p class="pl-4">stack: [</p>
+                <p class="pl-8">
+                  <span class="syntax-string">'React'</span>,
+                  <span class="syntax-string">'TypeScript'</span>,
+                  <span class="syntax-string">'Next.js'</span>,
+                  <span class="syntax-string">'AntD'</span>
+                </p>
+                <p class="pl-4">],</p>
+                <p class="pl-4">focus: [</p>
+                <p class="pl-8">
+                  <span class="syntax-string">'Performance Tuning'</span>,
+                  <span class="syntax-string">'Core UI Infrastructure'</span>
+                </p>
+                <p class="pl-4">]</p>
+                <p>};</p>
+                <p class="mt-4 text-slate-500">
+                  // Read-only environment output
+                </p>
+                <p>
+                  <span class="syntax-function">console</span>.<span
+                    class="syntax-function"
+                    >log</span
+                  >(engineer.role);
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Playable Game Element: Interactive Optimization Sandbox -->
+    <section
+      id="performance-lab"
+      class="py-24 bg-slate-950/80 border-y border-white/5"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-brand-500 text-sm font-semibold tracking-wide uppercase font-mono"
+            >Performance Lab v3.0</span
+          >
+          <h2
+            class="text-3xl font-bold tracking-tight text-white sm:text-4xl mt-2"
+          >
+            Dynamic Optimization Sandbox
+          </h2>
+          <p class="mt-4 text-slate-400 text-base">
+            Toggle optimizations to instantly simulate how structural
+            configurations affect runtime frame rate, Lighthouse scoring, bundle
+            size, and output code structures.
+          </p>
+        </div>
+
+        <!-- Dashboard App Simulator -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Optimizer Settings Controls (Left) -->
+          <div
+            class="lg:col-span-4 bg-slate-900/40 border border-white/5 rounded-xl p-6 flex flex-col justify-between backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <div>
+              <h3
+                class="text-base font-bold text-white mb-4 flex items-center gap-2"
+              >
+                <svg
+                  class="w-5 h-5 text-brand-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  />
+                </svg>
+                Optimization Configurations
+              </h3>
+
+              <div class="space-y-4">
+                <!-- Toggle 1 -->
+                <div
+                  class="flex items-center justify-between p-3.5 rounded-lg bg-slate-950 border border-white/5 transition-all hover:border-white/10"
+                >
+                  <div>
+                    <label class="text-sm font-semibold text-white block"
+                      >React.memo()</label
+                    >
+                    <span class="text-xs text-slate-400"
+                      >Skips unnecessary render loops</span
+                    >
+                  </div>
+                  <button
+                    id="memo-toggle"
+                    class="relative inline-flex h-6 w-11 items-center rounded-full bg-slate-800 transition-colors focus:outline-none"
+                    role="switch"
+                    aria-checked="false"
+                  >
+                    <span
+                      class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1"
+                    ></span>
+                  </button>
+                </div>
+
+                <!-- Toggle 2 -->
+                <div
+                  class="flex items-center justify-between p-3.5 rounded-lg bg-slate-950 border border-white/5 transition-all hover:border-white/10"
+                >
+                  <div>
+                    <label class="text-sm font-semibold text-white block"
+                      >DOM Virtualization</label
+                    >
+                    <span class="text-xs text-slate-400"
+                      >Renders visible items in viewport only</span
+                    >
+                  </div>
+                  <button
+                    id="virt-toggle"
+                    class="relative inline-flex h-6 w-11 items-center rounded-full bg-slate-800 transition-colors focus:outline-none"
+                    role="switch"
+                    aria-checked="false"
+                  >
+                    <span
+                      class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1"
+                    ></span>
+                  </button>
+                </div>
+
+                <!-- Toggle 3 -->
+                <div
+                  class="flex items-center justify-between p-3.5 rounded-lg bg-slate-950 border border-white/5 transition-all hover:border-white/10"
+                >
+                  <div>
+                    <label class="text-sm font-semibold text-white block"
+                      >Tree Shaking</label
+                    >
+                    <span class="text-xs text-slate-400"
+                      >Prunes dead imports at build time</span
+                    >
+                  </div>
+                  <button
+                    id="asset-toggle"
+                    class="relative inline-flex h-6 w-11 items-center rounded-full bg-slate-800 transition-colors focus:outline-none"
+                    role="switch"
+                    aria-checked="false"
+                  >
+                    <span
+                      class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1"
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-white/5">
+              <span class="text-xs text-slate-400 block font-mono"
+                >Simulated Telemetry Stream:</span
+              >
+              <div
+                class="h-2 w-full bg-slate-950 rounded-full overflow-hidden mt-2 border border-white/5"
+              >
+                <div
+                  id="simulated-traffic"
+                  class="h-full bg-brand-500 w-1/3 animate-pulse"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulation Visual Metrics & Graphs (Right) -->
+          <div
+            class="lg:col-span-8 bg-slate-900/40 border border-white/5 rounded-xl p-6 flex flex-col justify-between backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-base font-bold text-white">
+                  Live Performance Telemetry
+                </h3>
+                <span
+                  class="text-xs font-mono text-slate-400 px-2.5 py-1 rounded bg-slate-950 border border-white/5"
+                  >Telemetry status: Active</span
+                >
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                <!-- Lighthouse Score -->
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 text-center relative overflow-hidden"
+                >
+                  <span class="text-xs font-semibold text-slate-400 block mb-1"
+                    >Lighthouse Performance</span
+                  >
+                  <div
+                    id="perf-score"
+                    class="text-3xl font-mono font-extrabold text-red-500"
+                  >
+                    45%
+                  </div>
+                  <span
+                    id="perf-status"
+                    class="text-[10px] uppercase font-mono tracking-wider text-red-500"
+                    >Critical</span
+                  >
+                </div>
+                <!-- Frame Rate (FPS) -->
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 text-center"
+                >
+                  <span class="text-xs font-semibold text-slate-400 block mb-1"
+                    >Frame Rate (FPS)</span
+                  >
+                  <div
+                    id="fps-score"
+                    class="text-3xl font-mono font-extrabold text-red-500"
+                  >
+                    12 FPS
+                  </div>
+                  <span
+                    id="fps-status"
+                    class="text-[10px] uppercase font-mono tracking-wider text-red-500"
+                    >Janky Scroll</span
+                  >
+                </div>
+                <!-- Bundle Footprint -->
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 text-center"
+                >
+                  <span class="text-xs font-semibold text-slate-400 block mb-1"
+                    >Build Bundle Size</span
+                  >
+                  <div
+                    id="size-score"
+                    class="text-3xl font-mono font-extrabold text-amber-500"
+                  >
+                    1.8 MB
+                  </div>
+                  <span
+                    id="size-status"
+                    class="text-[10px] uppercase font-mono tracking-wider text-amber-500"
+                    >Heavy Bundle</span
+                  >
+                </div>
+              </div>
+
+              <!-- Real-time dynamic visual render simulator -->
+              <div class="border border-white/5 rounded-lg p-4 bg-slate-950">
+                <div
+                  class="flex items-center justify-between text-xs text-slate-500 mb-2 font-mono"
+                >
+                  <span>Realtime Render Output Loop</span>
+                  <span id="nodes-count" class="text-brand-400"
+                    >10,000 DOM Nodes Rendering</span
+                  >
+                </div>
+                <!-- Canvas graph simulation -->
+                <div
+                  class="h-24 w-full bg-slate-900/50 rounded border border-white/5 overflow-hidden relative"
+                >
+                  <canvas
+                    id="fps-canvas"
+                    class="absolute inset-0 w-full h-full"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/5 pt-6"
+            >
+              <p class="text-xs text-slate-400 max-w-md">
+                Adjust configurations on the left to see how production
+                virtualization and tree-shaking patterns change output
+                properties.
+              </p>
+              <button
+                id="optimize-all-btn"
+                class="text-xs font-bold uppercase tracking-wider bg-brand-500/10 hover:bg-brand-500/20 text-brand-400 border border-brand-500/30 px-5 py-2.5 rounded transition-all"
+              >
+                Run Full Performance Sweep
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Syntax Highlighted IDE View -->
+        <div
+          class="mt-8 bg-slate-900/40 border border-white/5 rounded-xl overflow-hidden shadow-2xl backdrop-blur-sm"
+        >
+          <div
+            class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-slate-950/40"
+          >
+            <div class="flex items-center space-x-2">
+              <span
+                class="w-3 h-3 rounded-full bg-brand-400 animate-pulse"
+              ></span>
+              <span class="text-xs font-semibold text-slate-300"
+                >Live Code Syntax Viewer</span
+              >
+            </div>
+            <span class="text-xs font-mono text-slate-500"
+              >ActiveSystemGenerator.tsx</span
+            >
+          </div>
+          <div
+            class="p-6 font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto bg-slate-950/90"
+          >
+            <pre><code id="code-output" class="text-slate-300"></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
+          <div>
+            <span
+              class="text-brand-500 text-sm font-semibold tracking-wide uppercase font-mono"
+              >Professional Profile</span
+            >
+            <h2
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl mt-2"
+            >
+              Core Engineering Approach
+            </h2>
+            <p class="mt-6 text-base text-slate-400 leading-relaxed">
+              With over 7 years of professional experience, I construct web
+              applications that meet strict stability standards. My development
+              approach focuses on code maintainability and runtime performance.
+            </p>
+            <p class="mt-4 text-base text-slate-400 leading-relaxed">
+              I specialize in streamlining high-density data visualizations,
+              configuring complex routing systems, and establishing reusable
+              design system architectures.
+            </p>
+            <!-- Experience Indicators -->
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div
+                class="rounded-lg bg-slate-900 border border-white/5 p-4 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="text-3xl font-bold text-white">7+ Years</div>
+                <div class="text-xs text-slate-400 mt-1">
+                  Professional Experience
+                </div>
+              </div>
+              <div
+                class="rounded-lg bg-slate-900 border border-white/5 p-4 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="text-3xl font-bold text-white">5 Industries</div>
+                <div class="text-xs text-slate-400 mt-1">
+                  SaaS & Deep Tech Integration
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specialized Domain Matrix -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-semibold text-white">
+              Targeted Contributions
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Industry 1 -->
+              <div
+                class="flex items-start space-x-3 p-4 rounded-lg bg-slate-900 border border-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="mt-1 text-brand-500 shrink-0">
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-200">Healthcare</h4>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Constructed secure patient dashboards, synchronized metrics
+                    engines, and chat panels.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Industry 2 -->
+              <div
+                class="flex items-start space-x-3 p-4 rounded-lg bg-slate-900 border border-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="mt-1 text-brand-500 shrink-0">
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 12l3-3 3 3 4-4M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-200">
+                    Marketing & SaaS
+                  </h4>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Integrated personalization engines, analytics charts, and
+                    campaigns modules.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Industry 3 -->
+              <div
+                class="flex items-start space-x-3 p-4 rounded-lg bg-slate-900 border border-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="mt-1 text-brand-500 shrink-0">
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-200">
+                    Oil & Gas UI Modern
+                  </h4>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Upgraded data visualizations for reservoir logging
+                    applications.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Industry 4 -->
+              <div
+                class="flex items-start space-x-3 p-4 rounded-lg bg-slate-900 border border-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="mt-1 text-brand-500 shrink-0">
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-200">
+                    EdTech Integration
+                  </h4>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Configured coding tutorial widgets and dashboard layouts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tech Stack Section -->
+    <section id="skills" class="py-24 bg-slate-900/30">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-brand-500 text-sm font-semibold tracking-wide uppercase font-mono"
+            >Expertise Directory</span
+          >
+          <h2
+            class="text-3xl font-bold tracking-tight text-white sm:text-4xl mt-2"
+          >
+            Core Technical Ecosystem
+          </h2>
+          <p class="mt-4 text-slate-400 text-base">
+            Core frameworks and development models used in my day-to-day
+            workflow.
+          </p>
+        </div>
+
+        <!-- Custom Tabbed Interface for Skills -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Tab Controls -->
+          <div
+            class="md:col-span-1 flex flex-row md:flex-col overflow-x-auto md:overflow-visible gap-2 pb-4 md:pb-0"
+          >
+            <button
+              onclick="switchSkillTab('frontend')"
+              id="tab-frontend"
+              class="skill-tab-btn active shrink-0 text-left px-4 py-3 rounded-lg text-xs font-bold tracking-wider uppercase border-l-2 bg-slate-900 border-brand-500 text-white transition-all"
+            >
+              Frontend Stack
+            </button>
+            <button
+              onclick="switchSkillTab('ui')"
+              id="tab-ui"
+              class="skill-tab-btn shrink-0 text-left px-4 py-3 rounded-lg text-xs font-bold tracking-wider uppercase border-l-2 border-transparent text-slate-400 hover:bg-slate-900/50 hover:text-white transition-all"
+            >
+              UI & Libraries
+            </button>
+            <button
+              onclick="switchSkillTab('tools')"
+              id="tab-tools"
+              class="skill-tab-btn shrink-0 text-left px-4 py-3 rounded-lg text-xs font-bold tracking-wider uppercase border-l-2 border-transparent text-slate-400 hover:bg-slate-900/50 hover:text-white transition-all"
+            >
+              Tools & Workspace
+            </button>
+            <button
+              onclick="switchSkillTab('practices')"
+              id="tab-practices"
+              class="skill-tab-btn shrink-0 text-left px-4 py-3 rounded-lg text-xs font-bold tracking-wider uppercase border-l-2 border-transparent text-slate-400 hover:bg-slate-900/50 hover:text-white transition-all"
+            >
+              Practices
+            </button>
+          </div>
+
+          <!-- Tab Content panels -->
+          <div
+            class="md:col-span-3 bg-slate-900/40 border border-white/5 rounded-xl p-6 sm:p-8 min-h-[340px] backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <!-- Frontend Panel -->
+            <div id="content-frontend" class="skill-panel space-y-6">
+              <div>
+                <h3 class="text-lg font-bold text-white">
+                  Browser Technology Integration
+                </h3>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1 font-mono">
+                  Core languages and development engines.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    React / Next.js
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Declarative architecture, custom rendering optimizations,
+                    state routing patterns.</span
+                  >
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    TypeScript
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Strict interface declarations, mapping contracts, generic
+                    utility definitions.</span
+                  >
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    JavaScript (ES6+)
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Functional loops, closures, asynchronous actions,
+                    performance-critical path adjustments.</span
+                  >
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    HTML5 & CSS3
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Semantic elements, grid layout configurations, custom
+                    hardware transitions.</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- UI Panel -->
+            <div id="content-ui" class="skill-panel hidden space-y-6">
+              <div>
+                <h3 class="text-lg font-bold text-white">
+                  Layout Libraries & Visual Integration
+                </h3>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1 font-mono">
+                  Component suites and telemetry rendering integrations.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    Ant Design
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Managing global theme properties, custom styling, component
+                    overrides.</span
+                  >
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    Chart.js
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Integrating custom data dashboards and metrics
+                    graphs.</span
+                  >
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    WebSockets
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Integrating low-latency data loops for live message
+                    systems.</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools Panel -->
+            <div id="content-tools" class="skill-panel hidden space-y-6">
+              <div>
+                <h3 class="text-lg font-bold text-white">
+                  Version Control & Layout Utilities
+                </h3>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1 font-mono">
+                  Tools used to support continuous integration and team
+                  alignment.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    Git / Version Control
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Branching patterns, version tags, and code review
+                    operations.</span
+                  >
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">Figma</div>
+                  <span class="text-xs text-slate-400"
+                    >Translating system design layouts into responsive, modular
+                    browser elements.</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Practices Panel -->
+            <div id="content-practices" class="skill-panel hidden space-y-6">
+              <div>
+                <h3 class="text-lg font-bold text-white">
+                  System Delivery Practices
+                </h3>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1 font-mono">
+                  Development methodologies and standards.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    Technical Specifications
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Authoring design papers and specs to align engineering
+                    groups.</span
+                  >
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    Performance Tuning
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Managing bundle split limits, loading pipelines, and
+                    garbage collection pathways.</span
+                  >
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    Refactoring & Testing
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Improving legacy codebases and maintaining unit testing
+                    structures.</span
+                  >
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all"
+                >
+                  <div class="text-brand-400 font-bold text-sm mb-1">
+                    Engineering Documentation
+                  </div>
+                  <span class="text-xs text-slate-400"
+                    >Writing clean, approachable technical references and code
+                    guidelines.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-brand-500 text-sm font-semibold tracking-wide uppercase font-mono"
+            >Career Timeline</span
+          >
+          <h2
+            class="text-3xl font-bold tracking-tight text-white sm:text-4xl mt-2"
+          >
+            Professional Contributions
+          </h2>
+          <p class="mt-4 text-slate-400 text-base">
+            A summary of roles, software contributions, and optimizations.
+          </p>
+        </div>
+
+        <!-- Timeline Structure -->
+        <div
+          class="relative border-l border-white/5 max-w-4xl mx-auto pl-6 sm:pl-8 space-y-12"
+        >
+          <!-- Experience Item 1: Tekboox (PRG) -->
+          <div class="relative group">
+            <!-- Bullet Point -->
+            <span
+              class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex items-center justify-center h-4 w-4 rounded-full bg-slate-950 border-2 border-brand-500 group-hover:bg-brand-500 transition-all duration-300"
+            >
+              <span
+                class="h-1.5 w-1.5 rounded-full bg-brand-500 group-hover:bg-slate-950"
+              ></span>
+            </span>
+
+            <div
+              class="p-6 rounded-xl bg-slate-900/40 border border-white/5 hover:border-white/10 transition-all backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+            >
+              <div
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4"
+              >
+                <div>
+                  <span
+                    class="text-xs font-semibold text-brand-400 uppercase tracking-wider font-mono"
+                    >Tekboox (PRG)</span
+                  >
+                  <h3 class="text-xl font-bold text-white">
+                    Senior Software Engineer (Frontend)
+                  </h3>
+                </div>
+                <span
+                  class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-slate-950 text-slate-300 border border-white/5 self-start sm:self-center font-mono"
+                >
+                  Jun 2024 – Present
+                </span>
+              </div>
+
+              <p class="text-sm text-slate-400 mb-4">
+                Led development for the RPD V2 team, overseeing clinical
+                interface designs and secure patient dashboard portals.
+              </p>
+
+              <div class="space-y-2 mb-6">
+                <h4
+                  class="text-xs font-semibold text-white uppercase tracking-wider font-mono"
+                >
+                  Key Contributions
+                </h4>
+                <ul class="space-y-2 text-xs text-slate-400">
+                  <li class="flex items-start gap-2">
+                    <svg
+                      class="w-4 h-4 text-brand-500 shrink-0 mt-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span
+                      >Built data dashboards, patient listings, and integrated
+                      messaging systems.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg
+                      class="w-4 h-4 text-brand-500 shrink-0 mt-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span
+                      >Refactored pagination workflows, reducing data load
+                      speeds across large tables.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg
+                      class="w-4 h-4 text-brand-500 shrink-0 mt-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span
+                      >Guided front-end developers, managed pull requests, and
+                      maintained coding standards.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2.5 py-1 rounded bg-slate-950 border border-white/5 text-xs font-semibold text-slate-300 font-mono"
+                  >React</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded bg-slate-950 border border-white/5 text-xs font-semibold text-slate-300 font-mono"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded bg-slate-950 border border-white/5 text-xs font-semibold text-slate-300 font-mono"
+                  >Ant Design</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded bg-slate-950 border border-white/5 text-xs font-semibold text-slate-300 font-mono"
+                  >WebSockets</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 2: Formulatrix Pakistan -->
+          <div class="relative group">
+            <span
+              class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex items-center justify-center h-4 w-4 rounded-full bg-slate-950 border-2 border-brand-500 group-hover:bg-brand-500 transition-all duration-300"
+            >
+              <span
+                class="h-1.5 w-1.5 rounded-full bg-brand-500 group-hover:bg-slate-950"
+              ></span>
+            </span>
+
+            <div
+              class="p-6 rounded-xl bg-slate-900/40 border border-white/5 hover:border-white/10 transition-all backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+            >
+              <div
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4"
+              >
+                <div>
+                  <span
+                    class="text-xs font-semibold text-brand-400 uppercase tracking-wider font-mono"
+                    >Formulatrix Pakistan</span
+                  >
+                  <h3 class="text-xl font-bold text-white">
+                    Senior Software Engineer (Full Stack)
+                  </h3>
+                </div>
+                <span
+                  class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-slate-950 text-slate-300 border border-white/5 self-start sm:self-center font-mono"
+                >
+                  May 2023 – Feb 2024
+                </span>
+              </div>
+
+              <p class="text-sm text-slate-400 mb-4">
+                Refactored application modules, optimizing initial load times
+                and asset configurations.
+              </p>
+
+              <div class="space-y-2 mb-6">
+                <h4
+                  class="text-xs font-semibold text-white uppercase tracking-wider font-mono"
+                >
+                  Key Contributions
+                </h4>
+                <ul class="space-y-2 text-xs text-slate-400">
+                  <li class="flex items-start gap-2">
+                    <svg
+                      class="w-4 h-4 text-brand-500 shrink-0 mt-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span
+                      >Built custom client-side tools and functional system
+                      layers.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg
+                      class="w-4 h-4 text-brand-500 shrink-0 mt-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span
+                      >Optimized build size configurations, reducing overall
+                      asset bundles by approximately 30%.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2.5 py-1 rounded bg-slate-950 border border-white/5 text-xs font-semibold text-slate-300 font-mono"
+                  >React</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded bg-slate-950 border border-white/5 text-xs font-semibold text-slate-300 font-mono"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded bg-slate-950 border border-white/5 text-xs font-semibold text-slate-300 font-mono"
+                  >TypeScript</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 3: xiQ Inc. -->
+          <div class="relative group">
+            <span
+              class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex items-center justify-center h-4 w-4 rounded-full bg-slate-950 border-2 border-brand-500 group-hover:bg-brand-500 transition-all duration-300"
+            >
+              <span
+                class="h-1.5 w-1.5 rounded-full bg-brand-500 group-hover:bg-slate-950"
+              ></span>
+            </span>
+
+            <div
+              class="p-6 rounded-xl bg-slate-900/40 border border-white/5 hover:border-white/10 transition-all backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+            >
+              <div
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4"
+              >
+                <div>
+                  <span
+                    class="text-xs font-semibold text-brand-400 uppercase tracking-wider font-mono"
+                    >xiQ Inc.</span
+                  >
+                  <h3 class="text-xl font-bold text-white">
+                    Senior Software Engineer (Frontend)
+                  </h3>
+                </div>
+                <span
+                  class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-slate-950 text-slate-300 border border-white/5 self-start sm:self-center font-mono"
+                >
+                  Jul 2021 – Feb 2023
+                </span>
+              </div>
+
+              <p class="text-sm text-slate-400 mb-4">
+                Developed core analytics tools and campaign monitoring systems.
+              </p>
+
+              <div class="space-y-2 mb-6">
+                <h4
+                  class="text-xs font-semibold text-white uppercase tracking-wider font-mono"
+                >
+                  Key Contributions
+                </h4>
+                <ul class="space-y-2 text-xs text-slate-400">
+                  <li class="flex items-start gap-2">
+                    <svg
+                      class="w-4 h-4 text-brand-500 shrink-0 mt-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span
+                      >Integrated the analytical tracking and visual campaign
+                      email layouts.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg
+                      class="w-4 h-4 text-brand-500 shrink-0 mt-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span
+                      >Built custom chart components to represent user
+                      engagement statistics.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2.5 py-1 rounded bg-slate-950 border border-white/5 text-xs font-semibold text-slate-300 font-mono"
+                  >React</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded bg-slate-950 border border-white/5 text-xs font-semibold text-slate-300 font-mono"
+                  >Chart.js</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded bg-slate-950 border border-white/5 text-xs font-semibold text-slate-300 font-mono"
+                  >JavaScript</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 4: Educative & LMKR -->
+          <div class="relative group">
+            <span
+              class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex items-center justify-center h-4 w-4 rounded-full bg-slate-950 border-2 border-brand-500 group-hover:bg-brand-500 transition-all duration-300"
+            >
+              <span
+                class="h-1.5 w-1.5 rounded-full bg-brand-500 group-hover:bg-slate-950"
+              ></span>
+            </span>
+
+            <div
+              class="p-6 rounded-xl bg-slate-900/40 border border-white/5 hover:border-white/10 transition-all backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+            >
+              <div
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4"
+              >
+                <div>
+                  <span
+                    class="text-xs font-semibold text-brand-400 uppercase tracking-wider font-mono"
+                    >Educative & LMKR</span
+                  >
+                  <h3 class="text-lg font-bold text-white">
+                    Full Stack / Application Engineer
+                  </h3>
+                </div>
+                <span
+                  class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-slate-950 text-slate-300 border border-white/5 self-start sm:self-center font-mono"
+                >
+                  2019 – 2021
+                </span>
+              </div>
+
+              <p class="text-sm text-slate-400 mb-4">
+                Developed interactive widgets and modernized legacy application
+                rendering frameworks.
+              </p>
+
+              <div class="space-y-2 mb-6">
+                <h4
+                  class="text-xs font-semibold text-white uppercase tracking-wider font-mono"
+                >
+                  Key Contributions
+                </h4>
+                <ul class="space-y-2 text-xs text-slate-400">
+                  <li class="flex items-start gap-2">
+                    <svg
+                      class="w-4 h-4 text-brand-500 shrink-0 mt-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span
+                      >Built custom coding exercise elements and workspace
+                      dashboard modules (Educative).</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg
+                      class="w-4 h-4 text-brand-500 shrink-0 mt-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span
+                      >Refactored data processing pathways for specialized
+                      reservoir modeling software (LMKR).</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="py-24 bg-slate-900/30">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-brand-500 text-sm font-semibold tracking-wide uppercase font-mono"
+            >Output Portfolio</span
+          >
+          <h2
+            class="text-3xl font-bold tracking-tight text-white sm:text-4xl mt-2"
+          >
+            Systems Portfolio
+          </h2>
+          <p class="mt-4 text-slate-400 text-base">
+            Core dashboard platforms and specialized software installations.
+          </p>
+
+          <!-- Dynamic Filter controls! -->
+          <div class="flex flex-wrap justify-center gap-2 mt-8">
+            <button
+              onclick="filterProjects('all')"
+              class="project-filter-btn active px-4 py-2 rounded-full border border-white/5 text-xs font-semibold bg-slate-950 text-white transition-all"
+            >
+              All Projects
+            </button>
+            <button
+              onclick="filterProjects('healthcare')"
+              class="project-filter-btn px-4 py-2 rounded-full border border-white/5 text-xs font-semibold text-slate-400 hover:text-white hover:border-slate-700 transition-all"
+            >
+              Healthcare
+            </button>
+            <button
+              onclick="filterProjects('martech')"
+              class="project-filter-btn px-4 py-2 rounded-full border border-white/5 text-xs font-semibold text-slate-400 hover:text-white hover:border-slate-700 transition-all"
+            >
+              SaaS & Marketing
+            </button>
+            <button
+              onclick="filterProjects('analytics')"
+              class="project-filter-btn px-4 py-2 rounded-full border border-white/5 text-xs font-semibold text-slate-400 hover:text-white hover:border-slate-700 transition-all"
+            >
+              High-Density Data
+            </button>
+          </div>
+        </div>
+
+        <!-- Enhanced Projects Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto animate-fade-in"
+          id="project-grid"
+        >
+          <!-- Project Card 1: xiQ Workbench -->
+          <div
+            data-category="martech analytics"
+            class="project-card group relative overflow-hidden rounded-xl border border-white/5 bg-slate-900/40 p-6 hover:border-brand-500/30 transition-all flex flex-col justify-between backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-[10px] uppercase font-mono tracking-wider text-brand-400 bg-brand-500/10 px-2 py-0.5 rounded"
+                  >SaaS & Marketing</span
+                >
+                <span class="text-xs text-slate-500 font-mono"
+                  >B2B Workbench</span
+                >
+              </div>
+              <h3
+                class="text-xl font-bold text-white group-hover:text-brand-400 transition mb-2"
+              >
+                xiQ Workbench
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                An account-based marketing platform supporting targeted
+                campaigns, automated asset workflows, and granular visual
+                metrics.
+              </p>
+            </div>
+
+            <!-- Expandable Spec Sheets -->
+            <div class="border-t border-white/5 pt-4 mt-4">
+              <button
+                onclick="toggleSpecSheet('spec-xiq')"
+                class="text-xs font-mono text-slate-400 hover:text-brand-400 flex items-center gap-1 transition-all"
+              >
+                <span>[+] View Project Specs</span>
+              </button>
+              <div
+                id="spec-xiq"
+                class="hidden mt-3 space-y-2 p-3 rounded bg-slate-950 font-mono text-[11px] text-slate-400"
+              >
+                <div class="flex justify-between">
+                  <span>Core Layout Engine:</span
+                  ><span class="text-white">React v17</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Lighthouse Performance:</span
+                  ><span class="text-emerald-400">92/100</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Hydration Latency:</span
+                  ><span class="text-emerald-400">120ms</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Primary Bundle Weight:</span
+                  ><span class="text-white">180kB Gzip</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >React</span
+                >
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >Chart.js</span
+                >
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >JavaScript</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2: RPD -->
+          <div
+            data-category="healthcare analytics"
+            class="project-card group relative overflow-hidden rounded-xl border border-white/5 bg-slate-900/40 p-6 hover:border-brand-500/30 transition-all flex flex-col justify-between backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-[10px] uppercase font-mono tracking-wider text-brand-400 bg-brand-500/10 px-2 py-0.5 rounded"
+                  >Healthcare</span
+                >
+                <span class="text-xs text-slate-500 font-mono"
+                  >Admin Dashboard</span
+                >
+              </div>
+              <h3
+                class="text-xl font-bold text-white group-hover:text-brand-400 transition mb-2"
+              >
+                RPD
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                A high-density clinical monitoring dashboard securely processing
+                records for over 8,000 active users and 30,000 candidate
+                profiles.
+              </p>
+            </div>
+
+            <!-- Expandable Spec Sheets -->
+            <div class="border-t border-white/5 pt-4 mt-4">
+              <button
+                onclick="toggleSpecSheet('spec-rpd')"
+                class="text-xs font-mono text-slate-400 hover:text-brand-400 flex items-center gap-1 transition-all"
+              >
+                <span>[+] View Project Specs</span>
+              </button>
+              <div
+                id="spec-rpd"
+                class="hidden mt-3 space-y-2 p-3 rounded bg-slate-950 font-mono text-[11px] text-slate-400"
+              >
+                <div class="flex justify-between">
+                  <span>Core Layout Engine:</span
+                  ><span class="text-white">React v18</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Security Protocol:</span
+                  ><span class="text-emerald-400">HIPAA Compliant</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Data Hydration:</span
+                  ><span class="text-emerald-400">WebSocket Push</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Telemetry Rate:</span
+                  ><span class="text-white">60 updates/sec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >React</span
+                >
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >TypeScript</span
+                >
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >Ant Design</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3: Patient Portal -->
+          <div
+            data-category="healthcare"
+            class="project-card group relative overflow-hidden rounded-xl border border-white/5 bg-slate-900/40 p-6 hover:border-brand-500/30 transition-all flex flex-col justify-between backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-[10px] uppercase font-mono tracking-wider text-brand-400 bg-brand-500/10 px-2 py-0.5 rounded"
+                  >Healthcare</span
+                >
+                <span class="text-xs text-slate-500 font-mono"
+                  >Patient Portal</span
+                >
+              </div>
+              <h3
+                class="text-xl font-bold text-white group-hover:text-brand-400 transition mb-2"
+              >
+                Patient Portal
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                An accessible patient dashboard allowing self-reporting of
+                biometrics, secure coordination channels, and care coordination
+                scheduling.
+              </p>
+            </div>
+
+            <!-- Expandable Spec Sheets -->
+            <div class="border-t border-white/5 pt-4 mt-4">
+              <button
+                onclick="toggleSpecSheet('spec-pp')"
+                class="text-xs font-mono text-slate-400 hover:text-brand-400 flex items-center gap-1 transition-all"
+              >
+                <span>[+] View Project Specs</span>
+              </button>
+              <div
+                id="spec-pp"
+                class="hidden mt-3 space-y-2 p-3 rounded bg-slate-950 font-mono text-[11px] text-slate-400"
+              >
+                <div class="flex justify-between">
+                  <span>Core Layout Engine:</span
+                  ><span class="text-white">Next.js v13</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Accessibility Rating:</span
+                  ><span class="text-emerald-400">WCAG AA</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Initial Load Speed:</span
+                  ><span class="text-emerald-400">0.85s</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Interactive Metrics:</span
+                  ><span class="text-white">Realtime Sync</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >React</span
+                >
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >WebSockets</span
+                >
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >TypeScript</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 4: Petrophysics -->
+          <div
+            data-category="analytics"
+            class="project-card group relative overflow-hidden rounded-xl border border-white/5 bg-slate-900/40 p-6 hover:border-brand-500/30 transition-all flex flex-col justify-between backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-[10px] uppercase font-mono tracking-wider text-brand-400 bg-brand-500/10 px-2 py-0.5 rounded"
+                  >High-Density Data</span
+                >
+                <span class="text-xs text-slate-500 font-mono"
+                  >Legacy Redesign</span
+                >
+              </div>
+              <h3
+                class="text-xl font-bold text-white group-hover:text-brand-400 transition mb-2"
+              >
+                Petrophysics (Revamped)
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Modernized web interfaces designed to render geological logging
+                measurements and reservoir profiles clearly.
+              </p>
+            </div>
+
+            <!-- Expandable Spec Sheets -->
+            <div class="border-t border-white/5 pt-4 mt-4">
+              <button
+                onclick="toggleSpecSheet('spec-petro')"
+                class="text-xs font-mono text-slate-400 hover:text-brand-400 flex items-center gap-1 transition-all"
+              >
+                <span>[+] View Project Specs</span>
+              </button>
+              <div
+                id="spec-petro"
+                class="hidden mt-3 space-y-2 p-3 rounded bg-slate-950 font-mono text-[11px] text-slate-400"
+              >
+                <div class="flex justify-between">
+                  <span>Rendering Strategy:</span
+                  ><span class="text-white">HTML5 Canvas</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Rendering Latency:</span
+                  ><span class="text-emerald-400">~16.6ms (60FPS)</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Node Reduction:</span
+                  ><span class="text-emerald-400">Virtual Grid</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Dataset Limits:</span
+                  ><span class="text-white">Up to 500,000 pts</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >JavaScript</span
+                >
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >UI Engineering</span
+                >
+                <span
+                  class="text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono"
+                  >Data Visualization</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership & Hackathons Section -->
+    <section class="py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <!-- Leadership & Activities -->
+          <div class="space-y-6">
+            <div>
+              <span
+                class="text-brand-500 text-sm font-semibold tracking-wide uppercase font-mono"
+                >Operations</span
+              >
+              <h2 class="text-3xl font-bold tracking-tight text-white mt-2">
+                Leadership & Activities
+              </h2>
+            </div>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+              I apply my technical background to mentor engineering colleagues,
+              coordinate agile processes, and outline core product directions.
+            </p>
+
+            <div class="space-y-4">
+              <div
+                class="flex gap-4 p-4 rounded-lg bg-slate-900 border border-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="text-brand-500 shrink-0">
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">
+                    Team Lead — RPD V2 Initiative
+                  </h4>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Coordinated developer sprints, led structural design audits,
+                    and reviewed code merges to protect framework performance
+                    targets.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex gap-4 p-4 rounded-lg bg-slate-900 border border-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="text-brand-500 shrink-0">
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">
+                    HIPAA Compliance Integration
+                  </h4>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Configured healthcare layout operations in compliance with
+                    secure electronic data handling standards.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex gap-4 p-4 rounded-lg bg-slate-900 border border-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="text-brand-500 shrink-0">
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">
+                    Technical Writing & Education
+                  </h4>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Authoring structured guides, code standards, and technical
+                    specifications for frontend projects.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hackathons / NASA space apps lead -->
+          <div
+            class="bg-slate-900 border border-white/5 rounded-xl p-6 lg:p-8 space-y-6 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <span
+              class="text-[10px] uppercase font-mono tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20"
+              >Rapid Prototyping</span
+            >
+            <h3 class="text-2xl font-bold text-white">
+              NASA Space Apps Hackathon
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Served as Hackathon Lead, guiding development efforts, database
+              setup configurations, and API connections under tight event
+              schedules.
+            </p>
+            <div class="p-4 rounded-lg bg-slate-950 border border-white/5">
+              <div
+                class="text-xs font-semibold text-slate-200 uppercase tracking-wider mb-2 font-mono"
+              >
+                Key Activities
+              </div>
+              <ul class="text-xs text-slate-400 space-y-2">
+                <li class="flex items-center gap-2">
+                  <span
+                    class="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"
+                  ></span>
+                  Coordinated developer tasks and workflows.
+                </li>
+                <li class="flex items-center gap-2">
+                  <span
+                    class="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"
+                  ></span>
+                  Focused on delivering functional mockups on schedule.
+                </li>
+                <li class="flex items-center gap-2">
+                  <span
+                    class="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"
+                  ></span>
+                  Integrated map elements and geographic telemetry APIs.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Slider (Playable/Interactive) -->
+    <section class="py-24 bg-slate-900/30 border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-brand-500 text-sm font-semibold tracking-wide uppercase font-mono font-mono"
+            >Collaborator Feedback</span
+          >
+          <h2
+            class="text-3xl font-bold tracking-tight text-white sm:text-4xl mt-2"
+          >
+            Industry Testimonials
+          </h2>
+          <p class="mt-4 text-slate-400 text-base">
+            Feedback from engineering managers, team leads, and colleagues.
+          </p>
+        </div>
+
+        <!-- Testimonial Slider Shell -->
+        <div class="max-w-4xl mx-auto relative px-4">
+          <div class="overflow-hidden relative min-h-[200px] flex items-center">
+            <!-- Slide 1 -->
+            <div
+              id="slide-0"
+              class="testimonial-slide transition-opacity duration-500 w-full text-center"
+            >
+              <blockquote class="text-center">
+                <p
+                  class="text-lg sm:text-xl font-medium text-slate-300 italic max-w-3xl mx-auto leading-relaxed"
+                >
+                  "Haseeb consistently delivers clean, high-performance layouts.
+                  His focus on performance optimization helped keep our complex
+                  dashboards fast and user-friendly."
+                </p>
+                <footer class="mt-6">
+                  <div class="text-sm font-semibold text-white">
+                    Engineering Manager
+                  </div>
+                  <div class="text-xs text-slate-500 font-mono">
+                    Tekboox Collaborative
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+
+            <!-- Slide 2 -->
+            <div
+              id="slide-1"
+              class="testimonial-slide transition-opacity duration-500 w-full text-center hidden"
+            >
+              <blockquote class="text-center">
+                <p
+                  class="text-lg sm:text-xl font-medium text-slate-300 italic max-w-3xl mx-auto leading-relaxed"
+                >
+                  "His ability to optimize builds and refactor complex logic was
+                  a major asset. He cut down bundle sizes by 30% while
+                  maintaining stability."
+                </p>
+                <footer class="mt-6">
+                  <div class="text-sm font-semibold text-white">
+                    Team Lead / Colleague
+                  </div>
+                  <div class="text-xs text-slate-500 font-mono">
+                    Formulatrix Pakistan
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+
+            <!-- Slide 3 -->
+            <div
+              id="slide-2"
+              class="testimonial-slide transition-opacity duration-500 w-full text-center hidden"
+            >
+              <blockquote class="text-center">
+                <p
+                  class="text-lg sm:text-xl font-medium text-slate-300 italic max-w-3xl mx-auto leading-relaxed"
+                >
+                  "Haseeb is a focused frontend engineer who builds structured,
+                  accessible systems. He helped make our dynamic charting
+                  platforms much easier to use."
+                </p>
+                <footer class="mt-6">
+                  <div class="text-sm font-semibold text-white">
+                    Product Owner
+                  </div>
+                  <div class="text-xs text-slate-500 font-mono">
+                    xiQ B2B Analytics Platform
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- Navigation Controls -->
+          <div class="flex items-center justify-center space-x-4 mt-8">
+            <button
+              onclick="prevTestimonial()"
+              class="p-2.5 rounded-full border border-white/5 bg-slate-900 text-slate-400 hover:text-white hover:border-brand-500 transition-all"
+            >
+              <svg
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <!-- Indicators -->
+            <div class="flex space-x-2">
+              <span
+                id="dot-0"
+                class="dot h-2.5 w-2.5 rounded-full bg-brand-500 transition-all"
+              ></span>
+              <span
+                id="dot-1"
+                class="dot h-2.5 w-2.5 rounded-full bg-slate-700 transition-all"
+              ></span>
+              <span
+                id="dot-2"
+                class="dot h-2.5 w-2.5 rounded-full bg-slate-700 transition-all"
+              ></span>
+            </div>
+            <button
+              onclick="nextTestimonial()"
+              class="p-2.5 rounded-full border border-white/5 bg-slate-900 text-slate-400 hover:text-white hover:border-brand-500 transition-all"
+            >
+              <svg
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Articles / Blog Section -->
+    <section class="py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-brand-500 text-sm font-semibold tracking-wide uppercase font-mono"
+            >Technical Insights</span
+          >
+          <h2
+            class="text-3xl font-bold tracking-tight text-white sm:text-4xl mt-2"
+          >
+            Engineering Articles
+          </h2>
+          <p class="mt-4 text-slate-400 text-base">
+            Articles written on React performance patterns, modern TypeScript
+            developments, and structural optimization techniques.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Blog Post 1 -->
+          <div
+            class="bg-slate-900/40 border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-all flex flex-col justify-between backdrop-blur-sm"
+          >
+            <div class="p-6">
+              <div class="text-xs text-brand-400 font-mono mb-2">
+                REACT SYSTEMS
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">
+                Virtualizing Lists for Rich Dashboards
+              </h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                A breakdown of DOM element reduction approaches to maintain
+                steady frame rates on data-heavy dashboards.
+              </p>
+            </div>
+            <div
+              class="p-6 border-t border-white/5 bg-slate-950/80 flex items-center justify-between text-xs font-mono"
+            >
+              <span class="text-slate-500">5 min read</span>
+              <a
+                href="https://linkedin.com/in/haseebijaz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1"
+              >
+                Read Article
+                <svg
+                  class="h-3.5 w-3.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div
+            class="bg-slate-900/40 border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-all flex flex-col justify-between backdrop-blur-sm"
+          >
+            <div class="p-6">
+              <div class="text-xs text-brand-400 font-mono mb-2">
+                TYPESCRIPT STRATEGY
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">
+                Configuring Stable Layout Contracts
+              </h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                Leveraging TypeScript constraints and interface declarations to
+                minimize runtime errors across component frameworks.
+              </p>
+            </div>
+            <div
+              class="p-6 border-t border-white/5 bg-slate-950/80 flex items-center justify-between text-xs font-mono"
+            >
+              <span class="text-slate-500">7 min read</span>
+              <a
+                href="https://linkedin.com/in/haseebijaz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1"
+              >
+                Read Article
+                <svg
+                  class="h-3.5 w-3.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div
+            class="bg-slate-900/40 border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-all flex flex-col justify-between backdrop-blur-sm"
+          >
+            <div class="p-6">
+              <div class="text-xs text-brand-400 font-mono mb-2">
+                BUNDLE SYSTEMS
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">
+                Reducing Production Build Weights
+              </h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                Analyzing bundle structures, optimizing compiler trees, and
+                targeting clean dependency distributions to keep pages light.
+              </p>
+            </div>
+            <div
+              class="p-6 border-t border-white/5 bg-slate-950/80 flex items-center justify-between text-xs font-mono"
+            >
+              <span class="text-slate-500">6 min read</span>
+              <a
+                href="https://linkedin.com/in/haseebijaz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1"
+              >
+                Read Article
+                <svg
+                  class="h-3.5 w-3.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume / CTA Section -->
+    <section class="py-16 bg-slate-950/50 border-t border-white/5">
+      <div class="mx-auto max-w-4xl px-4 text-center space-y-6">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">
+          Looking for the detailed professional profile?
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+          Review my complete technical background, certifications, and project
+          history in a clean, print-friendly format.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="https://linkedin.com/in/haseebijaz"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-lg bg-brand-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-600 shadow-md shadow-brand-500/10"
+          >
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+            View Online Resume
+          </a>
+          <a
+            href="mailto:haseebijazi150172@gmail.com?subject=Resume%20Request"
+            class="inline-flex items-center gap-2 rounded-lg border border-white/5 bg-slate-900 px-5 py-3 text-sm font-semibold text-slate-300 transition hover:bg-slate-850 hover:text-white"
+          >
+            <svg
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            Download Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+          <!-- Contact Info -->
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <span
+                class="text-brand-500 text-sm font-semibold tracking-wide uppercase font-mono"
+                >Communications</span
+              >
+              <h2 class="text-3xl font-bold tracking-tight text-white mt-2">
+                Connect with Me
+              </h2>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              If you are looking to discuss development roles, performance
+              audits, or architecture layouts, feel free to send a message.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <div
+                  class="p-2.5 rounded bg-slate-900 border border-white/5 text-brand-500 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span
+                    class="text-[10px] uppercase font-mono text-slate-500 block"
+                    >Direct Email</span
+                  >
+                  <a
+                    href="mailto:haseebijazi150172@gmail.com"
+                    class="text-sm font-semibold text-white hover:text-brand-400 transition"
+                    >haseebijazi150172@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div
+                  class="p-2.5 rounded bg-slate-900 border border-white/5 text-brand-500 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span
+                    class="text-[10px] uppercase font-mono text-slate-500 block"
+                    >Location</span
+                  >
+                  <span class="text-sm font-semibold text-white"
+                    >Lahore, Pakistan</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Presence Links -->
+            <div class="flex gap-3 pt-4">
+              <a
+                href="https://linkedin.com/in/haseebijaz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-2.5 rounded bg-slate-900 border border-white/5 text-slate-400 hover:text-white hover:border-brand-500 transition-all shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+                aria-label="LinkedIn"
+              >
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://github.com/haseebijaz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-2.5 rounded bg-slate-900 border border-white/5 text-slate-400 hover:text-white hover:border-brand-500 transition-all shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+                aria-label="GitHub"
+              >
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div
+            class="lg:col-span-7 bg-slate-900/40 border border-white/5 rounded-xl p-6 sm:p-8 backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-xs font-semibold uppercase text-slate-400 mb-1.5 font-mono"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    class="w-full rounded-lg border border-white/5 bg-slate-950 px-4 py-2.5 text-sm text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                    placeholder="Jane Doe"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-xs font-semibold uppercase text-slate-400 mb-1.5 font-mono"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    class="w-full rounded-lg border border-white/5 bg-slate-950 px-4 py-2.5 text-sm text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                    placeholder="jane@example.com"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="subject"
+                  class="block text-xs font-semibold uppercase text-slate-400 mb-1.5 font-mono"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  required
+                  class="w-full rounded-lg border border-white/5 bg-slate-950 px-4 py-2.5 text-sm text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  placeholder="Project Consultation"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-xs font-semibold uppercase text-slate-400 mb-1.5 font-mono"
+                  >Message Details</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  required
+                  class="w-full rounded-lg border border-white/5 bg-slate-950 px-4 py-2.5 text-sm text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  placeholder="Hello Haseeb, I'd like to discuss a frontend assignment..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                id="form-submit-btn"
+                class="w-full rounded-lg bg-brand-500 py-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-600 focus:outline-none"
+              >
+                Submit Inquiry
+              </button>
+            </form>
+            <p
+              id="form-feedback"
+              class="hidden text-xs text-center mt-4 text-emerald-400 font-mono"
+            >
+              Inquiry submitted successfully (Simulated output).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="border-t border-white/5 bg-slate-950 py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div class="flex justify-center space-x-6 text-sm text-slate-400">
+          <a
+            href="https://linkedin.com/in/haseebijaz"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-brand-500 transition"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/haseebijaz"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-brand-500 transition"
+            >GitHub</a
+          >
+          <a
+            href="mailto:haseebijazi150172@gmail.com"
+            class="hover:text-brand-500 transition"
+            >Email</a
+          >
+        </div>
+        <p class="text-xs text-slate-500 font-mono">
+          Copyright © 2026 Haseeb Ijaz. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+      // 1. Mobile Navigation Menu Toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        if (isHidden) {
+          mobileMenu.classList.remove("hidden");
+          menuIcon.setAttribute("d", "M6 18L18 6M6 6l12 12"); // Close X Icon
+        } else {
+          mobileMenu.classList.add("hidden");
+          menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16"); // Hamburger Icon
+        }
+      });
+
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+        });
+      });
+
+      // 2. Playable Feature: Profiler Simulator Graph & Logic
+      const state = {
+        memo: false,
+        virtualization: false,
+        compression: false,
+      };
+
+      const toggles = {
+        memo: document.getElementById("memo-toggle"),
+        virt: document.getElementById("virt-toggle"),
+        asset: document.getElementById("asset-toggle"),
+      };
+
+      const canvas = document.getElementById("fps-canvas");
+      const ctx = canvas.getContext("2d");
+      let frameHistory = Array(100).fill(12);
+
+      // Adjust canvas resolution dynamically
+      function resizeCanvas() {
+        canvas.width = canvas.parentElement.clientWidth;
+        canvas.height = canvas.parentElement.clientHeight;
+      }
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+
+      function drawGraph() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw background grid lines
+        ctx.strokeStyle = "#0f172a";
+        ctx.lineWidth = 1;
+        for (let i = 1; i < 4; i++) {
+          const y = (canvas.height / 4) * i;
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(canvas.width, y);
+          ctx.stroke();
+        }
+
+        // Draw real-time graph path
+        ctx.lineWidth = 2;
+        const currentFPS = frameHistory[frameHistory.length - 1];
+        ctx.strokeStyle =
+          currentFPS > 45 ? "#10b981" : currentFPS > 25 ? "#f59e0b" : "#ef4444";
+
+        ctx.beginPath();
+        const step = canvas.width / (frameHistory.length - 1);
+        for (let i = 0; i < frameHistory.length; i++) {
+          const x = i * step;
+          // Standardize graph plotting (60 FPS fits to top)
+          const y =
+            canvas.height - (frameHistory[i] / 60) * (canvas.height * 0.8) - 10;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      }
+
+      // Custom High-Performance Code Syntax Highlighter
+      function syntaxHighlight(code) {
+        return (
+          code
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            // Keywords
+            .replace(
+              /\b(const|let|var|function|return|export|import|from|const)\b/g,
+              '<span class="syntax-keyword">$1</span>',
+            )
+            // Strings
+            .replace(
+              /(['"`].*?['"`])/g,
+              '<span class="syntax-string">$1</span>',
+            )
+            // Custom Types / Components
+            .replace(
+              /\b(React|DataItem|Dashboard|VirtualList|DataItem)\b/g,
+              '<span class="syntax-type">$1</span>',
+            )
+            // Native functions
+            .replace(
+              /\b(console|useState|generateLargeArray|map)\b/g,
+              '<span class="syntax-function">$1</span>',
+            )
+            // Comments
+            .replace(/(\/\/.*)/g, '<span class="syntax-comment">$1</span>')
+        );
+      }
+
+      function updateTelemetry() {
+        let score = 45;
+        let fps = 12;
+        let size = 1.8;
+
+        if (state.memo) {
+          score += 20;
+          fps += 18;
+        }
+        if (state.virtualization) {
+          score += 25;
+          fps += 30;
+        }
+        if (state.compression) {
+          score += 9;
+          size = 1.1;
+        }
+
+        if (score > 99) score = 99;
+        if (fps > 60) fps = 60;
+
+        // Render text metric indicators
+        const perfScoreEl = document.getElementById("perf-score");
+        const perfStatusEl = document.getElementById("perf-status");
+        perfScoreEl.innerText = `${score}%`;
+        if (score < 60) {
+          perfScoreEl.className =
+            "text-3xl font-mono font-extrabold text-red-500";
+          perfStatusEl.innerText = "Critical";
+          perfStatusEl.className =
+            "text-[10px] uppercase font-mono tracking-wider text-red-500";
+        } else if (score < 85) {
+          perfScoreEl.className =
+            "text-3xl font-mono font-extrabold text-amber-500";
+          perfStatusEl.innerText = "Modest";
+          perfStatusEl.className =
+            "text-[10px] uppercase font-mono tracking-wider text-amber-500";
+        } else {
+          perfScoreEl.className =
+            "text-3xl font-mono font-extrabold text-emerald-400";
+          perfStatusEl.innerText = "Excellent";
+          perfStatusEl.className =
+            "text-[10px] uppercase font-mono tracking-wider text-emerald-400";
+        }
+
+        const fpsScoreEl = document.getElementById("fps-score");
+        const fpsStatusEl = document.getElementById("fps-status");
+        fpsScoreEl.innerText = `${fps} FPS`;
+        if (fps < 20) {
+          fpsScoreEl.className =
+            "text-3xl font-mono font-extrabold text-red-500";
+          fpsStatusEl.innerText = "Lagging Scroll";
+          fpsStatusEl.className =
+            "text-[10px] uppercase font-mono tracking-wider text-red-500";
+        } else if (fps < 45) {
+          fpsScoreEl.className =
+            "text-3xl font-mono font-extrabold text-amber-500";
+          fpsStatusEl.innerText = "Acceptable";
+          fpsStatusEl.className =
+            "text-[10px] uppercase font-mono tracking-wider text-amber-500";
+        } else {
+          fpsScoreEl.className =
+            "text-3xl font-mono font-extrabold text-emerald-400";
+          fpsStatusEl.innerText = "Butter Smooth";
+          fpsStatusEl.className =
+            "text-[10px] uppercase font-mono tracking-wider text-emerald-400";
+        }
+
+        const sizeScoreEl = document.getElementById("size-score");
+        const sizeStatusEl = document.getElementById("size-status");
+        sizeScoreEl.innerText = `${size} MB`;
+        if (size > 1.5) {
+          sizeScoreEl.className =
+            "text-3xl font-mono font-extrabold text-amber-500";
+          sizeStatusEl.innerText = "Heavy Bundle";
+          sizeStatusEl.className =
+            "text-[10px] uppercase font-mono tracking-wider text-amber-500";
+        } else {
+          sizeScoreEl.className =
+            "text-3xl font-mono font-extrabold text-emerald-400";
+          sizeStatusEl.innerText = "Tree-shaken";
+          sizeStatusEl.className =
+            "text-[10px] uppercase font-mono tracking-wider text-emerald-400";
+        }
+
+        document.getElementById("nodes-count").innerText = state.virtualization
+          ? "Rendering 15 elements (Virtual)"
+          : "Rendering 10,000 DOM elements (Lag)";
+
+        updateCodeSandbox();
+      }
+
+      // Live Code Sandbox synchronization logic
+      function updateCodeSandbox() {
+        const codeOutput = document.getElementById("code-output");
+
+        let template = `import React, { useState } from 'react';\n\n`;
+
+        if (state.memo) {
+          template += `// [OPTIMIZED]: React.memo skips unnecessary rendering\nconst DataItem = React.memo(({ item }) => {\n  return <div className="item">{item.name}</div>;\n});\n\n`;
+        } else {
+          template += `// [UNOPTIMIZED]: Item renders from scratch every updates\nconst DataItem = ({ item }) => {\n  return <div className="item">{item.name}</div>;\n};\n\n`;
+        }
+
+        template += `export const Dashboard = () => {\n  const [data] = useState(generateLargeArray(10000));\n\n`;
+
+        if (state.virtualization) {
+          template += `  // [OPTIMIZED]: DOM Virtualization coordinates visual rendering window\n  return (\n    <VirtualList items={data} height={400} itemHeight={35}>\n      {(item) => <DataItem key={item.id} item={item} />}\n    </VirtualList>\n  );\n`;
+        } else {
+          template += `  // [UNOPTIMIZED]: Mapping 10,000 components directly to DOM tree\n  return (\n    <div className="list-scroller">\n      {data.map(item => <DataItem key={item.id} item={item} />)}\n    </div>\n  );\n`;
+        }
+
+        template += `};`;
+
+        // Run through the custom syntax highlighter
+        codeOutput.innerHTML = syntaxHighlight(template);
+      }
+
+      // Simulates realistic telemetry updates
+      setInterval(() => {
+        let targetFPS = 12;
+        if (state.memo) targetFPS += 18;
+        if (state.virtualization) targetFPS += 30;
+
+        // Generate realistic jitter variance
+        const variance = Math.floor(Math.random() * 5) - 2;
+        let currentFPS = targetFPS + variance;
+        if (currentFPS > 60) currentFPS = 60;
+        if (currentFPS < 5) currentFPS = 5;
+
+        frameHistory.push(currentFPS);
+        frameHistory.shift();
+        drawGraph();
+      }, 100);
+
+      function toggleSwitchStyle(btn, isActive) {
+        const circle = btn.querySelector("span");
+        if (isActive) {
+          btn.classList.remove("bg-slate-800");
+          btn.classList.add("bg-brand-500");
+          circle.classList.add("translate-x-6");
+          circle.classList.remove("translate-x-1");
+        } else {
+          btn.classList.add("bg-slate-800");
+          btn.classList.remove("bg-brand-500");
+          circle.classList.remove("translate-x-6");
+          circle.classList.add("translate-x-1");
+        }
+      }
+
+      toggles.memo.addEventListener("click", () => {
+        state.memo = !state.memo;
+        toggleSwitchStyle(toggles.memo, state.memo);
+        updateTelemetry();
+      });
+
+      toggles.virt.addEventListener("click", () => {
+        state.virtualization = !state.virtualization;
+        toggleSwitchStyle(toggles.virt, state.virtualization);
+        updateTelemetry();
+      });
+
+      toggles.asset.addEventListener("click", () => {
+        state.compression = !state.compression;
+        toggleSwitchStyle(toggles.asset, state.compression);
+        updateTelemetry();
+      });
+
+      document
+        .getElementById("optimize-all-btn")
+        .addEventListener("click", () => {
+          state.memo = true;
+          state.virtualization = true;
+          state.compression = true;
+          toggleSwitchStyle(toggles.memo, true);
+          toggleSwitchStyle(toggles.virt, true);
+          toggleSwitchStyle(toggles.asset, true);
+          updateTelemetry();
+        });
+
+      // Initialize state
+      updateTelemetry();
+
+      // 3. Tabbed Skills Swapping Mechanism
+      function switchSkillTab(tabId) {
+        document.querySelectorAll(".skill-tab-btn").forEach((btn) => {
+          btn.classList.remove(
+            "active",
+            "bg-slate-900",
+            "border-brand-500",
+            "text-white",
+          );
+          btn.classList.add("border-transparent", "text-slate-400");
+        });
+
+        const activeBtn = document.getElementById(`tab-${tabId}`);
+        activeBtn.classList.add(
+          "active",
+          "bg-slate-900",
+          "border-brand-500",
+          "text-white",
+        );
+        activeBtn.classList.remove("border-transparent", "text-slate-400");
+
+        document.querySelectorAll(".skill-panel").forEach((panel) => {
+          panel.classList.add("hidden");
+        });
+
+        document.getElementById(`content-${tabId}`).classList.remove("hidden");
+      }
+
+      // 4. Dynamic Project Portfolio Filtering
+      function filterProjects(category) {
+        document.querySelectorAll(".project-filter-btn").forEach((btn) => {
+          btn.classList.remove("active", "bg-slate-950", "text-white");
+          btn.classList.add("text-slate-400");
+        });
+        event.target.classList.add("active", "bg-slate-950", "text-white");
+
+        document.querySelectorAll(".project-card").forEach((card) => {
+          if (category === "all") {
+            card.classList.remove("hidden");
+          } else {
+            const categories = card.getAttribute("data-category").split(" ");
+            if (categories.includes(category)) {
+              card.classList.remove("hidden");
+            } else {
+              card.classList.add("hidden");
+            }
+          }
+        });
+      }
+
+      // 5. Expandable Spec Sheets Toggler
+      function toggleSpecSheet(id) {
+        const el = document.getElementById(id);
+        if (el.classList.contains("hidden")) {
+          el.classList.remove("hidden");
+        } else {
+          el.classList.add("hidden");
+        }
+      }
+
+      // 6. Testimonial manual slider implementation
+      let currentTestimonialIndex = 0;
+      const totalSlides = 3;
+
+      function showTestimonial(index) {
+        for (let i = 0; i < totalSlides; i++) {
+          const slide = document.getElementById(`slide-${i}`);
+          const dot = document.getElementById(`dot-${i}`);
+
+          if (i === index) {
+            slide.classList.remove("hidden");
+            dot.classList.add("bg-brand-500");
+            dot.classList.remove("bg-slate-700");
+          } else {
+            slide.classList.add("hidden");
+            dot.classList.remove("bg-brand-500");
+            dot.classList.add("bg-slate-700");
+          }
+        }
+      }
+
+      function nextTestimonial() {
+        currentTestimonialIndex = (currentTestimonialIndex + 1) % totalSlides;
+        showTestimonial(currentTestimonialIndex);
+      }
+
+      function prevTestimonial() {
+        currentTestimonialIndex =
+          (currentTestimonialIndex - 1 + totalSlides) % totalSlides;
+        showTestimonial(currentTestimonialIndex);
+      }
+
+      setInterval(nextTestimonial, 8000);
+
+      // 7. Contact Form submission logic
+      function handleContactSubmit(event) {
+        event.preventDefault();
+        const btn = document.getElementById("form-submit-btn");
+        const feedback = document.getElementById("form-feedback");
+
+        btn.innerText = "Submitting Inquiries...";
+        btn.disabled = true;
+
+        setTimeout(() => {
+          btn.innerText = "Submitted";
+          feedback.classList.remove("hidden");
+          event.target.reset();
+          setTimeout(() => {
+            btn.innerText = "Submit Inquiry";
+            btn.disabled = false;
+          }, 4000);
+        }, 1200);
+      }
+    </script>
+  </body>
+</html>
