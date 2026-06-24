@@ -24,6 +24,8 @@ availability: Open to opportunities
 
 # Haseeb Ijaz
 
+![portfolio_image]('images/Portfolio.PNG')
+
 ## Hero
 
 ### Info
