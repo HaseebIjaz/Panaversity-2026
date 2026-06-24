@@ -7,19 +7,18 @@ role: Senior Software Engineer (Frontend)
 location: Lahore, Pakistan
 experience_years: 7+
 specialization:
-
-- Frontend Engineering
-- React Applications
-- TypeScript Development
-- Performance Optimization
-- UI Engineering
-  industries:
-- Healthcare
-- Marketing Technology
-- Oil & Gas
-- Education Technology
-- AI-powered SaaS
-  availability: Open to opportunities
+  - Frontend Engineering
+  - React Applications
+  - TypeScript Development
+  - Performance Optimization
+  - UI Engineering
+    industries:
+  - Healthcare
+  - Marketing Technology
+  - Oil & Gas
+  - Education Technology
+  - AI-powered SaaS
+availability: Open to opportunities
 
 ---
 
