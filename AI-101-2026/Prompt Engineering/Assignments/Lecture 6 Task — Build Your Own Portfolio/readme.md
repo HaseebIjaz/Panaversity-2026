@@ -1,5 +1,4 @@
 ---
-
 title: portfolio_frontmatter
 author: Haseeb Ijaz
 purpose: Personal portfolio website for showcasing experience, projects, technical expertise, and professional achievements.
@@ -12,14 +11,13 @@ specialization:
   - TypeScript Development
   - Performance Optimization
   - UI Engineering
-    industries:
+industries:
   - Healthcare
   - Marketing Technology
   - Oil & Gas
   - Education Technology
   - AI-powered SaaS
 availability: Open to opportunities
-
 ---
 
 # Haseeb Ijaz
