@@ -2,9 +2,8 @@
 
 ## Game Link
 
-The game currently lives in Google AI Studio. Here is the [link](https://ai.studio/apps/5913aca0-c6ad-40ea-8d65-5aaea753dae9).
-
-https://aistudio.google.com/apps/5913aca0-c6ad-40ea-8d65-5aaea753dae9?showPreview=true&showAssistant=true
+The game currently lives in Google AI Studio. Here is the [https://aistudio.google.com/apps/5913aca0-c6ad-40ea-8d65-5aaea753dae9?showPreview=true&showAssistant=true
+](https://ai.studio/apps/5913aca0-c6ad-40ea-8d65-5aaea753dae9).
 
 ## Description
 
