@@ -4,6 +4,8 @@
 
 The game currently lives in Google AI Studio. Here is the [link](https://ai.studio/apps/5913aca0-c6ad-40ea-8d65-5aaea753dae9).
 
+https://aistudio.google.com/apps/5913aca0-c6ad-40ea-8d65-5aaea753dae9?showPreview=true&showAssistant=true
+
 ## Description
 
 - It a game tha helps user learn Typescript
