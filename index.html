@@ -1,0 +1,2543 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Haseeb Ijaz | Senior Frontend Architect & Performance Engineer
+    </title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                900: "#060913",
+                950: "#03050a",
+              },
+              brand: {
+                400: "#34d399",
+                500: "#10b981", // Emerald Accents
+                600: "#059669",
+                950: "#011c11",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+              mono: ["JetBrains Mono", "Fira Code", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Dynamic Portfolio Data Section (As Requested: JSON format in the Head of the template) -->
+    <script id="portfolio-data" type="application/json">
+      {
+        "profile": {
+          "name": "Haseeb Ijaz",
+          "title": "Senior Software Engineer & UI Architect",
+          "subTitle": "Senior Frontend Architect & Performance Engineer",
+          "description": "I build responsive, modular web applications with an engineering approach focused on runtime performance, bundle optimization, and codebase sustainability.",
+          "email": "haseebijazi150172@gmail.com",
+          "location": "Lahore, Pakistan",
+          "linkedin": "https://linkedin.com/in/haseebijaz",
+          "github": "https://github.com/haseebijaz",
+          "yearsOfExperience": "7+",
+          "industriesCount": "5"
+        },
+        "industries": [
+          {
+            "id": "healthcare",
+            "title": "Healthcare",
+            "desc": "Constructed secure patient dashboards, synchronized metrics engines, and chat panels."
+          },
+          {
+            "id": "saas",
+            "title": "Marketing & SaaS",
+            "desc": "Integrated personalization engines, analytics charts, and campaigns modules."
+          },
+          {
+            "id": "petroleum",
+            "title": "Oil & Gas UI Modern",
+            "desc": "Upgraded data visualizations for reservoir logging applications."
+          },
+          {
+            "id": "edtech",
+            "title": "EdTech Integration",
+            "desc": "Configured coding tutorial widgets and dashboard layouts."
+          }
+        ],
+        "skills": {
+          "frontend": {
+            "title": "Browser Technology Integration",
+            "subTitle": "Core languages and development engines.",
+            "items": [
+              {
+                "name": "React / Next.js",
+                "desc": "Declarative architecture, custom rendering optimizations, state routing patterns."
+              },
+              {
+                "name": "TypeScript",
+                "desc": "Strict interface declarations, mapping contracts, generic utility definitions."
+              },
+              {
+                "name": "JavaScript (ES6+)",
+                "desc": "Functional loops, closures, asynchronous actions, performance-critical path adjustments."
+              },
+              {
+                "name": "HTML5 & CSS3",
+                "desc": "Semantic elements, grid layout configurations, custom hardware transitions."
+              }
+            ]
+          },
+          "ui": {
+            "title": "Layout Libraries & Visual Integration",
+            "subTitle": "Component suites and telemetry rendering integrations.",
+            "items": [
+              {
+                "name": "Ant Design",
+                "desc": "Managing global theme properties, custom styling, component overrides."
+              },
+              {
+                "name": "Chart.js",
+                "desc": "Integrating custom data dashboards and metrics graphs."
+              },
+              {
+                "name": "WebSockets",
+                "desc": "Integrating low-latency data loops for live message systems."
+              }
+            ]
+          },
+          "tools": {
+            "title": "Version Control & Layout Utilities",
+            "subTitle": "Tools used to support continuous integration and team alignment.",
+            "items": [
+              {
+                "name": "Git / Version Control",
+                "desc": "Branching patterns, version tags, and code review operations."
+              },
+              {
+                "name": "Figma",
+                "desc": "Translating system design layouts into responsive, modular browser elements."
+              }
+            ]
+          },
+          "practices": {
+            "title": "System Delivery Practices",
+            "subTitle": "Development methodologies and standards.",
+            "items": [
+              {
+                "name": "Technical Specifications",
+                "desc": "Authoring design papers and specs to align engineering groups."
+              },
+              {
+                "name": "Performance Tuning",
+                "desc": "Managing bundle split limits, loading pipelines, and garbage collection pathways."
+              },
+              {
+                "name": "Refactoring & Testing",
+                "desc": "Improving legacy codebases and maintaining unit testing structures."
+              },
+              {
+                "name": "Engineering Documentation",
+                "desc": "Writing code guides, specifications, and development references."
+              }
+            ]
+          }
+        },
+        "experience": [
+          {
+            "id": "tekboox",
+            "company": "Tekboox (PRG)",
+            "period": "Jun 2024 – Present",
+            "role": "Senior Software Engineer (Frontend)",
+            "description": "Led frontend architecture configurations for the RPD and Patient Portal clinical applications, overseeing daily operations and structural codebase updates.",
+            "bullets": [
+              "Team Lead of RPD V2 team. Coordinated sprint schedules, tracked deliverables, and managed structural updates.",
+              "Built high-density dashboard layouts, patient logs, and embedded chat components.",
+              "Refactored pagination workflows, reducing data load speeds across large tables."
+            ],
+            "tags": ["React", "TypeScript", "Ant Design", "WebSockets"]
+          },
+          {
+            "id": "formulatrix",
+            "company": "Formulatrix",
+            "period": "May 2023 – Feb 2024",
+            "role": "Senior Software Engineer (Full Stack)",
+            "description": "Refactored application modules, optimizing initial load times and asset configurations.",
+            "bullets": [
+              "Built custom client-side tools and functional system layers.",
+              "Optimized build size configurations, reducing overall asset bundles by approximately 30%."
+            ],
+            "tags": ["React", "JavaScript", "TypeScript"]
+          },
+          {
+            "id": "xiq",
+            "company": "xiQ Inc.",
+            "period": "Jul 2021 – Feb 2023",
+            "role": "Senior Software Engineer (Frontend)",
+            "description": "Developed core analytics tools and campaign monitoring systems.",
+            "bullets": [
+              "Integrated analytical tracking and visual campaign email layouts.",
+              "Built custom chart components to represent user engagement statistics."
+            ],
+            "tags": ["React", "Chart.js", "JavaScript"]
+          },
+          {
+            "id": "educative",
+            "company": "Educative",
+            "period": "Nov 2020 – Apr 2021",
+            "role": "Full Stack Software Engineer",
+            "description": "Designed learning modules, workspace widgets, and interactive development sandboxes.",
+            "bullets": [
+              "Created responsive UI modules for software tutorials and interactive development sandboxes.",
+              "Wrote technical specs and architectural plans for layout upgrades."
+            ],
+            "tags": ["React", "Full Stack Frameworks", "Unit Testing"]
+          },
+          {
+            "id": "lmkr",
+            "company": "LMKR",
+            "period": "Jun 2019 – Jul 2020",
+            "role": "Application Engineer (Frontend)",
+            "description": "Modernized rendering platforms, updated legacy styling, and stabilized core petrophysical layout engines.",
+            "bullets": [
+              "Refactored data processing pathways for specialized reservoir modeling software.",
+              "Re-engineered rendering engines to display logging metrics reliably."
+            ],
+            "tags": ["Legacy JS", "HTML5 Canvas", "Data Rendering"]
+          }
+        ],
+        "projects": [
+          {
+            "id": "xiq_wb",
+            "category": "martech analytics",
+            "badge": "SaaS & Marketing",
+            "subBadge": "B2B Workbench",
+            "title": "xiQ Workbench",
+            "description": "An account-based marketing platform supporting targeted campaigns, automated asset workflows, and granular visual metrics.",
+            "engine": "React v17",
+            "lighthouse": "92%",
+            "latency": "120ms",
+            "tags": ["React", "Chart.js", "JavaScript"]
+          },
+          {
+            "id": "rpd_dash",
+            "category": "healthcare analytics",
+            "badge": "Healthcare",
+            "subBadge": "Admin Dashboard",
+            "title": "RPD",
+            "description": "A high-density clinical monitoring dashboard securely processing records for over 8,000 active users and 30,000 candidate profiles.",
+            "engine": "React v18",
+            "lighthouse": "95%",
+            "latency": "WebSockets Push",
+            "tags": ["React", "TypeScript", "Ant Design"]
+          },
+          {
+            "id": "pat_portal",
+            "category": "healthcare",
+            "badge": "Healthcare",
+            "subBadge": "Patient Portal",
+            "title": "Patient Portal",
+            "description": "An accessible patient dashboard allowing self-reporting of biometrics, secure coordination channels, and care coordination scheduling.",
+            "engine": "Next.js v13",
+            "lighthouse": "95%",
+            "latency": "WebSockets Push",
+            "tags": ["React", "WebSockets", "TypeScript"]
+          },
+          {
+            "id": "petro_rev",
+            "category": "analytics",
+            "badge": "High-Density Data",
+            "subBadge": "Legacy Redesign",
+            "title": "Petrophysics (Revamped)",
+            "description": "Modernized web interfaces designed to render geological logging measurements and reservoir profiles clearly.",
+            "engine": "HTML5 Canvas",
+            "lighthouse": "100%",
+            "latency": "~16.6ms (60FPS)",
+            "tags": ["JavaScript", "UI Engineering", "Data Visualization"]
+          }
+        ],
+        "testimonials": [
+          {
+            "text": "Haseeb consistently delivers clean, high-performance layouts. His focus on performance optimization helped keep our complex dashboards fast and user-friendly.",
+            "author": "Engineering Manager",
+            "company": "Tekboox Collaborative"
+          },
+          {
+            "text": "His ability to optimize builds and refactor complex logic was a major asset. He cut down bundle sizes by 30% while maintaining stability.",
+            "author": "Team Lead / Colleague",
+            "company": "Formulatrix Pakistan"
+          },
+          {
+            "text": "Haseeb is a focused frontend engineer who builds structured, accessible systems. He helped make our dynamic charting platforms much easier to use.",
+            "author": "Product Owner",
+            "company": "xiQ B2B Analytics Platform"
+          }
+        ],
+        "articles": [
+          {
+            "tag": "REACT SYSTEMS",
+            "title": "Virtualizing Lists for Rich Dashboards",
+            "desc": "A breakdown of DOM element reduction approaches to maintain steady frame rates on data-heavy dashboards.",
+            "readTime": "5 min read"
+          },
+          {
+            "tag": "TYPESCRIPT STRATEGY",
+            "title": "Configuring Stable Layout Contracts",
+            "desc": "Leveraging TypeScript constraints and interface declarations to minimize runtime errors across component frameworks.",
+            "readTime": "7 min read"
+          },
+          {
+            "tag": "BUNDLE SYSTEMS",
+            "title": "Reducing Production Build Weights",
+            "desc": "Analyzing bundle structures, optimizing compiler trees, and targeting clean dependency distributions to keep pages light.",
+            "readTime": "6 min read"
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #03050a;
+        color: #f1f5f9;
+      }
+      /* Engineering Matrix Mesh Pattern */
+      .mesh-bg {
+        background-image: radial-gradient(
+          rgba(16, 185, 129, 0.04) 1px,
+          transparent 0
+        );
+        background-size: 32px 32px;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #03050a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #10b981;
+      }
+      /* Code IDE Highlight Classes */
+      .syntax-keyword {
+        color: #f472b6;
+        font-weight: 600;
+      }
+      .syntax-string {
+        color: #34d399;
+      }
+      .syntax-type {
+        color: #60a5fa;
+      }
+      .syntax-comment {
+        color: #64748b;
+        font-style: italic;
+      }
+      .syntax-const {
+        color: #fbbf24;
+      }
+      .syntax-function {
+        color: #818cf8;
+      }
+
+      /* Interactive Highlight rings */
+      .premium-border {
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow:
+          inset 0 1px 0 0 rgba(255, 255, 255, 0.02),
+          0 4px 20px -2px rgba(0, 0, 0, 0.5);
+      }
+      .premium-border:hover {
+        border-color: rgba(16, 185, 129, 0.25);
+        box-shadow:
+          inset 0 1px 0 0 rgba(255, 255, 255, 0.05),
+          0 4px 30px -2px rgba(16, 185, 129, 0.05);
+      }
+    </style>
+  </head>
+  <body
+    class="selection:bg-brand-500/30 selection:text-brand-100 overflow-x-hidden relative mesh-bg"
+  >
+    <!-- Ambient Visual Glow Nodes -->
+    <div
+      class="absolute top-0 left-10 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-brand-500/5 rounded-full blur-[80px] sm:blur-[140px] -z-10 pointer-events-none"
+    ></div>
+    <div
+      class="absolute top-[800px] right-10 w-[350px] sm:w-[700px] h-[350px] sm:h-[700px] bg-emerald-500/5 rounded-full blur-[90px] sm:blur-[160px] -z-10 pointer-events-none"
+    ></div>
+    <div
+      class="absolute bottom-[400px] left-1/4 w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] bg-brand-500/5 rounded-full blur-[70px] sm:blur-[120px] -z-10 pointer-events-none"
+    ></div>
+
+    <!-- Sticky Navigation Header -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-white/5 bg-slate-950/75 backdrop-blur-lg"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      >
+        <a
+          href="#"
+          class="group flex items-center space-x-2 text-lg font-bold tracking-tight text-white"
+        >
+          <span class="text-brand-500 font-mono">&lt;</span>
+          <span
+            class="tracking-tight hover:text-brand-400 transition-colors name-placeholder"
+          ></span>
+          <span class="text-brand-500 font-mono">/&gt;</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav
+          class="hidden md:flex items-center space-x-6 lg:space-x-8 text-xs font-bold tracking-wider uppercase text-slate-300"
+        >
+          <a href="#about" class="hover:text-brand-500 transition-colors"
+            >About</a
+          >
+          <a href="#skills" class="hover:text-brand-500 transition-colors"
+            >Skills</a
+          >
+          <a href="#experience" class="hover:text-brand-500 transition-colors"
+            >Experience</a
+          >
+          <a href="#projects" class="hover:text-brand-500 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#performance-lab"
+            class="text-brand-400 hover:text-brand-500 font-semibold transition-colors flex items-center gap-1.5 normal-case font-sans"
+          >
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"
+              ></span>
+            </span>
+            Performance Lab
+          </a>
+          <a href="#contact" class="hover:text-brand-500 transition-colors"
+            >Contact</a
+          >
+        </nav>
+
+        <div class="hidden md:flex items-center space-x-4">
+          <a
+            href="#contact"
+            class="rounded-lg bg-brand-500 px-4 py-2.5 text-xs font-bold tracking-wider uppercase text-slate-950 transition-all hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500"
+          >
+            Contact me
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button
+          id="mobile-menu-btn"
+          class="rounded-lg p-2 text-slate-400 hover:bg-slate-900 hover:text-white md:hidden focus:outline-none"
+          aria-label="Toggle Menu"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              id="menu-icon"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Nav Menu Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden border-b border-white/5 bg-slate-950 px-4 py-4 md:hidden"
+      >
+        <nav
+          class="flex flex-col space-y-4 text-base font-medium text-slate-300"
+        >
+          <a href="#about" class="hover:text-brand-500 transition-colors"
+            >About</a
+          >
+          <a href="#skills" class="hover:text-brand-500 transition-colors"
+            >Skills</a
+          >
+          <a href="#experience" class="hover:text-brand-500 transition-colors"
+            >Experience</a
+          >
+          <a href="#projects" class="hover:text-brand-500 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#performance-lab"
+            class="text-brand-400 hover:text-brand-500 transition-colors flex items-center gap-2"
+          >
+            <span
+              class="h-2 w-2 rounded-full bg-brand-500 animate-pulse"
+            ></span>
+            Performance Lab
+          </a>
+          <a href="#contact" class="hover:text-brand-500 transition-colors"
+            >Contact</a
+          >
+          <a
+            href="#contact"
+            class="inline-block rounded-lg bg-brand-500 px-4 py-2.5 text-center text-sm font-semibold text-slate-950 transition hover:bg-brand-600"
+          >
+            Contact me
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-16 sm:py-24 lg:py-32">
+      <div class="absolute inset-0 -z-10">
+        <canvas id="nodes-canvas" class="w-full h-full opacity-40"></canvas>
+      </div>
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+          <!-- Hero Left Content -->
+          <div class="lg:col-span-7 space-y-6">
+            <div
+              class="inline-flex items-center gap-x-2 rounded-full border border-brand-500/20 bg-brand-500/10 px-3.5 sm:px-4 py-2 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-brand-400 font-mono"
+            >
+              <span
+                class="flex h-2 w-2 rounded-full bg-brand-500 animate-pulse"
+              ></span>
+              Available for Technical Contributions
+            </div>
+
+            <h1
+              id="hero-name"
+              class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none"
+            ></h1>
+            <p
+              id="hero-title"
+              class="text-lg sm:text-3xl font-medium bg-gradient-to-r from-slate-100 via-slate-200 to-slate-400 bg-clip-text text-transparent leading-tight"
+            ></p>
+            <p
+              id="hero-desc"
+              class="max-w-xl text-sm sm:text-lg text-slate-400 leading-relaxed"
+            ></p>
+
+            <!-- CTAs -->
+            <div
+              class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2 sm:pt-4"
+            >
+              <a
+                href="#projects"
+                class="rounded-lg bg-brand-500 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-950 text-center transition-all hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500 shadow-lg shadow-brand-500/10"
+              >
+                Explore Projects
+              </a>
+              <a
+                href="#contact"
+                class="rounded-lg border border-white/10 bg-slate-900/40 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-200 text-center transition-all hover:bg-slate-900 hover:text-white"
+              >
+                Contact me
+              </a>
+              <a
+                id="hero-linkedin"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-slate-900/40 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-300 transition-all hover:bg-slate-900 hover:text-white"
+              >
+                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right: High Fidelity Graphic Stats -->
+          <div class="lg:col-span-5 w-full">
+            <div
+              class="relative overflow-hidden rounded-xl border border-white/5 bg-slate-950/80 shadow-2xl backdrop-blur-md p-5 sm:p-6 space-y-6"
+            >
+              <div
+                class="flex items-center justify-between border-b border-white/5 pb-4"
+              >
+                <h3
+                  class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-400 font-mono"
+                >
+                  System Parameters
+                </h3>
+                <span class="text-xs font-mono text-brand-400"
+                  >Verifying...</span
+                >
+              </div>
+              <div
+                class="space-y-4 font-mono text-[11px] sm:text-xs text-slate-300"
+              >
+                <div class="flex justify-between gap-2">
+                  <span class="text-slate-500">ENGINEER_NAME:</span>
+                  <span id="sys-name" class="text-white"></span>
+                </div>
+                <div class="flex justify-between gap-2">
+                  <span class="text-slate-500">ROLE_TARGET:</span>
+                  <span id="sys-role" class="text-brand-400 text-right"></span>
+                </div>
+                <div class="flex justify-between gap-2">
+                  <span class="text-slate-500">REUSABLE_COMPONENTS:</span>
+                  <span class="text-brand-400">Stable Design Systems</span>
+                </div>
+                <div class="flex justify-between gap-2">
+                  <span class="text-slate-500">PRIMARY_STACK:</span>
+                  <span class="text-white text-right"
+                    >React, TS, Next.js, WebSockets</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Playable Game Element: Interactive Optimization Sandbox -->
+    <section
+      id="performance-lab"
+      class="py-16 sm:py-24 bg-slate-950/90 border-y border-white/5"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span
+            class="text-brand-500 text-xs sm:text-sm font-semibold tracking-wide uppercase font-mono"
+            >Telemetry Control Suite</span
+          >
+          <h2
+            class="text-2xl sm:text-4xl font-bold tracking-tight text-white mt-2"
+          >
+            The Runtime Engineering Sandbox
+          </h2>
+          <p class="mt-3 sm:mt-4 text-slate-400 text-sm sm:text-base">
+            Simulate real-world client-side bottlenecks. Toggle different
+            optimizations to see changes in rendering speeds, Lighthouse
+            diagnostics, and output React templates.
+          </p>
+        </div>
+
+        <!-- Dashboard App Simulator -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch"
+        >
+          <!-- Optimizer Settings Controls (Left) -->
+          <div
+            class="lg:col-span-4 bg-slate-900/30 border border-white/5 rounded-xl p-5 sm:p-6 flex flex-col justify-between backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <div>
+              <h3
+                class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-200 mb-6 flex items-center gap-2 font-mono"
+              >
+                <svg
+                  class="w-5 h-5 text-brand-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                  />
+                </svg>
+                Optimization Controls
+              </h3>
+
+              <div class="space-y-4">
+                <!-- Toggle 1 -->
+                <div
+                  class="flex items-center justify-between p-3.5 rounded-lg bg-slate-950/80 border border-white/5 transition-all hover:border-white/10"
+                >
+                  <div>
+                    <label class="text-xs sm:text-sm font-bold text-white block"
+                      >React.memo()</label
+                    >
+                    <span class="text-[10px] sm:text-[11px] text-slate-400"
+                      >Skips unnecessary render loops</span
+                    >
+                  </div>
+                  <button
+                    id="memo-toggle"
+                    class="relative inline-flex h-6 w-11 shrink-0 items-center rounded-full bg-slate-800 transition-colors focus:outline-none"
+                    role="switch"
+                    aria-checked="false"
+                  >
+                    <span
+                      class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1"
+                    ></span>
+                  </button>
+                </div>
+
+                <!-- Toggle 2 -->
+                <div
+                  class="flex items-center justify-between p-3.5 rounded-lg bg-slate-950/80 border border-white/5 transition-all hover:border-white/10"
+                >
+                  <div>
+                    <label class="text-xs sm:text-sm font-bold text-white block"
+                      >DOM Virtualization</label
+                    >
+                    <span class="text-[10px] sm:text-[11px] text-slate-400"
+                      >Reduces rendered DOM elements</span
+                    >
+                  </div>
+                  <button
+                    id="virt-toggle"
+                    class="relative inline-flex h-6 w-11 shrink-0 items-center rounded-full bg-slate-800 transition-colors focus:outline-none"
+                    role="switch"
+                    aria-checked="false"
+                  >
+                    <span
+                      class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1"
+                    ></span>
+                  </button>
+                </div>
+
+                <!-- Toggle 3 -->
+                <div
+                  class="flex items-center justify-between p-3.5 rounded-lg bg-slate-950/80 border border-white/5 transition-all hover:border-white/10"
+                >
+                  <div>
+                    <label class="text-xs sm:text-sm font-bold text-white block"
+                      >Tree Shaking</label
+                    >
+                    <span class="text-[10px] sm:text-[11px] text-slate-400"
+                      >Prunes dead build dependencies</span
+                    >
+                  </div>
+                  <button
+                    id="asset-toggle"
+                    class="relative inline-flex h-6 w-11 shrink-0 items-center rounded-full bg-slate-800 transition-colors focus:outline-none"
+                    role="switch"
+                    aria-checked="false"
+                  >
+                    <span
+                      class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1"
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-white/5">
+              <span
+                class="text-xs text-slate-400 block font-mono uppercase tracking-wider"
+                >Profiler Data stream:</span
+              >
+              <div
+                class="h-2 w-full bg-slate-950 rounded-full overflow-hidden mt-2 border border-white/5"
+              >
+                <div
+                  id="simulated-traffic"
+                  class="h-full bg-brand-500 w-1/3 animate-pulse"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulation Visual Metrics & Graphs (Right) -->
+          <div
+            class="lg:col-span-8 bg-slate-900/30 border border-white/5 rounded-xl p-5 sm:p-6 flex flex-col justify-between backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <div>
+              <div
+                class="flex items-center justify-between mb-4 border-b border-white/5 pb-4"
+              >
+                <h3
+                  class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-200 font-mono"
+                >
+                  Live Telemetry Diagnostics
+                </h3>
+                <span
+                  class="text-[10px] sm:text-xs font-mono text-slate-400 px-2.5 py-1 rounded bg-slate-950 border border-white/5"
+                  >Profiler Engine active</span
+                >
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                <!-- Lighthouse Score -->
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 text-center relative overflow-hidden"
+                >
+                  <span
+                    class="text-[11px] sm:text-xs font-semibold text-slate-400 block mb-1"
+                    >Lighthouse Performance</span
+                  >
+                  <div
+                    id="perf-score"
+                    class="text-2xl sm:text-3xl font-mono font-extrabold text-red-500"
+                  >
+                    45%
+                  </div>
+                  <span
+                    id="perf-status"
+                    class="text-[10px] uppercase font-mono tracking-wider text-red-500"
+                    >Critical</span
+                  >
+                </div>
+                <!-- Frame Rate (FPS) -->
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 text-center"
+                >
+                  <span
+                    class="text-[11px] sm:text-xs font-semibold text-slate-400 block mb-1"
+                    >Frame Rate (FPS)</span
+                  >
+                  <div
+                    id="fps-score"
+                    class="text-2xl sm:text-3xl font-mono font-extrabold text-red-500"
+                  >
+                    12 FPS
+                  </div>
+                  <span
+                    id="fps-status"
+                    class="text-[10px] uppercase font-mono tracking-wider text-red-500"
+                    >Janky Scroll</span
+                  >
+                </div>
+                <!-- Bundle Footprint -->
+                <div
+                  class="p-4 rounded-lg bg-slate-950 border border-white/5 text-center"
+                >
+                  <span
+                    class="text-[11px] sm:text-xs font-semibold text-slate-400 block mb-1"
+                    >Build Bundle Size</span
+                  >
+                  <div
+                    id="size-score"
+                    class="text-2xl sm:text-3xl font-mono font-extrabold text-amber-500"
+                  >
+                    1.8 MB
+                  </div>
+                  <span
+                    id="size-status"
+                    class="text-[10px] uppercase font-mono tracking-wider text-amber-500"
+                    >Heavy Bundle</span
+                  >
+                </div>
+              </div>
+
+              <!-- Real-time dynamic visual render simulator -->
+              <div
+                class="border border-white/5 rounded-lg p-3 sm:p-4 bg-slate-950"
+              >
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-500 mb-2 font-mono gap-1"
+                >
+                  <span>Realtime Render Output Loop</span>
+                  <span id="nodes-count" class="text-brand-400"
+                    >10,000 DOM Nodes Rendering</span
+                  >
+                </div>
+                <!-- Canvas graph simulation -->
+                <div
+                  class="h-20 sm:h-24 w-full bg-slate-900/50 rounded border border-white/5 overflow-hidden relative"
+                >
+                  <canvas
+                    id="fps-canvas"
+                    class="absolute inset-0 w-full h-full"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/5 pt-6"
+            >
+              <p
+                class="text-xs text-slate-400 max-w-md text-center sm:text-left"
+              >
+                Adjust optimization configs on the left to see changes in
+                rendering speeds and compiled code structures.
+              </p>
+              <button
+                id="optimize-all-btn"
+                class="text-xs font-bold uppercase tracking-wider bg-brand-500/10 hover:bg-brand-500/20 text-brand-400 border border-brand-500/30 px-5 py-2.5 rounded transition-all w-full sm:w-auto text-center"
+              >
+                Run Full Performance Sweep
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom High Fidelity IDE Shell -->
+        <div
+          class="mt-8 bg-slate-950 border border-white/5 rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-auto md:h-[420px]"
+        >
+          <!-- Sidebar File Explorer -->
+          <div
+            class="w-full md:w-56 bg-slate-950 border-b md:border-b-0 md:border-r border-white/5 flex flex-col shrink-0"
+          >
+            <div
+              class="px-4 py-3 border-b border-white/5 text-xs font-bold uppercase tracking-wider text-slate-500 font-mono flex items-center justify-between"
+            >
+              <span>WORKSPACE Explorer</span>
+            </div>
+            <div
+              class="p-3 font-mono text-xs text-slate-400 space-y-2 select-none flex md:flex-col overflow-x-auto md:overflow-visible gap-2 md:gap-0 pb-3"
+            >
+              <div
+                class="flex items-center gap-1.5 py-1 px-2 hover:bg-white/5 rounded transition text-brand-400 shrink-0"
+              >
+                <span>📁</span> <span class="font-bold">src</span>
+              </div>
+              <div
+                class="flex md:flex-col pl-0 md:pl-4 gap-2 md:gap-1 w-full shrink-0"
+              >
+                <button
+                  id="file-btn-app"
+                  class="file-tab-sidebar active w-full flex items-center gap-1.5 py-1 px-2 rounded hover:bg-white/5 transition text-left text-brand-500 font-semibold bg-white/5 shrink-0"
+                >
+                  <span>⚛️</span> <span>App.tsx</span>
+                </button>
+                <button
+                  id="file-btn-telemetry"
+                  class="file-tab-sidebar w-full flex items-center gap-1.5 py-1 px-2 rounded hover:bg-white/5 transition text-left shrink-0"
+                >
+                  <span>📜</span> <span>Telemetry.ts</span>
+                </button>
+              </div>
+              <div
+                class="flex items-center gap-1.5 py-1 px-2 hover:bg-white/5 rounded transition shrink-0"
+              >
+                <span>⚙️</span> <span>package.json</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editor Code Content Window -->
+          <div class="flex-1 flex flex-col bg-slate-900/50 min-w-0">
+            <!-- File Tabs Bar -->
+            <div
+              class="flex items-center bg-slate-950/80 border-b border-white/5 h-10 select-none overflow-x-auto"
+            >
+              <span
+                class="file-tab-active px-4 h-full flex items-center gap-1.5 border-r border-white/5 border-t-2 border-t-brand-500 bg-slate-900/50 text-xs text-slate-300 font-mono font-semibold shrink-0"
+                id="active-tab-indicator"
+              >
+                ⚛️ App.tsx
+              </span>
+            </div>
+            <!-- Code Editor Display -->
+            <div
+              class="flex-1 p-4 sm:p-6 font-mono text-xs sm:text-sm leading-relaxed overflow-y-auto bg-slate-950/30 flex max-h-[300px] md:max-h-full"
+            >
+              <!-- Line Numbers -->
+              <div
+                class="text-slate-600 text-right pr-4 select-none border-r border-white/5 space-y-1 h-full font-mono text-xs hidden sm:block"
+                id="line-numbers-col"
+              >
+                <!-- Populated dynamically -->
+              </div>
+              <!-- Highlighted Code output area -->
+              <pre
+                class="pl-2 sm:pl-4 flex-1 overflow-x-auto"
+              ><code id="code-output" class="text-slate-300"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
+          <div>
+            <span
+              class="text-brand-500 text-xs sm:text-sm font-semibold tracking-wide uppercase font-mono"
+              >Core Profile</span
+            >
+            <h2
+              class="text-2xl sm:text-4xl font-bold tracking-tight text-white mt-2"
+            >
+              Systematic Interface Development
+            </h2>
+            <p
+              id="about-desc"
+              class="mt-6 text-sm sm:text-base text-slate-400 leading-relaxed"
+            ></p>
+            <p class="mt-4 text-sm sm:text-base text-slate-400 leading-relaxed">
+              I focus on streamlining high-density data dashboards, configuring
+              secure user portals, and establishing structured design system
+              frameworks.
+            </p>
+            <!-- Experience Indicators -->
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div
+                class="rounded-lg bg-slate-900/50 border border-white/5 p-4 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div
+                  id="about-years"
+                  class="text-2xl sm:text-3xl font-bold text-white"
+                ></div>
+                <div class="text-[10px] sm:text-xs text-slate-400 mt-1">
+                  Professional Experience
+                </div>
+              </div>
+              <div
+                class="rounded-lg bg-slate-900/50 border border-white/5 p-4 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div
+                  id="about-industries"
+                  class="text-2xl sm:text-3xl font-bold text-white"
+                ></div>
+                <div class="text-[10px] sm:text-xs text-slate-400 mt-1">
+                  Multi-Domain Insights
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specialized Domain Matrix -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-semibold text-white">
+              Targeted Contributions
+            </h3>
+            <div
+              id="industries-grid"
+              class="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            >
+              <!-- Populated dynamically from JSON -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tech Stack Section -->
+    <section id="skills" class="py-16 sm:py-24 bg-slate-900/30">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span
+            class="text-brand-500 text-xs sm:text-sm font-semibold tracking-wide uppercase font-mono"
+            >Expertise Directory</span
+          >
+          <h2
+            class="text-2xl sm:text-4xl font-bold tracking-tight text-white mt-2"
+          >
+            Core Technical Ecosystem
+          </h2>
+          <p class="mt-3 sm:mt-4 text-slate-400 text-sm sm:text-base">
+            Core frameworks and development models used in my day-to-day
+            workflow.
+          </p>
+        </div>
+
+        <!-- Custom Tabbed Interface for Skills -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Tab Controls -->
+          <div
+            id="skills-tab-controls"
+            class="md:col-span-1 flex flex-row md:flex-col overflow-x-auto md:overflow-visible gap-2 pb-4 md:pb-0"
+          >
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Tab Content panels -->
+          <div
+            class="md:col-span-3 bg-slate-900/40 border border-white/5 rounded-xl p-5 sm:p-8 min-h-[300px] sm:min-h-[340px] backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <div id="skills-panel-content" class="space-y-6">
+              <!-- Populated dynamically based on selected skill tab -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Explorer -->
+    <section id="experience" class="py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span
+            class="text-brand-500 text-xs sm:text-sm font-semibold tracking-wide uppercase font-mono"
+            >Career History</span
+          >
+          <h2
+            class="text-2xl sm:text-4xl font-bold tracking-tight text-white mt-2"
+          >
+            Professional Timeline
+          </h2>
+          <p class="mt-3 sm:mt-4 text-slate-400 text-sm sm:text-base">
+            Click corporate tags on the left to evaluate roles, code
+            contributions, and achievements.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-5xl mx-auto">
+          <!-- Experience Sidebar Tabs -->
+          <div
+            id="work-tab-controls"
+            class="md:col-span-4 flex flex-row md:flex-col overflow-x-auto md:overflow-visible gap-2 pb-4 md:pb-0 font-mono w-full"
+          >
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Experience Detail View (Tab panels) -->
+          <div
+            class="md:col-span-8 bg-slate-900/30 border border-white/5 rounded-xl p-5 sm:p-8 backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)] min-h-[320px] sm:min-h-[360px] flex flex-col justify-between"
+          >
+            <div id="work-panel-content" class="space-y-4">
+              <!-- Populated dynamically based on selected experience tab -->
+            </div>
+
+            <!-- Tech Stack badges footer -->
+            <div class="border-t border-white/5 pt-4 mt-6">
+              <div class="flex flex-wrap gap-2" id="work-tech-badges">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="py-16 sm:py-24 bg-slate-900/30">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span
+            class="text-brand-500 text-xs sm:text-sm font-semibold tracking-wide uppercase font-mono"
+            >Portfolio</span
+          >
+          <h2
+            class="text-2xl sm:text-4xl font-bold tracking-tight text-white mt-2"
+          >
+            Systems Portfolio
+          </h2>
+          <p class="mt-3 sm:mt-4 text-slate-400 text-sm sm:text-base font-sans">
+            Core dashboard platforms and specialized software installations.
+          </p>
+
+          <!-- Dynamic Filter controls! -->
+          <div
+            id="project-filters"
+            class="flex flex-wrap justify-center gap-2 mt-8 sm:mt-10"
+          >
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto transition-all duration-300"
+          id="project-grid"
+        >
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership & Hackathons Section -->
+    <section class="py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <!-- Leadership & Activities -->
+          <div class="space-y-6">
+            <div>
+              <span
+                class="text-brand-500 text-xs sm:text-sm font-semibold tracking-wide uppercase font-mono"
+                >Operations</span
+              >
+              <h2
+                class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-2"
+              >
+                Leadership & Activities
+              </h2>
+            </div>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+              I apply my technical background to mentor engineering colleagues,
+              coordinate agile processes, and outline core product directions.
+            </p>
+
+            <div class="space-y-4">
+              <div
+                class="flex gap-4 p-4 rounded-lg bg-slate-900 border border-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="text-brand-500 shrink-0">
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">
+                    Team Lead — RPD V2 Initiative
+                  </h4>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Coordinated developer sprints, led structural design audits,
+                    and reviewed code merges to protect framework performance
+                    targets.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex gap-4 p-4 rounded-lg bg-slate-900 border border-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="text-brand-500 shrink-0">
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">
+                    HIPAA Compliance Integration
+                  </h4>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Configured healthcare layout operations in compliance with
+                    secure electronic data handling standards.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex gap-4 p-4 rounded-lg bg-slate-900 border border-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+              >
+                <div class="text-brand-500 shrink-0">
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">
+                    Technical Writing & Education
+                  </h4>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Authoring structured guides, code standards, and technical
+                    specifications for frontend projects.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hackathons / NASA space apps lead -->
+          <div
+            class="bg-slate-900 border border-white/5 rounded-xl p-6 lg:p-8 space-y-6 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <span
+              class="text-[10px] uppercase font-mono tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20"
+              >Rapid Prototyping</span
+            >
+            <h3 class="text-2xl font-bold text-white">
+              NASA Space Apps Hackathon
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Served as Hackathon Lead, guiding development efforts, database
+              setup configurations, and API connections under tight event
+              schedules.
+            </p>
+            <div class="p-4 rounded-lg bg-slate-950 border border-white/5">
+              <div
+                class="text-xs font-semibold text-slate-200 uppercase tracking-wider mb-2 font-mono"
+              >
+                Key Activities
+              </div>
+              <ul class="text-xs text-slate-400 space-y-2">
+                <li class="flex items-center gap-2">
+                  <span
+                    class="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"
+                  ></span>
+                  Coordinated developer tasks and workflows.
+                </li>
+                <li class="flex items-center gap-2">
+                  <span
+                    class="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"
+                  ></span>
+                  Focused on delivering functional mockups on schedule.
+                </li>
+                <li class="flex items-center gap-2">
+                  <span
+                    class="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"
+                  ></span>
+                  Integrated map elements and geographic telemetry APIs.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Slider (Playable/Interactive) -->
+    <section class="py-16 sm:py-24 bg-slate-900/30 border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span
+            class="text-brand-500 text-xs sm:text-sm font-semibold tracking-wide uppercase font-mono"
+            >Collaborator Feedback</span
+          >
+          <h2
+            class="text-2xl sm:text-4xl font-bold tracking-tight text-white mt-2"
+          >
+            Industry Testimonials
+          </h2>
+          <p class="mt-3 sm:mt-4 text-slate-400 text-sm sm:text-base">
+            Feedback from engineering managers, team leads, and colleagues.
+          </p>
+        </div>
+
+        <!-- Testimonial Slider Shell -->
+        <div class="max-w-4xl mx-auto relative px-4">
+          <div
+            id="testimonial-container"
+            class="overflow-hidden relative min-h-[180px] sm:min-h-[200px] flex items-center"
+          >
+            <!-- Rendered dynamically -->
+          </div>
+
+          <!-- Navigation Controls -->
+          <div class="flex items-center justify-center space-x-4 mt-8">
+            <button
+              id="prev-testimonial-btn"
+              class="p-2.5 rounded-full border border-white/5 bg-slate-900 text-slate-400 hover:text-white hover:border-brand-500 transition-all cursor-pointer"
+            >
+              <svg
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <!-- Indicators -->
+            <div id="testimonial-dots-container" class="flex space-x-2">
+              <!-- Rendered dynamically -->
+            </div>
+            <button
+              id="next-testimonial-btn"
+              class="p-2.5 rounded-full border border-white/5 bg-slate-900 text-slate-400 hover:text-white hover:border-brand-500 transition-all cursor-pointer"
+            >
+              <svg
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Articles / Blog Section -->
+    <section class="py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span
+            class="text-brand-500 text-xs sm:text-sm font-semibold tracking-wide uppercase font-mono"
+            >Technical Insights</span
+          >
+          <h2
+            class="text-2xl sm:text-4xl font-bold tracking-tight text-white mt-2"
+          >
+            Engineering Articles
+          </h2>
+          <p class="mt-3 sm:mt-4 text-slate-400 text-sm sm:text-base">
+            Articles written on React performance patterns, modern TypeScript
+            developments, and structural optimization techniques.
+          </p>
+        </div>
+
+        <div
+          id="articles-grid"
+          class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto"
+        >
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume / CTA Section -->
+    <section class="py-16 bg-slate-950/50 border-t border-white/5">
+      <div class="mx-auto max-w-4xl px-4 text-center space-y-6">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">
+          Looking for the detailed professional profile?
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+          Review my complete technical background, certifications, and project
+          history in a clean, print-friendly format.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            id="resume-linkedin-btn"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-lg bg-brand-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-600 shadow-md shadow-brand-500/10 cursor-pointer"
+          >
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+            View Online Resume
+          </a>
+          <a
+            id="resume-email-btn"
+            href=""
+            class="inline-flex items-center gap-2 rounded-lg border border-white/5 bg-slate-900 px-5 py-3 text-sm font-semibold text-slate-300 transition hover:bg-slate-850 hover:text-white"
+          >
+            <svg
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            Download Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+          <!-- Contact Info -->
+          <div class="lg:col-span-12 xl:col-span-5 space-y-6">
+            <div>
+              <span
+                class="text-brand-500 text-xs sm:text-sm font-semibold tracking-wide uppercase font-mono"
+                >Communications</span
+              >
+              <h2
+                class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-2"
+              >
+                Connect with me
+              </h2>
+            </div>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+              If you are looking to discuss development roles, performance
+              audits, or architecture layouts, feel free to send a message.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
+              <div class="flex items-center gap-3">
+                <div
+                  class="p-2.5 rounded bg-slate-900 border border-white/5 text-brand-500 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span
+                    class="text-[10px] uppercase font-mono text-slate-500 block"
+                    >Direct Email</span
+                  >
+                  <a
+                    id="contact-email-link"
+                    href=""
+                    class="text-xs sm:text-sm font-semibold text-white hover:text-brand-400 transition break-all"
+                  ></a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div
+                  class="p-2.5 rounded bg-slate-900 border border-white/5 text-brand-500 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span
+                    class="text-[10px] uppercase font-mono text-slate-500 block"
+                    >Location</span
+                  >
+                  <span
+                    id="contact-location"
+                    class="text-xs sm:text-sm font-semibold text-white"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Presence Links -->
+            <div class="flex gap-3 pt-2">
+              <a
+                id="footer-linkedin"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-2.5 rounded bg-slate-900 border border-white/5 text-slate-400 hover:text-white hover:border-brand-500 transition-all shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+                aria-label="LinkedIn"
+              >
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+              </a>
+              <a
+                id="footer-github"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-2.5 rounded bg-slate-900 border border-white/5 text-slate-400 hover:text-white hover:border-brand-500 transition-all shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+                aria-label="GitHub"
+              >
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div
+            class="lg:col-span-12 xl:col-span-7 bg-slate-900/40 border border-white/5 rounded-xl p-5 sm:p-8 backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]"
+          >
+            <form id="contact-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-xs font-semibold uppercase text-slate-400 mb-1.5 font-mono"
+                    >Your name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    class="w-full rounded-lg border border-white/5 bg-slate-950 px-4 py-2.5 text-sm text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                    placeholder="Jane Doe"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-xs font-semibold uppercase text-slate-400 mb-1.5 font-mono"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    class="w-full rounded-lg border border-white/5 bg-slate-950 px-4 py-2.5 text-sm text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                    placeholder="jane@example.com"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="subject"
+                  class="block text-xs font-semibold uppercase text-slate-400 mb-1.5 font-mono"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  required
+                  class="w-full rounded-lg border border-white/5 bg-slate-950 px-4 py-2.5 text-sm text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  placeholder="Project Consultation"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-xs font-semibold uppercase text-slate-400 mb-1.5 font-mono"
+                  >Message Details</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  required
+                  class="w-full rounded-lg border border-white/5 bg-slate-950 px-4 py-2.5 text-sm text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  placeholder="Hello Haseeb, I'd like to discuss a frontend assignment..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                id="form-submit-btn"
+                class="w-full rounded-lg bg-brand-500 py-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-600 focus:outline-none cursor-pointer"
+              >
+                Submit Inquiry
+              </button>
+            </form>
+            <p
+              id="form-feedback"
+              class="hidden text-xs text-center mt-4 text-emerald-400 font-mono"
+            >
+              Inquiry submitted successfully (Simulated output).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="border-t border-white/5 bg-slate-950 py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div class="flex justify-center space-x-6 text-sm text-slate-400">
+          <a
+            id="footer-nav-linkedin"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-brand-500 transition"
+            >LinkedIn</a
+          >
+          <a
+            id="footer-nav-github"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-brand-500 transition"
+            >GitHub</a
+          >
+          <a
+            id="footer-nav-email"
+            href=""
+            class="hover:text-brand-500 transition"
+            >Email</a
+          >
+        </div>
+        <p class="text-xs text-slate-500 font-mono">
+          Copyright © 2026 Haseeb Ijaz. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+      // Global Dynamic State Manager
+      const portfolioState = {
+        memo: false,
+        virtualization: false,
+        compression: false,
+        selectedSkillTab: "frontend",
+        selectedWorkTab: "tekboox",
+        activeFilter: "all",
+        activeFile: "app", // 'app' or 'telemetry'
+        testimonialIndex: 0,
+        specExpanded: {},
+        data: null,
+      };
+
+      // 1. Load data from `<script id="portfolio-data"...>` block in template’s `<head>`
+      const rawData = document.getElementById("portfolio-data").textContent;
+      portfolioState.data = JSON.parse(rawData);
+
+      // DOM Elements caching
+      const nodesCanvas = document.getElementById("nodes-canvas");
+      const nodesCtx = nodesCanvas.getContext("2d");
+      const fpsCanvas = document.getElementById("fps-canvas");
+      const fpsCtx = fpsCanvas.getContext("2d");
+
+      // Render Functions
+      function initializeProfileData() {
+        const { profile, industries } = portfolioState.data;
+
+        // Populate name logos and placeholders
+        document.querySelectorAll(".name-placeholder").forEach((el) => {
+          el.textContent = profile.name;
+        });
+
+        document.getElementById("hero-name").textContent = profile.name;
+        document.getElementById("hero-title").textContent = profile.title;
+        document.getElementById("hero-desc").textContent = profile.description;
+
+        // Links
+        document.getElementById("hero-linkedin").href = profile.linkedin;
+        document.getElementById("resume-linkedin-btn").href = profile.linkedin;
+        document.getElementById("resume-email-btn").href =
+          `mailto:${profile.email}?subject=Resume%20Request`;
+        document.getElementById("footer-linkedin").href = profile.linkedin;
+        document.getElementById("footer-github").href = profile.github;
+        document.getElementById("footer-nav-linkedin").href = profile.linkedin;
+        document.getElementById("footer-nav-github").href = profile.github;
+        document.getElementById("footer-nav-email").href =
+          `mailto:${profile.email}`;
+        document.getElementById("contact-email-link").href =
+          `mailto:${profile.email}`;
+        document.getElementById("contact-email-link").textContent =
+          profile.email;
+        document.getElementById("contact-location").textContent =
+          profile.location;
+
+        // System params panel
+        document.getElementById("sys-name").textContent = profile.name;
+        document.getElementById("sys-role").textContent = profile.subTitle;
+
+        // About block metrics
+        document.getElementById("about-desc").textContent =
+          `With over ${profile.yearsOfExperience} of professional experience, I construct responsive web applications with strict standards for performance and component architecture.`;
+        document.getElementById("about-years").textContent =
+          profile.yearsOfExperience;
+        document.getElementById("about-industries").textContent =
+          `${profile.industriesCount} Industries`;
+
+        // Industries grid list
+        const industriesGrid = document.getElementById("industries-grid");
+        industriesGrid.innerHTML = industries
+          .map(
+            (ind) => `
+          <div class="flex items-start space-x-3 p-4 rounded-lg bg-slate-900/50 border border-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]">
+            <div class="mt-1 text-brand-500 shrink-0">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-200">${ind.title}</h4>
+              <p class="text-xs text-slate-400 mt-1">${ind.desc}</p>
+            </div>
+          </div>
+        `,
+          )
+          .join("");
+      }
+
+      function renderSkills() {
+        const { skills } = portfolioState.data;
+        const keys = Object.keys(skills);
+
+        // Sidebar tabs
+        const tabControls = document.getElementById("skills-tab-controls");
+        tabControls.innerHTML = keys
+          .map((k) => {
+            const tabLabel =
+              k === "frontend"
+                ? "Frontend Stack"
+                : k === "ui"
+                  ? "UI & Libraries"
+                  : k === "tools"
+                    ? "Tools & Workspace"
+                    : "Practices";
+            const isActive = portfolioState.selectedSkillTab === k;
+            return `
+            <button
+              onclick="selectSkillTab('${k}')"
+              class="shrink-0 text-left px-4 py-3 rounded-lg text-xs font-bold tracking-wider uppercase border-l-2 ${isActive ? "bg-slate-900 border-brand-500 text-white" : "border-transparent text-slate-400 hover:bg-slate-900/50 hover:text-white"} transition-all"
+            >
+              ${tabLabel}
+            </button>
+          `;
+          })
+          .join("");
+
+        // Actively displayed panel
+        const currentSkill = skills[portfolioState.selectedSkillTab];
+        const panelContent = document.getElementById("skills-panel-content");
+        panelContent.innerHTML = `
+          <div>
+            <h3 class="text-lg font-bold text-white">${currentSkill.title}</h3>
+            <p class="text-slate-400 text-xs sm:text-sm mt-1 font-mono">${currentSkill.subTitle}</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            ${currentSkill.items
+              .map(
+                (item) => `
+              <div class="p-4 rounded-lg bg-slate-950 border border-white/5 hover:border-brand-500/30 transition-all">
+                <div class="text-brand-400 font-bold text-sm mb-1">${item.name}</div>
+                <span class="text-xs text-slate-400">${item.desc}</span>
+              </div>
+            `,
+              )
+              .join("")}
+          </div>
+        `;
+      }
+
+      window.selectSkillTab = function (key) {
+        portfolioState.selectedSkillTab = key;
+        renderSkills();
+      };
+
+      function renderExperience() {
+        const { experience } = portfolioState.data;
+
+        const workTabControls = document.getElementById("work-tab-controls");
+        workTabControls.innerHTML = experience
+          .map((exp) => {
+            const isActive = portfolioState.selectedWorkTab === exp.id;
+            return `
+            <button
+              onclick="selectWorkTab('${exp.id}')"
+              class="shrink-0 text-left px-4 py-3 rounded-lg text-xs font-bold border-l-2 ${isActive ? "bg-slate-900 border-brand-500 text-white" : "border-transparent text-slate-400 hover:bg-slate-900/50 hover:text-white"} transition-all w-full flex justify-between items-center"
+            >
+              <span>${exp.company}</span>
+              <span class="text-[10px] text-slate-500 font-mono shrink-0">${exp.period.split(" ")[exp.period.split(" ").length - 1]}</span>
+            </button>
+          `;
+          })
+          .join("");
+
+        // Actively loaded panel
+        const currentWork = experience.find(
+          (exp) => exp.id === portfolioState.selectedWorkTab,
+        );
+        const workPanelContent = document.getElementById("work-panel-content");
+        workPanelContent.innerHTML = `
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-white/5 pb-4">
+            <div>
+              <h3 class="text-lg font-bold text-white">${currentWork.role}</h3>
+              <span class="text-xs text-brand-400 font-mono">${currentWork.company}</span>
+            </div>
+            <span class="text-xs text-slate-300 font-mono self-start sm:self-center bg-slate-950 px-2.5 py-1 rounded border border-white/5">
+              ${currentWork.period}
+            </span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed">${currentWork.description}</p>
+          <div class="space-y-2">
+            <h4 class="text-xs font-semibold text-white uppercase tracking-wider font-mono">Core Achievements & Duties:</h4>
+            <ul class="space-y-1.5 text-xs text-slate-400">
+              ${currentWork.bullets
+                .map(
+                  (bullet) => `
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>${bullet}</span>
+                </li>
+              `,
+                )
+                .join("")}
+            </ul>
+          </div>
+        `;
+
+        // Update technical footer badges
+        const badgeContainer = document.getElementById("work-tech-badges");
+        badgeContainer.innerHTML = currentWork.tags
+          .map(
+            (t) => `
+          <span class="px-2.5 py-1 rounded bg-slate-950 border border-white/5 text-xs font-semibold text-slate-300 font-mono">${t}</span>
+        `,
+          )
+          .join("");
+      }
+
+      window.selectWorkTab = function (id) {
+        portfolioState.selectedWorkTab = id;
+        renderExperience();
+      };
+
+      function renderProjects() {
+        const { projects } = portfolioState.data;
+
+        // Custom filters HTML
+        const filterControls = document.getElementById("project-filters");
+        const categories = ["all", "healthcare", "martech", "analytics"];
+        filterControls.innerHTML = categories
+          .map((cat) => {
+            const isActive = portfolioState.activeFilter === cat;
+            const label =
+              cat === "all"
+                ? "All Projects"
+                : cat === "healthcare"
+                  ? "Healthcare"
+                  : cat === "martech"
+                    ? "SaaS & Marketing"
+                    : "High-Density Data";
+            return `
+            <button
+              onclick="filterProjects('${cat}')"
+              class="px-4 py-2 rounded-full border border-white/5 text-xs font-semibold ${isActive ? "bg-slate-950 text-white border-brand-500/50" : "text-slate-400 hover:text-white hover:border-slate-700"} transition-all cursor-pointer"
+            >
+              ${label}
+            </button>
+          `;
+          })
+          .join("");
+
+        // Cards list filtered dynamically
+        const projectGrid = document.getElementById("project-grid");
+        const currentFiltered = projects.filter(
+          (p) =>
+            portfolioState.activeFilter === "all" ||
+            p.category.includes(portfolioState.activeFilter),
+        );
+
+        projectGrid.innerHTML = currentFiltered
+          .map((p) => {
+            const specExpanded = !!portfolioState.specExpanded[p.id];
+            return `
+            <div class="project-card group relative overflow-hidden rounded-xl border border-white/5 bg-slate-900/40 p-5 sm:p-6 hover:border-brand-500/30 transition-all flex flex-col justify-between backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.02)]">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-[10px] uppercase font-mono tracking-wider text-brand-400 bg-brand-500/10 px-2.5 py-0.5 rounded">${p.badge}</span>
+                  <span class="text-xs text-slate-500 font-mono">${p.subBadge}</span>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-brand-400 transition mb-2">${p.title}</h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">${p.description}</p>
+              </div>
+
+              <!-- Expandable Custom Spec sheet -->
+              <div class="border-t border-white/5 pt-4 mt-4">
+                <button
+                  onclick="toggleSpec('${p.id}')"
+                  class="text-xs font-mono text-slate-400 hover:text-brand-400 flex items-center gap-1 transition-all cursor-pointer"
+                >
+                  <span>${specExpanded ? "[-] Hide" : "[+] View"} Project Specs</span>
+                </button>
+                <div class="${specExpanded ? "" : "hidden"} mt-3 space-y-3 p-4 rounded bg-slate-950 border border-white/5 font-mono text-[11px] text-slate-400">
+                  <div class="flex justify-between">
+                    <span>Core Layout Engine:</span><span class="text-white">${p.engine}</span>
+                  </div>
+                  <div class="space-y-1">
+                    <div class="flex justify-between">
+                      <span>Lighthouse Performance:</span><span class="text-brand-400">${p.lighthouse}</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-1 rounded-full overflow-hidden">
+                      <div class="bg-brand-500 h-full" style="width: ${p.lighthouse}"></div>
+                    </div>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Hydration Latency:</span><span class="text-brand-400">${p.latency}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <div class="flex flex-wrap gap-2">
+                  ${p.tags
+                    .map(
+                      (t) => `
+                    <span class="text-[10px] sm:text-[11px] bg-slate-950 border border-white/5 text-slate-400 px-2 py-1 rounded font-mono">${t}</span>
+                  `,
+                    )
+                    .join("")}
+                </div>
+              </div>
+            </div>
+          `;
+          })
+          .join("");
+      }
+
+      window.filterProjects = function (category) {
+        portfolioState.activeFilter = category;
+        renderProjects();
+      };
+
+      window.toggleSpec = function (id) {
+        portfolioState.specExpanded[id] = !portfolioState.specExpanded[id];
+        renderProjects();
+      };
+
+      function renderTestimonials() {
+        const { testimonials } = portfolioState.data;
+
+        const testimonialContainer = document.getElementById(
+          "testimonial-container",
+        );
+        testimonialContainer.innerHTML = testimonials
+          .map((t, idx) => {
+            const isActive = idx === portfolioState.testimonialIndex;
+            return `
+            <div class="${isActive ? "" : "hidden"} w-full text-center animate-fade-in transition-opacity duration-300">
+              <blockquote class="text-center">
+                <p class="text-base sm:text-lg lg:text-xl font-medium text-slate-300 italic max-w-3xl mx-auto leading-relaxed">
+                  "${t.text}"
+                </p>
+                <footer class="mt-6">
+                  <div class="text-sm font-semibold text-white">${t.author}</div>
+                  <div class="text-xs text-slate-500 font-mono">${t.company}</div>
+                </footer>
+              </blockquote>
+            </div>
+          `;
+          })
+          .join("");
+
+        // Dots control rendering
+        const dotsContainer = document.getElementById(
+          "testimonial-dots-container",
+        );
+        dotsContainer.innerHTML = testimonials
+          .map((_, idx) => {
+            const isActive = idx === portfolioState.testimonialIndex;
+            return `
+            <span
+              onclick="selectTestimonial(${idx})"
+              class="h-2.5 w-2.5 rounded-full transition-all cursor-pointer ${isActive ? "bg-brand-500" : "bg-slate-700"}"
+            ></span>
+          `;
+          })
+          .join("");
+      }
+
+      window.selectTestimonial = function (idx) {
+        portfolioState.testimonialIndex = idx;
+        renderTestimonials();
+      };
+
+      document
+        .getElementById("prev-testimonial-btn")
+        .addEventListener("click", () => {
+          const len = portfolioState.data.testimonials.length;
+          portfolioState.testimonialIndex =
+            (portfolioState.testimonialIndex - 1 + len) % len;
+          renderTestimonials();
+        });
+
+      document
+        .getElementById("next-testimonial-btn")
+        .addEventListener("click", () => {
+          const len = portfolioState.data.testimonials.length;
+          portfolioState.testimonialIndex =
+            (portfolioState.testimonialIndex + 1) % len;
+          renderTestimonials();
+        });
+
+      function renderArticles() {
+        const { articles } = portfolioState.data;
+        const articlesGrid = document.getElementById("articles-grid");
+        articlesGrid.innerHTML = articles
+          .map(
+            (art) => `
+          <div class="bg-slate-900/40 border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-all flex flex-col justify-between backdrop-blur-sm">
+            <div class="p-6">
+              <div class="text-[10px] sm:text-xs text-brand-400 font-mono mb-2">${art.tag}</div>
+              <h3 class="text-base sm:text-lg font-bold text-white mb-2 leading-snug">${art.title}</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">${art.desc}</p>
+            </div>
+            <div class="p-6 border-t border-white/5 bg-slate-950/80 flex items-center justify-between text-xs font-mono">
+              <span class="text-slate-500">${art.readTime}</span>
+              <a
+                href="${portfolioState.data.profile.linkedin}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-brand-400 hover:text-brand-500 font-semibold flex items-center gap-1 cursor-pointer"
+              >
+                Read Article
+                <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        `,
+          )
+          .join("");
+      }
+
+      // Initialize all profile data elements
+      initializeProfileData();
+      renderSkills();
+      renderExperience();
+      renderProjects();
+      renderTestimonials();
+      renderArticles();
+
+      // Mobile navbar toggles
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const mobileNav = document.getElementById("mobile-menu");
+      const mIcon = document.getElementById("menu-icon");
+
+      menuBtn.addEventListener("click", () => {
+        const isHidden = mobileNav.classList.contains("hidden");
+        if (isHidden) {
+          mobileNav.classList.remove("hidden");
+          mIcon.setAttribute("d", "M6 18L18 6M6 6l12 12");
+        } else {
+          mobileNav.classList.add("hidden");
+          mIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+        }
+      });
+
+      // Ambient visual background canvas nodes simulation
+      let nodeList = [];
+      const nodesCount = 40;
+      let mousePos = { x: null, y: null };
+
+      function initBackgroundCanvas() {
+        nodesCanvas.width = nodesCanvas.parentElement.clientWidth;
+        nodesCanvas.height = nodesCanvas.parentElement.clientHeight || 700;
+        nodeList = [];
+        for (let i = 0; i < nodesCount; i++) {
+          nodeList.push({
+            x: Math.random() * nodesCanvas.width,
+            y: Math.random() * nodesCanvas.height,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            radius: Math.random() * 2 + 1,
+          });
+        }
+      }
+
+      function renderBackgroundCanvas() {
+        nodesCtx.clearRect(0, 0, nodesCanvas.width, nodesCanvas.height);
+        nodesCtx.fillStyle = "rgba(16, 185, 129, 0.3)";
+        nodesCtx.strokeStyle = "rgba(16, 185, 129, 0.08)";
+        nodesCtx.lineWidth = 1;
+
+        for (let i = 0; i < nodeList.length; i++) {
+          const node = nodeList[i];
+          node.x += node.vx;
+          node.y += node.vy;
+
+          if (node.x < 0 || node.x > nodesCanvas.width) node.vx *= -1;
+          if (node.y < 0 || node.y > nodesCanvas.height) node.vy *= -1;
+
+          nodesCtx.beginPath();
+          nodesCtx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+          nodesCtx.fill();
+
+          if (mousePos.x !== null && mousePos.y !== null) {
+            const dx = mousePos.x - node.x;
+            const dy = mousePos.y - node.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance < 120) {
+              nodesCtx.beginPath();
+              nodesCtx.moveTo(node.x, node.y);
+              nodesCtx.lineTo(mousePos.x, mousePos.y);
+              nodesCtx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(renderBackgroundCanvas);
+      }
+
+      window.addEventListener("mousemove", (e) => {
+        const bounds = nodesCanvas.getBoundingClientRect();
+        mousePos.x = e.clientX - bounds.left;
+        mousePos.y = e.clientY - bounds.top;
+      });
+
+      window.addEventListener("mouseleave", () => {
+        mousePos.x = null;
+        mousePos.y = null;
+      });
+
+      window.addEventListener("resize", initBackgroundCanvas);
+      initBackgroundCanvas();
+      renderBackgroundCanvas();
+
+      // Telemetry Simulation profiling canvas block
+      let telemetryHistory = Array(100).fill(12);
+
+      function resizeProfilerCanvas() {
+        fpsCanvas.width = fpsCanvas.parentElement.clientWidth;
+        fpsCanvas.height = fpsCanvas.parentElement.clientHeight || 96;
+      }
+      window.addEventListener("resize", resizeProfilerCanvas);
+      resizeProfilerCanvas();
+
+      function animateProfiler() {
+        fpsCtx.clearRect(0, 0, fpsCanvas.width, fpsCanvas.height);
+
+        // Grid lines drawing
+        fpsCtx.strokeStyle = "#0f172a";
+        fpsCtx.lineWidth = 1;
+        for (let i = 1; i < 4; i++) {
+          const gridY = (fpsCanvas.height / 4) * i;
+          fpsCtx.beginPath();
+          fpsCtx.moveTo(0, gridY);
+          fpsCtx.lineTo(fpsCanvas.width, gridY);
+          fpsCtx.stroke();
+        }
+
+        // Trace plot graphing path
+        fpsCtx.lineWidth = 2;
+        const currentFPSVal = telemetryHistory[telemetryHistory.length - 1];
+        fpsCtx.strokeStyle =
+          currentFPSVal > 45
+            ? "#10b981"
+            : currentFPSVal > 25
+              ? "#f59e0b"
+              : "#ef4444";
+
+        fpsCtx.beginPath();
+        const stepSize = fpsCanvas.width / (telemetryHistory.length - 1);
+        for (let i = 0; i < telemetryHistory.length; i++) {
+          const plotX = i * stepSize;
+          const plotY =
+            fpsCanvas.height -
+            (telemetryHistory[i] / 60) * (fpsCanvas.height * 0.8) -
+            10;
+          if (i === 0) {
+            fpsCtx.moveTo(plotX, plotY);
+          } else {
+            fpsCtx.lineTo(plotX, plotY);
+          }
+        }
+        fpsCtx.stroke();
+      }
+
+      // Trigger values generation loop
+      setInterval(() => {
+        let baseVal = 12;
+        if (portfolioState.memo) baseVal += 18;
+        if (portfolioState.virtualization) baseVal += 30;
+
+        const jitter = Math.floor(Math.random() * 5) - 2;
+        let calculated = baseVal + jitter;
+        if (calculated > 60) calculated = 60;
+        if (calculated < 5) calculated = 5;
+
+        telemetryHistory.push(calculated);
+        telemetryHistory.shift();
+        animateProfiler();
+      }, 100);
+
+      // Custom plain-text code Highlighter
+      function syntaxHighlightCode(rawCode) {
+        return rawCode
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(
+            /\b(const|let|var|function|return|export|import|from|class|constructor|extends|super)\b/g,
+            '<span class="syntax-keyword">$1</span>',
+          )
+          .replace(/(['"`].*?['"`])/g, '<span class="syntax-string">$1</span>')
+          .replace(
+            /\b(React|DataItem|Dashboard|VirtualList|VirtualVirtualScroller|EnginePipeline|HTMLElement)\b/g,
+            '<span class="syntax-type">$1</span>',
+          )
+          .replace(
+            /\b(console|useState|generateLargeArray|map|getContext|getElementById|push|shift|requestAnimationFrame|resizeCanvas)\b/g,
+            '<span class="syntax-function">$1</span>',
+          )
+          .replace(/(\/\/.*)/g, '<span class="syntax-comment">$1</span>');
+      }
+
+      function renderSandboxCode() {
+        const codeOutput = document.getElementById("code-output");
+        const linesCol = document.getElementById("line-numbers-col");
+        let codeBody = "";
+
+        if (portfolioState.activeFile === "app") {
+          codeBody += `import React, { useState } from 'react';\n\n`;
+          if (portfolioState.memo) {
+            codeBody += `// [OPTIMIZED]: React.memo skips unnecessary rendering\nconst DataItem = React.memo(({ item }) => {\n  return <div className="item">{item.name}</div>;\n});\n\n`;
+          } else {
+            codeBody += `// [UNOPTIMIZED]: Item renders from scratch every updates\nconst DataItem = ({ item }) => {\n  return <div className="item">{item.name}</div>;\n};\n\n`;
+          }
+          codeBody += `export const Dashboard = () => {\n  const [data] = useState(generateLargeArray(10000));\n\n`;
+          if (portfolioState.virtualization) {
+            codeBody += `  // [OPTIMIZED]: DOM Virtualization coordinates visual rendering window\n  return (\n    <VirtualList items={data} height={400} itemHeight={35}>\n      {(item) => <DataItem key={item.id} item={item} />}\n    </VirtualList>\n  );\n`;
+          } else {
+            codeBody += `  // [UNOPTIMIZED]: Mapping 10,000 components directly to DOM tree\n  return (\n    <div className="list-scroller">\n      {data.map(item => <DataItem key={item.id} item={item} />)}\n    </div>\n  );\n`;
+          }
+          codeBody += `};`;
+        } else {
+          codeBody += `// High-Performance telemetry drawing script\nclass TelemetryEngine {\n  constructor(canvas: HTMLCanvasElement) {\n    this.ctx = canvas.getContext('2d');\n    this.history = Array(100).fill(12);\n  }\n\n`;
+          codeBody += `  draw(fps: number) {\n    this.history.push(fps);\n    this.history.shift();\n    this.ctx.clearRect(0, 0, width, height);\n    // Optimized drawing calculation pathways\n    this.ctx.beginPath();\n    this.history.forEach((f, i) => {\n      this.ctx.lineTo(i * step, height - (f / 60) * height);\n    });\n    this.ctx.stroke();\n  }\n}`;
+        }
+
+        // Output lines calculations
+        const linesCount = codeBody.split("\n").length;
+        let lineIdxHtml = "";
+        for (let idx = 1; idx <= linesCount; idx++) {
+          lineIdxHtml += `<div>${idx}</div>`;
+        }
+        linesCol.innerHTML = lineIdxHtml;
+        codeOutput.innerHTML = syntaxHighlightCode(codeBody);
+      }
+
+      function updateTelemetryLabels() {
+        let currentScore = 45;
+        let currentFPS = 12;
+        let currentSize = 1.8;
+
+        if (portfolioState.memo) {
+          currentScore += 20;
+          currentFPS += 18;
+        }
+        if (portfolioState.virtualization) {
+          currentScore += 25;
+          currentFPS += 30;
+        }
+        if (portfolioState.compression) {
+          currentScore += 9;
+          currentSize = 1.1;
+        }
+
+        if (currentScore > 99) currentScore = 99;
+        if (currentFPS > 60) currentFPS = 60;
+
+        const perfScore = document.getElementById("perf-score");
+        const perfStatus = document.getElementById("perf-status");
+        perfScore.textContent = `${currentScore}%`;
+        if (currentScore < 60) {
+          perfScore.className =
+            "text-2xl sm:text-3xl font-mono font-extrabold text-red-500";
+          perfStatus.textContent = "Critical";
+          perfStatus.className =
+            "text-[10px] uppercase font-mono tracking-wider text-red-500";
+        } else if (currentScore < 85) {
+          perfScore.className =
+            "text-2xl sm:text-3xl font-mono font-extrabold text-amber-500";
+          perfStatus.textContent = "Modest";
+          perfStatus.className =
+            "text-[10px] uppercase font-mono tracking-wider text-amber-500";
+        } else {
+          perfScore.className =
+            "text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400";
+          perfStatus.textContent = "Excellent";
+          perfStatus.className =
+            "text-[10px] uppercase font-mono tracking-wider text-emerald-400";
+        }
+
+        const fpsScore = document.getElementById("fps-score");
+        const fpsStatus = document.getElementById("fps-status");
+        fpsScore.textContent = `${currentFPS} FPS`;
+        if (currentFPS < 20) {
+          fpsScore.className =
+            "text-2xl sm:text-3xl font-mono font-extrabold text-red-500";
+          fpsStatus.textContent = "Janky Scroll";
+          fpsStatus.className =
+            "text-[10px] uppercase font-mono tracking-wider text-red-500";
+        } else if (currentFPS < 45) {
+          fpsScore.className =
+            "text-2xl sm:text-3xl font-mono font-extrabold text-amber-500";
+          fpsStatus.textContent = "Acceptable";
+          fpsStatus.className =
+            "text-[10px] uppercase font-mono tracking-wider text-amber-500";
+        } else {
+          fpsScore.className =
+            "text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400";
+          fpsStatus.textContent = "Butter Smooth";
+          fpsStatus.className =
+            "text-[10px] uppercase font-mono tracking-wider text-emerald-400";
+        }
+
+        const sizeScore = document.getElementById("size-score");
+        const sizeStatus = document.getElementById("size-status");
+        sizeScore.textContent = `${currentSize} MB`;
+        if (currentSize > 1.5) {
+          sizeScore.className =
+            "text-2xl sm:text-3xl font-mono font-extrabold text-amber-500";
+          sizeStatus.textContent = "Heavy Bundle";
+          sizeStatus.className =
+            "text-[10px] uppercase font-mono tracking-wider text-amber-500";
+        } else {
+          sizeScore.className =
+            "text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400";
+          sizeStatus.textContent = "Tree-shaken";
+          sizeStatus.className =
+            "text-[10px] uppercase font-mono tracking-wider text-emerald-400";
+        }
+
+        document.getElementById("nodes-count").textContent =
+          portfolioState.virtualization
+            ? "Rendering 15 elements (Virtual)"
+            : "10,000 DOM Nodes Rendering";
+
+        renderSandboxCode();
+      }
+
+      function initSwitchStyle(btn, status) {
+        const circle = btn.querySelector("span");
+        if (status) {
+          btn.classList.remove("bg-slate-800");
+          btn.classList.add("bg-brand-500");
+          circle.classList.add("translate-x-6");
+          circle.classList.remove("translate-x-1");
+        } else {
+          btn.classList.add("bg-slate-800");
+          btn.classList.remove("bg-brand-500");
+          circle.classList.remove("translate-x-6");
+          circle.classList.add("translate-x-1");
+        }
+      }
+
+      const memoBtn = document.getElementById("memo-toggle");
+      const virtBtn = document.getElementById("virt-toggle");
+      const assetBtn = document.getElementById("asset-toggle");
+
+      memoBtn.addEventListener("click", () => {
+        portfolioState.memo = !portfolioState.memo;
+        initSwitchStyle(memoBtn, portfolioState.memo);
+        updateTelemetryLabels();
+      });
+
+      virtBtn.addEventListener("click", () => {
+        portfolioState.virtualization = !portfolioState.virtualization;
+        initSwitchStyle(virtBtn, portfolioState.virtualization);
+        updateTelemetryLabels();
+      });
+
+      assetBtn.addEventListener("click", () => {
+        portfolioState.compression = !portfolioState.compression;
+        initSwitchStyle(assetBtn, portfolioState.compression);
+        updateTelemetryLabels();
+      });
+
+      document
+        .getElementById("optimize-all-btn")
+        .addEventListener("click", () => {
+          portfolioState.memo = true;
+          portfolioState.virtualization = true;
+          portfolioState.compression = true;
+          initSwitchStyle(memoBtn, true);
+          initSwitchStyle(virtBtn, true);
+          initSwitchStyle(assetBtn, true);
+          updateTelemetryLabels();
+        });
+
+      // Tab switcher app file vs telemetry.ts logic
+      const appFileBtn = document.getElementById("file-btn-app");
+      const telemetryFileBtn = document.getElementById("file-btn-telemetry");
+      const activeTabLabel = document.getElementById("active-tab-indicator");
+
+      function syncExplorerActiveClasses() {
+        if (portfolioState.activeFile === "app") {
+          appFileBtn.className =
+            "file-tab-sidebar active w-full flex items-center gap-1.5 py-1 px-2 rounded hover:bg-white/5 transition text-left text-brand-500 font-semibold bg-white/5 shrink-0";
+          telemetryFileBtn.className =
+            "file-tab-sidebar w-full flex items-center gap-1.5 py-1 px-2 rounded hover:bg-white/5 transition text-left shrink-0";
+          activeTabLabel.textContent = "⚛️ App.tsx";
+        } else {
+          appFileBtn.className =
+            "file-tab-sidebar w-full flex items-center gap-1.5 py-1 px-2 rounded hover:bg-white/5 transition text-left shrink-0";
+          telemetryFileBtn.className =
+            "file-tab-sidebar active w-full flex items-center gap-1.5 py-1 px-2 rounded hover:bg-white/5 transition text-left text-brand-500 font-semibold bg-white/5 shrink-0";
+          activeTabLabel.textContent = "📜 Telemetry.ts";
+        }
+        renderSandboxCode();
+      }
+
+      appFileBtn.addEventListener("click", () => {
+        portfolioState.activeFile = "app";
+        syncExplorerActiveClasses();
+      });
+
+      telemetryFileBtn.addEventListener("click", () => {
+        portfolioState.activeFile = "telemetry";
+        syncExplorerActiveClasses();
+      });
+
+      // Submit contact form simulation
+      const submitForm = document.getElementById("contact-form");
+      const subFeedback = document.getElementById("form-feedback");
+      const submitBtn = document.getElementById("form-submit-btn");
+
+      submitForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        submitBtn.textContent = "Submitting Inquiry...";
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          submitBtn.textContent = "Submitted";
+          subFeedback.classList.remove("hidden");
+          submitForm.reset();
+
+          setTimeout(() => {
+            submitBtn.textContent = "Submit Inquiry";
+            submitBtn.disabled = false;
+          }, 3000);
+        }, 1200);
+      });
+
+      // Initializer sync trigger
+      updateTelemetryLabels();
+    </script>
+  </body>
+</html>
