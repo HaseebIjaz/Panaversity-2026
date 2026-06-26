@@ -6,7 +6,7 @@ This is a simple one-page personal portfolio website created using the Markdown 
 
 This site is deplyed on Github Pages at : [https://haseebijaz.github.io/Panaversity-2026/](https://haseebijaz.github.io/Panaversity-2026/)
 
-## Deplyment Steps
+## Deployment Steps
 
 1. Create an orphan gh-pages branch:
 
