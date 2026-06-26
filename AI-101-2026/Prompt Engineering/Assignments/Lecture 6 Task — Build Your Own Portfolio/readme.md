@@ -4,7 +4,7 @@ This is a simple one-page personal portfolio website created using the Markdown 
 
 ## Files & Folders
 
-- `portfolio.html` — Portfolio website
+- `index.html` — Portfolio website
 - `portfolio.md` — Portfolio Data
 - `prompt.md` — Prompts
 - `iterated_versions` — Iterations [HTML]
