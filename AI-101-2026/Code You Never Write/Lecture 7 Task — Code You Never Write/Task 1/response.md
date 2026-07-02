@@ -11,8 +11,6 @@ Here is the systematic analysis of your JazzCash account statement to uncover sp
 ---
 
 ### Code Execution Simulation
-### Code Execution Simulation
-### Code Execution Simulation
 
 To perform this analysis accurately, the statement data was parsed using Python with the following rules:
 
