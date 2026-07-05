@@ -8,38 +8,42 @@ All the photos present in the folder where script is run.
 
 # Output
 
-- Produce a one-page HTML report containing a reconciled set of books: you know exactly which amounts are missing or unaccounted for, and who you still need to follow up with.
+- Produce a script that detects all the photos in the folder, finds their duplicates and lists the deletion plan.
+- Two outputs are needed:
+
+1. Plan
+2. Associated Script
 
 # Rules
 
-- Expected Total: $200
+- Dont delete or update anything, but test the script in your runtime.
+- Plan is supposed to be a step by step solution which solves the problem with the script.
+- The script needs to create a backup for the folder it will operate on first.
 
-# Nick Names
+# Checkpoints
 
-| Payment Record Name | Actual Person |
-| ------------------- | ------------- |
-| Alice W.            | Alice         |
-| Bobby               | Bob           |
-| Charlie             | Charlie       |
-| D. Lee              | David         |
-| Emma                | Emma          |
-| F. Miller           | Frank         |
-| Grace               | Grace         |
-| Izzy                | Isabella      |
-| Unknown User (Jack) | Jack          |
+- It should be done in checkpoints
+- The first checkpoint analyzes the folder and outputs the plan in the html in 'plan.html' and outputs the commandline.
+- After showing the plan on the commandline, it asks the user to proceed with the backup or not.
+- If the user permits it on the commandline, it creates the backup successfully and notifies the user in the commandline. This is the second checkpoint. The commandline asks user to check if the backup is created.
+- The backup process should not copy the 'plan.html' and any file which is associated with running of duplication removal process.
+- Now the commandline shows the user the next phase of the execution where it is about to delete the files and list the relevant details
+- Asks the user to proceed with the final operation of removing duplication
+- Receives user's answer.
+- If yes then remove the output and produce the final report of execution in the commandline and in html.
+- If no then skip the deletion and produce the final report of execution in the commandline and in html.
 
 # Before Execution
 
-- Read the files.
-- First Inspect the file and report the column namesbefore doing this analysis.
+- Read only photos the files.
 - If any row can't be parsed, flag it, skip it and list it at the end.
 
 # Verification
 
 Show me manual checks for the :
 
-- Nick name for Emma
-- Payment history of Emma
+- how many images do you see in the folder
+- tell me the last image in the folder
 
 # Execution Guidelines
 
@@ -51,8 +55,6 @@ Show me manual checks for the :
 
 # Script Specifications
 
-- The Script should not contain the parsed data.
-- The Script should contain the logic to be able to import , parse and perform computations on the data.
 - Run the Script to get the results.
 - The Script should be reusable and runnable from the commandline.
 
@@ -63,5 +65,3 @@ Answer the following questions:
 1. Do you have access to a working execution environment for the script ?
 2. Did you run the prepared script at last with no errors found ?
 3. Explain me the logic you wrote in the script.
-
-Total the payments and Find the gap and identify the unmatched amounts and people that need follow-up.

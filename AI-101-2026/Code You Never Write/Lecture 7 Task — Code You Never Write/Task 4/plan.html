@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Duplicate Photo Plan</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 2rem; background:#fafafa; color:#222; }
+h1 { font-size: 1.4rem; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 2rem; background:#fff; }
+th, td { border: 1px solid #ddd; padding: 6px 10px; font-size: 0.9rem; text-align:left; }
+th { background:#333; color:#fff; }
+tr.keeper td { background:#eaffea; }
+tr.dupe td { background:#ffecec; }
+.summary { background:#fff; padding:1rem; border:1px solid #ddd; margin-bottom:1.5rem; }
+</style></head>
+<body>
+<h1>Duplicate Photo Analysis — .</h1>
+<div class="summary">
+  <p><strong>Total image files scanned:</strong> 6</p>
+  <p><strong>Duplicate groups found:</strong> 3</p>
+  <p><strong>Files planned for deletion:</strong> 3</p>
+  <p><strong>Space reclaimable:</strong> 18.8MB</p>
+  <p><strong>Unparsable / flagged files (skipped, untouched):</strong> 0</p>
+  <p><em>Generated: 2026-07-06T03:29:17</em></p>
+</div>
+
+<h2>Deletion Plan</h2>
+<table>
+<tr><th>File</th><th>Action</th><th>Size</th><th>Content Hash</th></tr>
+<tr class='keeper'><td>IMG_3511.JPG</td><td>KEEP</td><td>7.7MB</td><td>02e546e243e9...</td></tr><tr class='dupe'><td>IMG_3522.JPG</td><td>DELETE (duplicate of IMG_3511.JPG)</td><td>7.7MB</td><td>02e546e243e9...</td></tr><tr class='keeper'><td>IMG_3514.JPG</td><td>KEEP</td><td>6.1MB</td><td>d85fab8da6f6...</td></tr><tr class='dupe'><td>IMG_3544.JPG</td><td>DELETE (duplicate of IMG_3514.JPG)</td><td>6.1MB</td><td>d85fab8da6f6...</td></tr><tr class='keeper'><td>IMG_3532.JPG</td><td>KEEP</td><td>5.1MB</td><td>31569e69e96e...</td></tr><tr class='dupe'><td>IMG_35323.JPG</td><td>DELETE (duplicate of IMG_3532.JPG)</td><td>5.1MB</td><td>31569e69e96e...</td></tr>
+</table>
+
+<h2>Flagged / Unparsable Files (not touched)</h2>
+<table>
+<tr><th>File</th><th>Reason</th></tr>
+<tr><td colspan='2'><em>None</em></td></tr>
+</table>
+</body></html>
