@@ -1,0 +1,195 @@
+Date,Time,Transaction Type,Channel,Transaction Description,Money In,Money Out,Fee,Balance
+01-Jan-2026,12:10 AM,Money transfer,JazzCash App,Money Transfer via RAAST,,1200.00,,50728.66
+01-Jan-2026,02:10 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,590.00,,49548.66
+01-Jan-2026,02:10 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,590.00,,50138.66
+01-Jan-2026,02:11 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,590.00,,48958.66
+01-Jan-2026,10:25 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,470.00,,48488.66
+02-Jan-2026,03:13 AM,Merchant Payment,JazzCash App,Till Payment from JazzCash Account ********3532,,960.00,,47528.66
+02-Jan-2026,10:55 AM,Money transfer,JazzCash App,Money Transfer via RAAST,,5740.00,,41788.66
+02-Jan-2026,10:57 AM,Money transfer,JazzCash App,Money Transfer via RAAST,,5740.00,,36048.66
+02-Jan-2026,12:37 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******1563,,5000.00,,31048.66
+02-Jan-2026,12:58 PM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,500.00,1.55,30547.11
+02-Jan-2026,07:07 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,1030.00,,29517.11
+02-Jan-2026,09:06 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******7757,,5000.00,,24517.11
+02-Jan-2026,09:41 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******1563,,1000.00,,23517.11
+03-Jan-2026,12:08 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******0003,,500.00,,23017.11
+03-Jan-2026,01:28 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3355,,360.00,,22657.11
+03-Jan-2026,01:31 AM,Merchant Payment,JazzCash App,Till Payment from JazzCash Account ********3532,,840.00,,21817.11
+03-Jan-2026,12:55 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******1563,,17000.00,,4817.11
+03-Jan-2026,12:58 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,60000.00,,,64817.11
+03-Jan-2026,02:42 PM,Donation,JazzCash App,Donation at Donation AlKhidmat Foundation,,100.00,,64717.11
+03-Jan-2026,03:41 PM,Merchant Payment,JazzCash App,Till Payment from JazzCash Account ********3532,,14500.00,,50217.11
+03-Jan-2026,04:37 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3125,,1000.00,,49217.11
+03-Jan-2026,06:23 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******7454,,700.00,,48517.11
+04-Jan-2026,04:47 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******5949,,45000.00,,3517.11
+04-Jan-2026,07:29 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******0250,,680.00,,1937.11
+05-Jan-2026,02:21 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******0027,,160.00,,1777.11
+05-Jan-2026,06:12 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******9990,,1700.00,,77.11
+08-Jan-2026,11:55 PM,Donation,JazzCash App,Donation at Donation Akhuwat,,40.00,,37.11
+10-Jan-2026,09:58 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******0251,5000.00,,,5037.11
+11-Jan-2026,07:12 PM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,2100.00,1.55,2935.56
+11-Jan-2026,08:37 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******0250,,600.00,,2335.56
+12-Jan-2026,01:48 AM,Utility Bills Payment,JazzCash App,Mobile Prepaid Load - Ufone,,150.00,,2185.56
+12-Jan-2026,02:25 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******4031,,350.00,,1835.56
+12-Jan-2026,02:52 AM,Merchant Payment,JazzCash App,Till Payment from JazzCash Account ********3532,,700.00,,1135.56
+12-Jan-2026,02:18 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,15000.00,,,16135.56
+13-Jan-2026,11:29 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******4012,,2400.00,,13735.56
+13-Jan-2026,11:52 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,150.00,,13585.56
+14-Jan-2026,01:35 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3355,,600.00,,12985.56
+14-Jan-2026,01:11 PM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,200.00,1.55,12784.01
+14-Jan-2026,04:43 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,11900.00,,884.01
+14-Jan-2026,06:41 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,300.00,,584.01
+15-Jan-2026,10:34 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,60.00,,,644.01
+18-Jan-2026,04:47 AM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,2350.00,,,2994.01
+18-Jan-2026,05:05 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******0177,,2350.00,,644.01
+18-Jan-2026,09:03 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******0250,,600.00,,44.01
+21-Jan-2026,02:51 AM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,3000.00,,,3044.01
+21-Jan-2026,02:52 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3355,,1020.00,,2024.01
+21-Jan-2026,12:48 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,330.00,,1694.01
+21-Jan-2026,01:16 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******6638,,150.00,,1544.01
+21-Jan-2026,02:43 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,11000.00,,,12544.01
+21-Jan-2026,02:44 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******5949,,10100.00,,2444.01
+21-Jan-2026,06:39 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,180.00,,2264.01
+21-Jan-2026,11:22 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,1240.00,,1024.01
+22-Jan-2026,04:03 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,3000.00,,,4024.01
+22-Jan-2026,04:06 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******6004,,2600.00,,1424.01
+23-Jan-2026,01:14 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******1338,,210.00,,1214.01
+23-Jan-2026,03:54 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,350.00,,864.01
+23-Jan-2026,04:05 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******6638,,70.00,,794.01
+23-Jan-2026,04:24 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******6638,,70.00,,724.01
+23-Jan-2026,07:24 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,1300.00,,,2024.01
+23-Jan-2026,07:25 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account *0741,,1300.00,,724.01
+24-Jan-2026,03:12 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******4582,,150.00,,574.01
+24-Jan-2026,06:08 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,30000.00,,,30574.01
+24-Jan-2026,06:09 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******9504,,28100.00,,2474.01
+24-Jan-2026,07:24 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3237,,1750.00,,724.01
+24-Jan-2026,08:10 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,2000.00,,,2724.01
+24-Jan-2026,08:12 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,5000.00,,,7724.01
+24-Jan-2026,08:13 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******9504,,4450.00,,3274.01
+24-Jan-2026,09:49 PM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,320.00,1.55,2952.46
+26-Jan-2026,02:32 AM,Money transfer,JazzCash App,Money Transfer via RAAST,,1050.00,,1902.46
+26-Jan-2026,11:28 AM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,6000.00,,,7902.46
+26-Jan-2026,11:29 AM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,6000.00,1.55,1900.91
+27-Jan-2026,01:51 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,9000.00,,,10900.91
+27-Jan-2026,02:09 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,4750.00,,6150.91
+27-Jan-2026,11:43 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******0003,,1220.00,,4930.91
+28-Jan-2026,02:49 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******4003,,900.00,,4030.91
+28-Jan-2026,04:34 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,3600.00,,430.91
+28-Jan-2026,10:09 PM,Donation,JazzCash App,Donation at Donation AlKhidmat Foundation,,100.00,,330.91
+29-Jan-2026,07:47 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,3000.00,,,3330.91
+29-Jan-2026,07:48 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******5937,,1000.00,,2330.91
+30-Jan-2026,03:04 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******5044,,320.00,,2010.91
+30-Jan-2026,06:35 PM,Donation,JazzCash App,Donation at Donation AlKhidmat Foundation,,200.00,,1810.91
+31-Jan-2026,06:54 PM,Donation,JazzCash App,Donation at Donation Akhuwat,,500.00,,1310.91
+03-Feb-2026,05:53 PM,Merchant Payment,JazzCash App,OMNO Customer Pay for Jazz Bundles via Consumer App,,1121.00,,189.91
+04-Feb-2026,08:08 PM,Incoming IBFT,Other,IBFT Credit - 923078470015,2000.00,,,2189.91
+04-Feb-2026,08:10 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3847,,1000.00,,1189.91
+05-Feb-2026,01:15 AM,Incoming IBFT,Other,IBFT Credit - 923078470015,4000.00,,,5189.91
+05-Feb-2026,11:30 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,700.00,,4489.91
+07-Feb-2026,05:01 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,4000.00,,489.91
+09-Feb-2026,08:18 PM,Incoming IBFT,Other,IBFT Credit - 923078470015,3090.00,,,3579.91
+10-Feb-2026,12:08 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******1961,,590.00,,2989.91
+10-Feb-2026,05:57 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,770.00,,2219.91
+10-Feb-2026,06:03 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,400.00,,1819.91
+11-Feb-2026,12:00 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3996,,550.00,,1269.91
+12-Feb-2026,05:02 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,5000.00,,,6269.91
+12-Feb-2026,05:03 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******8888,,3600.00,,2669.91
+12-Feb-2026,11:30 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******1864,,170.00,,2499.91
+15-Feb-2026,06:46 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,1000.00,,,3499.91
+15-Feb-2026,06:53 PM,Utility Bills Payment,JazzCash App,Bill Payment Made to NADRA Billing Companies,,3075.00,5.00,419.91
+17-Feb-2026,03:50 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,3500.00,,,3919.91
+17-Feb-2026,03:51 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,3192.00,,727.91
+21-Feb-2026,01:49 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,1000.00,,,1727.91
+22-Feb-2026,04:24 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,8000.00,,,9727.91
+22-Feb-2026,04:26 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,9500.00,,227.91
+24-Feb-2026,09:05 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,1500.00,,,1727.91
+24-Feb-2026,09:06 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******5712,,770.00,,957.91
+01-Mar-2026,11:01 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,957.00,,0.91
+12-Mar-2026,09:25 AM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,2000.00,,,2000.91
+12-Mar-2026,09:29 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******0287,,410.00,,1590.91
+12-Mar-2026,05:38 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******6627,,120.00,,1470.91
+15-Mar-2026,04:54 PM,Utility Bills Payment,JazzCash App,Mobile Prepaid Load - Other Mobile Operators (OMO),,300.00,,1170.91
+15-Mar-2026,11:27 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,1500.00,,,2670.91
+15-Mar-2026,11:29 PM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,1800.00,1.55,869.36
+17-Mar-2026,12:25 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******1256,,500.00,,369.36
+18-Mar-2026,12:44 PM,Merchant Payment,JazzCash App,OMNO Customer Buys Zong Bundles via Customer App,,150.00,,219.36
+19-Mar-2026,05:52 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,219.00,,0.36
+21-Mar-2026,04:41 AM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,11000.00,,,11000.36
+21-Mar-2026,04:44 AM,Utility Bills Payment,JazzCash App,Bill Payment Made to NADRA Billing Companies,,5977.00,5.00,5018.36
+26-Mar-2026,12:58 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account 3226,,1380.00,,3638.36
+27-Mar-2026,01:27 AM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,1580.00,1.55,2056.81
+27-Mar-2026,10:44 PM,Donation,JazzCash App,Donation at Donation AlKhidmat Foundation,,650.00,,1406.81
+30-Mar-2026,10:05 AM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,5000.00,,,6406.81
+30-Mar-2026,05:59 PM,Money transfer,JazzCash,Money Transfer From JazzCash Account,,440.00,,5966.81
+31-Mar-2026,01:29 AM,Money transfer,JazzCash App,Money Transfer via RAAST,,1700.00,,4266.81
+01-Apr-2026,05:27 PM,Utility Bills Payment,JazzCash App,Bill Payment Made to NADRA Billing Companies,,2488.00,5.00,1773.81
+01-Apr-2026,10:27 PM,Money transfer,JazzCash,Money Transfer From JazzCash Account,,240.00,,1533.81
+10-Apr-2026,07:14 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,1000.00,,,2533.81
+10-Apr-2026,08:35 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,1744.00,,789.81
+12-Apr-2026,01:11 AM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,5000.00,,,5789.81
+12-Apr-2026,01:12 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account 3226,,1400.00,,4389.81
+13-Apr-2026,04:06 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,7000.00,,,11389.81
+13-Apr-2026,04:09 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,7000.00,,4389.81
+16-Apr-2026,12:57 AM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,90.00,1.55,4298.26
+16-Apr-2026,01:06 AM,Money transfer,JazzCash App,Money Transfer via RAAST,,240.00,,4058.26
+16-Apr-2026,02:00 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******7757,,1345.00,,2713.26
+24-Apr-2026,04:33 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******8821,,500.00,,2213.26
+24-Apr-2026,05:01 PM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,2000.00,1.55,211.71
+05-May-2026,03:04 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,3000.00,,,3211.71
+05-May-2026,03:44 PM,Utility Bills Payment,JazzCash App,Bill Payment Made to NADRA Billing Companies,,3081.00,5.00,125.71
+06-May-2026,04:43 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,1200.00,,,1325.71
+06-May-2026,04:45 PM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,1050.00,1.55,274.16
+06-May-2026,07:28 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,1200.00,,,1474.16
+06-May-2026,07:29 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******7757,,1000.00,,474.16
+10-May-2026,12:19 AM,Incoming IBFT,Other,IBFT Credit - 923078470015,3500.00,,,3974.16
+10-May-2026,09:29 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,1580.00,,2394.16
+21-May-2026,04:29 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,500.00,,1894.16
+21-May-2026,05:39 PM,Merchant Payment,JazzCash App,Till Payment from JazzCash Account ********3532,,350.00,,1544.16
+23-May-2026,12:33 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3262,1000.00,,,2544.16
+25-May-2026,07:20 PM,Money Transfer,JazzCash,Money transfer to JazzCash account ******3283,2000.00,,,4544.16
+25-May-2026,10:59 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,1280.00,,3264.16
+25-May-2026,11:00 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,100.00,,3164.16
+27-May-2026,09:20 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******8897,,80.00,,3084.16
+28-May-2026,03:46 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******6001,,950.00,,2134.16
+01-Jun-2026,01:58 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,10000.00,,,12134.16
+01-Jun-2026,01:59 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,4000.00,,8134.16
+01-Jun-2026,07:09 PM,Merchant Payment,JazzCash App,Till Payment from JazzCash Account ********3532,,410.00,,7724.16
+02-Jun-2026,12:39 AM,Utility Bills Payment,JazzCash App,Bill Payment Made to NADRA Billing Companies,,3020.00,5.00,4699.16
+02-Jun-2026,12:10 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,500.00,,4199.16
+03-Jun-2026,12:56 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,8000.00,,,12199.16
+03-Jun-2026,12:58 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,5600.00,,6599.16
+03-Jun-2026,07:05 PM,Merchant Payment,JazzCash App,Till Payment from JazzCash Account ********3532,,410.00,,6189.16
+04-Jun-2026,06:13 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,1000.00,,5189.16
+04-Jun-2026,06:42 PM,Merchant Payment,JazzCash App,Till Payment from JazzCash Account ********3532,,350.00,,4839.16
+05-Jun-2026,06:58 PM,Merchant Payment,JazzCash App,Till Payment from JazzCash Account ********3532,,200.00,,4639.16
+06-Jun-2026,05:17 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3847,,2000.00,,2639.16
+06-Jun-2026,07:32 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,300.00,,2339.16
+06-Jun-2026,07:49 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3847,,500.00,,1839.16
+07-Jun-2026,05:49 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******4303,,840.00,,999.16
+07-Jun-2026,06:43 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,5000.00,,,5999.16
+07-Jun-2026,06:46 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3847,,3000.00,,2999.16
+07-Jun-2026,09:12 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,3600.00,,,6599.16
+07-Jun-2026,09:13 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3847,,3500.00,,3099.16
+08-Jun-2026,06:08 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,10000.00,,,13099.16
+08-Jun-2026,06:13 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******4239,,5300.00,,7799.16
+08-Jun-2026,07:06 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******3847,,5000.00,,2799.16
+09-Jun-2026,05:44 PM,Money transfer,JazzCash,Money Transfer From JazzCash Account,,120.00,,2679.16
+09-Jun-2026,09:48 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,6000.00,,,8679.16
+10-Jun-2026,12:09 AM,Money transfer,JazzCash App,Money Transfer via RAAST,,4000.00,,4679.16
+10-Jun-2026,06:37 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,22500.00,,,27179.16
+14-Jun-2026,11:07 PM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,20000.00,,,47179.16
+15-Jun-2026,06:13 AM,Money Transfer,JazzCash,Payment Received to JazzCash Account ******0015,35000.00,,,82179.16
+18-Jun-2026,01:03 AM,Money Transfer,JazzCash App,Money transfer to JazzCash account *0094,,1950.00,,80229.16
+19-Jun-2026,03:14 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******7098,,480.00,,79749.16
+19-Jun-2026,04:52 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******6686,,858.00,,78891.16
+19-Jun-2026,09:15 PM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,460.00,1.55,78429.61
+19-Jun-2026,10:13 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******6417,,1000.00,,77429.61
+19-Jun-2026,11:28 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******6556,,6700.00,,70729.61
+21-Jun-2026,11:14 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,650.00,,70079.61
+22-Jun-2026,08:20 PM,Merchant Payment,JazzCash App,Till Payment from JazzCash Account ********3532,,350.00,,69729.61
+22-Jun-2026,10:59 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,840.00,,68889.61
+23-Jun-2026,04:27 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******7098,,450.00,,68439.61
+23-Jun-2026,06:19 PM,Money Transfer,JazzCash App,Money transfer to JazzCash account ******2087,,120.00,,68319.61
+27-Jun-2026,11:33 PM,Money transfer,JazzCash App,Money Transfer via RAAST,,3000.00,,65319.61
+28-Jun-2026,06:46 PM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,15000.00,1.55,50318.06
+29-Jun-2026,01:30 AM,IBFT Outgoing,JazzCash App,IBFT Outgoing Customer - 923********5,,400.00,1.55,49916.51
