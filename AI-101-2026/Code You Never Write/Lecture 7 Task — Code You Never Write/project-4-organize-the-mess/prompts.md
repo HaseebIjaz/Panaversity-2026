@@ -36,7 +36,6 @@ All the photos present in the folder where script is run.
 # Before Execution
 
 - Read only photos the files.
-- If any row can't be parsed, flag it, skip it and list it at the end.
 
 # Verification
 
