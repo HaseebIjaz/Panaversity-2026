@@ -1,0 +1,129 @@
+{
+  "skill_name": "linkedin-content-generator",
+  "description": "Trigger-level tests: does the skill fire (or correctly not fire) for a given prompt? No execution required — evaluated against the SKILL.md description only, the way Claude's skill router would.",
+  "evals": [
+    {
+      "id": "T1",
+      "category": "narrow_trigger",
+      "query": "Use the linkedin-content-generator skill on my deployment pipeline notes and give me the full content package.",
+      "should_trigger": true,
+      "note": "Explicit, names the skill directly. Baseline sanity check."
+    },
+    {
+      "id": "T2",
+      "category": "narrow_trigger",
+      "query": "Turn this attached writeup on our infra decision framework into a LinkedIn article and posts.",
+      "should_trigger": true,
+      "note": "Explicit LinkedIn + Article + posts language with an attached source."
+    },
+    {
+      "id": "T3",
+      "category": "broad_trigger",
+      "query": "I just finished documenting how we structured the agent orchestration layer for our multi-agent system. Can you help me get this in front of CTOs and technical founders on LinkedIn?",
+      "should_trigger": true,
+      "note": "No mention of 'skill', 'article', or 'post' by name -- has to be inferred from intent + audience language matching the brand positioning."
+    },
+    {
+      "id": "T4",
+      "category": "broad_trigger",
+      "query": "here's my notes from building a scaling framework for our deployment system (pasted below). make something out of this i can share to build my profile as an ai systems builder",
+      "should_trigger": true,
+      "note": "Casual phrasing, lowercase, no explicit platform named but 'profile' + brand language + pasted source material should be enough."
+    },
+    {
+      "id": "T5",
+      "category": "broad_trigger",
+      "query": "can you turn my notes into a post",
+      "should_trigger": false,
+      "note": "REVISED after description update: no platform named, no 'share professionally'/'build my profile' signal -- description now explicitly excludes a platform-less 'make this a post.' Correctly should NOT trigger; if the user wants LinkedIn specifically they need to say so or it needs to be established earlier in the conversation."
+    },
+    {
+      "id": "N1",
+      "category": "negative_trigger",
+      "query": "What's a good commenting strategy to build engagement on other people's LinkedIn posts in the AI space?",
+      "should_trigger": false,
+      "note": "Explicitly out of scope per the skill's own negative trigger -- commenting strategy."
+    },
+    {
+      "id": "N2",
+      "category": "negative_trigger",
+      "query": "Write me a connection request message to send to a VP of Engineering at an AI startup.",
+      "should_trigger": false,
+      "note": "Connection-request messaging is explicitly excluded."
+    },
+    {
+      "id": "N3",
+      "category": "negative_trigger",
+      "query": "Write me a LinkedIn post about why agentic AI is going to change software engineering.",
+      "should_trigger": false,
+      "note": "No source material identifiable anywhere in the prompt -- this is asking Claude to originate the idea, which the skill must refuse to do. Borderline: skill should not silently trigger-and-comply; either it doesn't trigger, or it triggers and immediately asks for source material rather than drafting. Flag for human judgment either way."
+    },
+    {
+      "id": "N4",
+      "category": "negative_trigger",
+      "query": "Can you review my LinkedIn About section and headline and suggest improvements?",
+      "should_trigger": false,
+      "note": "Adjacent (LinkedIn, profile positioning) but not article/post generation from source material -- near-miss test."
+    },
+    {
+      "id": "S1",
+      "category": "scope_inside",
+      "query": "Attached is a transcript of a talk I gave on our RAG pipeline failures. Turn it into LinkedIn content.",
+      "should_trigger": true,
+      "note": "Real attached source material, LinkedIn content requested -- squarely in scope."
+    },
+    {
+      "id": "S2",
+      "category": "scope_outside",
+      "query": "Attached is a transcript of a talk I gave on our RAG pipeline failures. Can you write me a Twitter/X thread version of this?",
+      "should_trigger": false,
+      "note": "Same kind of source + same underlying task shape, but a different platform than this skill covers. Near-miss: shares 'turn source into social content' but LinkedIn-specific formatting/brand rules don't apply."
+    },
+    {
+      "id": "S3",
+      "category": "scope_outside",
+      "query": "Here are my system design notes -- can you turn these into a formal Word document report for my manager?",
+      "should_trigger": false,
+      "note": "Source material + Word doc output (surface overlap with this skill's deliverable format) but not LinkedIn content at all -- should route to the docx skill instead, not this one."
+    },
+    {
+      "id": "S4",
+      "category": "scope_outside",
+      "query": "I want to grow my LinkedIn following fast, what's the best posting cadence and hashtag strategy in general?",
+      "should_trigger": false,
+      "note": "General LinkedIn growth/algorithm question, no source material, not asking for a drafted piece of content -- outside scope."
+    },
+    {
+      "id": "R1",
+      "category": "request_type_article_only",
+      "query": "Just the article, not a full package -- turn my attached notes on our evaluation framework into a single long-form LinkedIn article.",
+      "should_trigger": true,
+      "expected_request_type": "article_only",
+      "note": "Should be classified as Article-only per Step 2's table, not escalate to full-package confirmation."
+    },
+    {
+      "id": "R2",
+      "category": "request_type_post_only",
+      "query": "From this changelog I pasted below, just give me one short LinkedIn post about the caching bug we fixed. No article needed.",
+      "should_trigger": true,
+      "expected_request_type": "post_only",
+      "note": "Explicit single-post scope, should not trigger full-package confirmation checkpoint."
+    },
+    {
+      "id": "R3",
+      "category": "request_type_full_package",
+      "query": "Take these system design and deployment notes and build out a full LinkedIn content package for me.",
+      "should_trigger": true,
+      "expected_request_type": "full_package",
+      "note": "'full content package' is explicit; should trigger the Step 2 confirmation checkpoint before executing."
+    },
+    {
+      "id": "R4",
+      "category": "request_type_ambiguous",
+      "query": "Here's my writeup on our new agent memory architecture, do something with this for LinkedIn.",
+      "should_trigger": true,
+      "expected_request_type": "full_package_default_with_clarification",
+      "note": "Scope not specified -- per the skill's classification table this defaults toward full package, but is vague enough it's reasonable to confirm scope with the user first rather than assume."
+    }
+  ]
+}

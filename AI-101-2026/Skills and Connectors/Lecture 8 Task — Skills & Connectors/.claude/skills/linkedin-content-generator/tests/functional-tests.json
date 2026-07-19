@@ -1,0 +1,201 @@
+{
+  "skill_name": "linkedin-content-generator",
+  "description": "Functional tests: run the skill for real and grade the actual behavior/output against assertions. Unlike trigger-evals.json, these require execution.",
+  "evals": [
+    {
+      "id": "E1",
+      "category": "instruction_execution",
+      "prompt": "Attached are notes about our deployment pipeline decisions. Give me the full LinkedIn content package.",
+      "files": ["evals/files/deployment-notes-thin.md"],
+      "expected_output": "Skill correctly identifies that the source material is thin (light on specifics -- no concrete metrics, outcomes, or named failure modes) and asks the user for more detail on the ambiguous points BEFORE drafting, rather than inventing plausible-sounding specifics.",
+      "expectations": [
+        "The skill does not fabricate specific numbers, outcomes, or anecdotes not present in the provided notes",
+        "The skill asks a clarifying question about the thin/ambiguous parts of the input before producing final content",
+        "No content is drafted and delivered as final in the same turn as the source material being clearly insufficient"
+      ]
+    },
+    {
+      "id": "E2",
+      "category": "instruction_execution",
+      "prompt": "Use my attached notes on our infra scaling decisions. Include distribution notes on the best day/time to post and how many hashtags to use.",
+      "files": ["evals/files/scaling-notes.md"],
+      "expected_output": "Distribution notes about posting cadence, timing, and hashtag counts are either backed by a live search for current LinkedIn algorithm behavior, or explicitly flagged as an assumption/unverified rather than stated as fact.",
+      "expectations": [
+        "Skill performs a web search (or equivalent verification step) before making algorithm-dependent claims (timing, hashtag count, format ranking)",
+        "Any algorithm claim that could not be verified is explicitly flagged as an assumption in the distribution notes, not stated as established fact",
+        "No fabricated engagement statistics or 'LinkedIn insider' claims appear anywhere in the output"
+      ]
+    },
+    {
+      "id": "E3",
+      "category": "instruction_execution",
+      "prompt": "Turn my attached notes on our evaluation framework into one LinkedIn post.",
+      "files": ["evals/files/eval-framework-notes.md"],
+      "expected_output": "The post text itself contains no Markdown syntax (no #, **, or - bullets) since it needs to be paste-ready for LinkedIn's editor.",
+      "expectations": [
+        "The delivered post text contains no '#' Markdown headers, no '**bold**' or '*italic*' asterisks used as Markdown, and no '-' or '*' bullet dashes",
+        "Any emphasis or list-like structure in the post uses plain-text conventions (line breaks, plain numbering like '1.', capitalization) instead",
+        "Hashtags appear as plain '#Word' text inline/at the end, not as a Markdown list"
+      ]
+    },
+    {
+      "id": "E4",
+      "category": "happy_path",
+      "prompt": "Here are my system design and deployment notes covering our CI/CD pipeline redesign, infra decision framework, and how we approached scaling. Build me the full LinkedIn content package.",
+      "files": ["evals/files/system-design-deployment-notes-full.md"],
+      "expected_output": "A single .docx delivered with all five sections present and populated: Article, Posts Associated With the Article, Independent Posts, Hashtags per piece, Distribution Notes & Suggestions -- all traceable back to the provided notes.",
+      "expectations": [
+        "Exactly one .docx file is produced and shared via present_files (not multiple files, not inline text only)",
+        "The document contains all five required sections in order: Article, Posts Associated With the Article, Independent Posts, Hashtags, Distribution Notes & Suggestions",
+        "Every substantive claim, example, or lesson in the Article and posts can be traced back to something present in the source notes",
+        "Hashtags are present for each individual piece of content, not just once for the whole document",
+        "The skill confirmed scope (full package) with the user before producing the final document, per Step 2"
+      ]
+    },
+    {
+      "id": "E5",
+      "category": "happy_path",
+      "prompt": "Just want one short-form LinkedIn post from these release notes about a caching bug fix, nothing else.",
+      "files": ["evals/files/caching-bugfix-notes.md"],
+      "expected_output": "A single short-form post is delivered (inline or as a small doc), correctly scoped to post-only -- no Article, no full package, no unnecessary confirmation checkpoint for what is already an unambiguous single-post request.",
+      "expectations": [
+        "Only a post is produced, not an Article or full package",
+        "The skill does not pause for a full-package scope confirmation, since the request was already unambiguous",
+        "The post content is traceable to the caching bugfix notes and doesn't introduce outside detail"
+      ]
+    },
+    {
+      "id": "SP1",
+      "category": "sad_path",
+      "prompt": "Here's a very short note: 'Switched our vector DB from Pinecone to pgvector, went fine.' Can you build the full LinkedIn content package from this?",
+      "files": [],
+      "expected_output": "The skill recognizes the source material is real but too thin to responsibly support a full package (Article + multiple posts), and either scopes the deliverable down to what the material actually supports or explicitly tells the user the material is too thin for the full ask and asks how they'd like to proceed -- rather than padding out a full package with invented detail to hit the requested structure.",
+      "expectations": [
+        "The skill does not silently invent additional technical detail (specific metrics, migration steps, failure modes) not present in the one-sentence input to fill out a full package",
+        "The skill communicates the mismatch between the thin input and the full-package request to the user",
+        "If content is produced, it stays honestly scoped to what the sentence actually supports (e.g. a single post) rather than fabricating enough material for 5+ pieces"
+      ]
+    },
+    {
+      "id": "SP2",
+      "category": "sad_path",
+      "prompt": "Turn this into a LinkedIn content package.",
+      "files": ["evals/files/mixed-relevance-notes.md"],
+      "expected_output": "Source file contains a mix of genuinely technical content and unrelated personal journal entries. Skill should draw only from the technical, brand-relevant portions and should not surface the personal/irrelevant material in the LinkedIn content, ideally noting that it's using only part of the provided material.",
+      "expectations": [
+        "None of the personal/irrelevant journal content from the source file appears in the drafted Article or posts",
+        "The technical content that is relevant gets used and attributed correctly",
+        "The skill notes (in conversation or distribution notes) that it filtered the input down to the relevant portions, rather than silently doing so with no explanation"
+      ]
+    },
+    {
+      "id": "F1",
+      "category": "failure_test",
+      "prompt": "Write me a LinkedIn post about the future of agentic AI. I don't have any notes, just write something good.",
+      "files": [],
+      "expected_output": "The skill declines to originate the content itself and clearly asks the user for real source material, rather than complying and generating a generic AI-hype post from nothing -- this is the core constraint of the skill and a direct request to violate it.",
+      "expectations": [
+        "No LinkedIn post is drafted and delivered as final output",
+        "The skill explicitly states it needs the user's own source material (notes, project writeup, etc.) and asks for it",
+        "The skill does not rationalize inventing content because the user explicitly said 'just write something good'"
+      ]
+    },
+    {
+      "id": "F2",
+      "category": "failure_test",
+      "prompt": "Pull the file from this GitHub link and turn it into LinkedIn content: https://github.com/some-user/nonexistent-repo-xyz123/blob/main/notes.md",
+      "files": [],
+      "expected_output": "The connector fetch fails (repo/file doesn't exist or isn't accessible). Skill should surface this failure clearly to the user and ask for an alternative source rather than proceeding with fabricated content or silently failing.",
+      "expectations": [
+        "The skill reports that it could not access the specified file/repo",
+        "The skill asks the user for an alternative source (paste text, attach a file, correct link) rather than inventing placeholder content",
+        "No LinkedIn content is generated from a source that was never actually retrieved"
+      ]
+    },
+    {
+      "id": "ER1",
+      "category": "error_test",
+      "prompt": "Here are my notes on our orchestration layer, build the full content package as a Word doc.",
+      "files": ["evals/files/orchestration-notes.md"],
+      "expected_output": "If .docx generation fails for any reason (tooling error, environment issue), the skill should report the failure plainly and offer the content in an alternative form (e.g. inline text, markdown file) rather than claiming success or silently producing an empty/corrupt file.",
+      "expectations": [
+        "If document generation fails, the failure is reported to the user rather than hidden",
+        "An alternative delivery of the actual content (inline text or another format) is offered so the user isn't left with nothing",
+        "The skill never claims a .docx was successfully created if it was not"
+      ]
+    },
+    {
+      "id": "ER2",
+      "category": "error_test",
+      "prompt": "Attached file has my notes, turn into a content package.",
+      "files": ["evals/files/corrupted-or-empty.docx"],
+      "expected_output": "The attached file is empty or unreadable. Skill should detect this and tell the user rather than proceeding as if it read real content.",
+      "expectations": [
+        "The skill recognizes the attached file could not be read or contained no usable content",
+        "The skill asks the user to re-attach or paste the material instead of proceeding",
+        "No content is generated that pretends to be derived from an unreadable file"
+      ]
+    },
+    {
+      "id": "O1",
+      "category": "output_test",
+      "prompt": "Full content package please, from these attached notes on our reliability/observability setup.",
+      "files": ["evals/files/reliability-notes.md"],
+      "expected_output": "Structural check on the final .docx: correct section headings, correct heading styles vs. plain-paste-ready body text, single file.",
+      "expectations": [
+        "The .docx uses real Word heading styles for the five organizational sections (Article / Posts Associated With the Article / Independent Posts / Hashtags / Distribution Notes)",
+        "The body text of the Article and each post is plain paste-ready text, not styled with Markdown remnants",
+        "Exactly one file is produced for the full package, not one file per section",
+        "The document is presented to the user via present_files, not just described in chat"
+      ]
+    },
+    {
+      "id": "O2",
+      "category": "output_test",
+      "prompt": "Just the article -- turn my attached notes on our multi-agent testing strategy into a LinkedIn article only.",
+      "files": ["evals/files/multi-agent-testing-notes.md"],
+      "expected_output": "For a scoped-down Article-only request, output format should match the smaller ask -- doesn't need to force the full five-section .docx structure.",
+      "expectations": [
+        "Output is scoped to the Article only, not padded out with unrequested posts/hashtags/distribution sections",
+        "Delivery format (inline vs. .docx) is reasonable for a single article-length piece",
+        "The article itself still respects LinkedIn-ready plain-text formatting rules"
+      ]
+    },
+    {
+      "id": "BI1",
+      "category": "bad_input",
+      "prompt": "Here's my source material for a LinkedIn content package.",
+      "files": ["evals/files/grocery-list.txt"],
+      "expected_output": "Attached file is a grocery list -- not technical/brand-relevant material at all. Skill should recognize this doesn't support the Agentic AI Developer positioning and flag it rather than forcing a post out of it.",
+      "expectations": [
+        "The skill does not generate Agentic AI Developer-positioned content from clearly irrelevant source material",
+        "The skill tells the user the attached material doesn't look like what's needed and asks for the right source",
+        "No content is produced that pretends grocery-list content is technical insight"
+      ]
+    },
+    {
+      "id": "BI2",
+      "category": "bad_input",
+      "prompt": "Build the full package from this.",
+      "files": ["evals/files/huge-notes-dump.md"],
+      "expected_output": "Source file is extremely large (e.g. an entire multi-project engineering wiki dump, far more than one content run's worth of focused material). Skill should recognize the scope problem and ask the user to narrow it to one topic/system rather than trying to cram everything into one Article.",
+      "expectations": [
+        "The skill flags that the input covers multiple disconnected topics/systems rather than one coherent thread",
+        "The skill asks the user to narrow scope to a single topic before drafting, rather than producing an unfocused Article that tries to cover everything",
+        "If it proceeds, it clearly states which portion it chose to focus on and why"
+      ]
+    },
+    {
+      "id": "BI3",
+      "category": "bad_input",
+      "prompt": "Turn this into LinkedIn content for me.",
+      "files": ["evals/files/non-english-notes.md"],
+      "expected_output": "Source material is in a language other than English (or mixed). Skill should handle this sensibly -- either ask the user which language to write the LinkedIn content in, or confirm before proceeding, rather than silently guessing.",
+      "expectations": [
+        "The skill notices the source material's language and either asks or states an assumption about the output language before/while drafting",
+        "The underlying technical substance is still correctly extracted regardless of source language",
+        "No content is produced in a language the user didn't ask for without at least flagging the choice"
+      ]
+    }
+  ]
+}
